@@ -1,0 +1,29 @@
+{
+  "name": "resume",
+  "version": "2.0.0",
+  "description": "Resume of Richard Bailey. Doubles as a code sample, because front end dev",
+  "homepage": "https://github.com/additiveinverse/resume",
+  "authors": [
+    "additiveinverse <additiveinverse@gmail.com>"
+  ],
+  "main": "index.html",
+  "keywords": [
+    "html",
+    "css",
+    "js",
+    "grunt",
+    "bower"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "normalize-less": "*"
+  }
+}

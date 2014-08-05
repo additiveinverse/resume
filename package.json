@@ -1,0 +1,30 @@
+{
+  "name": "resume",
+  "version": "2.0.0",
+  "description": "Resume of Richard Bailey. Doubles as a code sample, because front end dev",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/additiveinverse/resume.git"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "js",
+    "grunt",
+    "jade"
+  ],
+  "author": "Richard Bailey",
+  "license": "BSD",
+  "bugs": {
+    "url": "https://github.com/additiveinverse/resume/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-jade": "~0.12.0",
+    "grunt-contrib-less": "~0.11.4"
+  }
+}

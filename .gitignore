@@ -213,3 +213,9 @@ pip-log.txt
 
 #Mr Developer
 .mr.developer.cfg
+
+## Sublime
+*.sublime-workspace
+
+node_modules/
+bower_components/
