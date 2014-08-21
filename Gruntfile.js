@@ -1,18 +1,20 @@
 /*global module:false*/
 module.exports = function(grunt) {
-	var name    = '<%= pkg.name %>-v<%= pkg.version%>';
+	var name    = '<%= pkg.name %>-v<%= pkg.version%>',
+			manifest = { '<%= prod.CSS %>layout.min.css': [  '<%= app.LESS %>normalize.less', '<%= app.LESS %>base-*.less'],
+    							 '<%= prod.CSS %>global.css': '<%= app.LESS %>global.less'};
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		app: {
 			root: 'app/',
-				JS: 'app/js/',
-				LESS: 'app/less/',
-				IMG: {
-					root: 'app/image/',
-					dist: 'app/image/dist/',
-					src: 'app/image/src/',
-				}
+			JS: 'app/js/',
+			LESS: 'app/less/',
+			IMG: {
+				root: 'app/image/',
+				dist: 'app/image/dist/',
+				src: 'app/image/src/',
+			}
 		},
 		prod: {
 			root: 'gh-pages/',
@@ -35,7 +37,7 @@ module.exports = function(grunt) {
 					path: '<%= app.LESS %>',
 					cleancss: false
 				},
-				files: '<%= app.LESS %>*.less'
+				files: manifest
 			},
 			prod: {
 				options: {
@@ -43,14 +45,20 @@ module.exports = function(grunt) {
 					compress: true,
 					cleancss: true
 				},
-				files: '<%= app.LESS %>/*.less'
+				files: manifest
+			}
+		},
+		jsonlint: {
+			sample: {
+				src: [ '<%= app.root %>*.json' ]
 			}
 		},
 		jade: {
-			compile: {
+			dev: {
 				options: {
-					data: {
-						debug: true
+					data: function(dest, src) {
+						// Return an object of data to pass to templates
+						return require('./app/data.json');
 					},
 					pretty: true
 				},
@@ -74,6 +82,13 @@ module.exports = function(grunt) {
 			}
 		},
 		copy: {
+			less: {
+				expand: true,
+				cwd: 'bower_components/',
+				src: ['/normalize-less/normalize.less'],
+				dest: 'app/less/',
+				flatten: true
+			},
 			main: {
 				expand: true,
 				cwd: '<%= app.JS %>',
@@ -89,18 +104,27 @@ module.exports = function(grunt) {
 				flatten: true
 			}
 		},
-		open: {
-			dev : {
-				path: 'http://localhost:8080/gh-pages',
-				app: 'Firefox'
+		connect: {
+			server: {
+				options: {
+					port: '9001',
+					protocol: 'http',
+					hostname: 'localhost',
+					livereload: true,
+					open: {
+							target: 'http://localhost:9001/gh-pages', // target url to open
+							appName: 'Firefox'
+					},
+				}
 			}
 		},
 		watch: {
 			files: [
+				'<%=prod.root %>**/*',
 				'<%= app.root %>**/*',
 				'Gruntfile.js'
 			],
-			tasks: [ 'newer:less:dev', 'copy', 'jshint' ],
+			tasks: [ 'less:dev', 'jade'],
 			options: {
 				reload: true,
 				livereload: true,
@@ -116,7 +140,7 @@ module.exports = function(grunt) {
 	require('matchdep').filterDev('grunt-*').forEach( grunt.loadNpmTasks );
 
 	// Default
-	grunt.registerTask('default', [ 'watch', 'open' ]);
+	grunt.registerTask('default', [ 'connect', 'watch' ]);
 
 	// Deploy
 	grunt.registerTask('deploy', [ 'jade', 'less:production', 'copy', 'imagemin' ]);

@@ -1,0 +1,111 @@
+@import './_variables';
+@import './_mixins';
+// Defaults which you can freely override
+@column-width: 60;
+@gutter-width: 0;
+@columns: 12;
+
+// Utility variable — you should never need to modify this
+@gridsystem-width: (@column-width*@columns) + (@gutter-width*@columns) * 1px;
+
+// Set @total-width to 100% for a fluid layout
+@total-width: 100%;
+
+// Utility variable — you should never need to modify this
+@gridsystem-width: ( @column-width * @columns ) + ( @gutter-width * @columns ) * 1px;
+
+.clearfix() {
+	&:before,
+	&:after {
+	  content: "";
+	  display: table;
+	}
+	&:after { clear: both; }
+}
+
+.gd-row() {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	.row;
+}
+
+.gd-grid() {
+	display: inline;
+	float: left;
+}
+
+.gd-pull,
+.gd-push { position: relative; }
+
+.col( @x, @columns: @columns ) { width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width); }
+
+.row(@columns:@columns) {
+	width: @total-width*((@gutter-width + @gridsystem-width)/@gridsystem-width);
+	.clearfix;
+}
+
+.column(@x, @columns:@columns) {
+	&:extend( .gd-grid );
+	.col(@x);
+}
+
+.offsetter( @offset ) {
+	// storing this in a variable for legibilities sake.
+	@col-width: @total-width * (((@gutter-width+@column-width)*@offset)/@gridsystem-width) + @total-width*((@gutter-width*.5)/@gridsystem-width)
+}
+
+// adding some guards to tighten things up a little
+.position(@type, @offset: 1 ) when ( @type = push ) {
+	.offsetter( @offset );
+	left: @col-width;
+}
+
+.position(@type, @offset: 1 ) when ( @type = pull ) {
+	.offsetter( -@offset );
+	left: @col-width;
+}
+// call the guards with new mixins
+.push( @offset:1 ) { .position( push, @offset ); }
+.pull( @offset:1 ) { .position( push, @offset ); }
+
+
+// adding some guards to tighten things up a little
+.padding(@type, @offset: 1 ) when ( @type = prefix ) {
+	.offsetter( @offset );
+	padding-left: @col-width;
+}
+.padding(@type, @offset: 1 ) when ( @type = suffix ) {
+	.offsetter( @offset );
+	padding-right: @col-width;
+}
+// call the guards with new mixins
+.prefix( @offset:1 ) { .padding( prefix, @offset ); }
+.suffix( @offset:1 ) { .padding( suffix, @offset ); }
+
+
+// first pass at programatic grid system generation
+// this all sucks and is a pain in the rear because copy and paste
+// the ideal would be a single guard expression
+// that accepts @type: grid, push, pull, prefix, suffix
+// and @columns and then figures out which mixin to run.
+.grid-loop( @type; @i ) when ( @i > 0 ) {
+	.gd-@{type}-@{i} {
+		.column(@i);
+	}
+	.grid-loop( @type, @i - 1 );
+}
+
+.position-loop( @type; @i ) when ( @i > 0 ) {
+	.gd-@{type}-@{i} {
+		.position(@type, @i);
+	}
+	.position-loop( @type, @i - 1 );
+}
+
+.padding-loop( @type; @i ) when ( @i > 0 ) {
+	.gd-@{type}-@{i} {
+		.padding(@type, @i);
+	}
+	.padding-loop( @type, @i - 1 );
+}
