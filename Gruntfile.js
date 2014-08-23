@@ -108,23 +108,24 @@ module.exports = function(grunt) {
 			server: {
 				options: {
 					port: '9001',
+					base: 'gh-pages',
 					protocol: 'http',
 					hostname: 'localhost',
 					livereload: true,
 					open: {
-							target: 'http://localhost:9001/gh-pages', // target url to open
-							appName: 'Firefox'
+						target: 'http://localhost:9001/', // target url to open
+						appName: 'Firefox'
 					},
 				}
 			}
 		},
 		watch: {
 			files: [
-				'<%=prod.root %>**/*',
+				'<%= prod.root %>**/*',
 				'<%= app.root %>**/*',
 				'Gruntfile.js'
 			],
-			tasks: [ 'less:dev', 'jade'],
+			tasks: [ 'newer:less:dev', 'newer:jade' ],
 			options: {
 				reload: true,
 				livereload: true,
@@ -132,6 +133,14 @@ module.exports = function(grunt) {
 				dateFormat: function( time ) {
 					grunt.log.writeln('Hickory Dickory Dock the Mouse ran up the clock in ' + time + 'ms');
 					grunt.log.writeln('MOAR changes... bring them you must!');
+				}
+			}
+		},
+		concurrent: {
+			target: {
+				tasks: ['newer:less:dev', 'newer:jade'],
+				options: {
+					logConcurrentOutput: true
 				}
 			}
 		}

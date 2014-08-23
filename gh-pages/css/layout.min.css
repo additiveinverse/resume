@@ -89,7 +89,7 @@
   font-style: italic;
 }
 .req {
-  box-shadow: 0 0 5px #ff5e07 inset;
+  box-shadow: 0 0 5px #d32d31 inset;
   position: relative;
 }
 .req:after {
@@ -100,10 +100,10 @@
 }
 .fault,
 .err {
-  color: #ff5e07;
+  color: #d32d31;
 }
 .err {
-  background-color: #ff5e07;
+  background-color: #d32d31;
   border-radius: 16px;
   height: auto;
   left: 33%;
@@ -168,16 +168,13 @@ body {
 a,
 .lnk {
   text-decoration: none;
-  color: #ff5e07;
+  color: #d32d31;
 }
 a:hover {
-  color: #d34a00;
+  color: #e99698;
 }
 a:focus {
   outline: none;
-}
-.grids {
-  background: url(../im/text-16-24.png);
 }
 h1,
 h2,
@@ -185,7 +182,6 @@ h3,
 h4,
 h5,
 h6 {
-  color: #f0b514;
   margin-bottom: 0;
   margin-top: 0;
   position: relative;
@@ -306,5 +302,5 @@ fieldset {
 }
 .ttl {
   font-family: 'Roboto', sans-serif;
-  color: #04b4bf;
+  color: #000000;
 }

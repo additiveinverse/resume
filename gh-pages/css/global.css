@@ -3,7 +3,7 @@
 .ico:after {
   position: relative;
   line-height: 1;
-  font-family: "typicons";
+  font-family: 'typicons';
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -16,39 +16,62 @@
   position: relative;
 }
 body {
-  background-image: -webkit-linear-gradient(#eaeaea 0%, #ffffff 8%);
-  background-image: -moz-linear-gradient(#eaeaea 0%, #ffffff 8%);
-  background-image: linear-gradient(#eaeaea 0%, #ffffff 8%);
-  -webkit-background-size: 100% 20px;
-  -moz-background-size: 100% 20px;
-  -ms-background-size: 100% 20px;
-  background-size: 100% 20px;
-  background: white;
-  /* ^ behold the deliciousness that is the background size */
+  background: #e6e6e6;
 }
-.resume {
-  background-image: -webkit-linear-gradient(0, rgba(0, 0, 0, 0.04) 108px, transparent 0);
-  background-image: -moz-linear-gradient(90deg, rgba(0, 0, 0, 0.04) 108px, transparent 0);
-  background-image: linear-gradient(90deg, rgba(0, 0, 0, 0.04) 108px, transparent 0);
-  -webkit-background-size: 128px 10px;
-  -moz-background-size: 128px 10px;
-  -ms-background-size: 128px 10px;
-  background-size: 128px 10px;
+.header-info {
+  padding: 1.5em;
+  width: 23.61111111%;
+}
+.header-info-ttl {
+  display: inline-block;
+}
+.header-info-contact-lst {
+  padding: 0;
+  margin: 0;
+}
+.header-info-contact-itm {
+  display: inline-block;
+  padding: 0 0.75em;
 }
 .mission {
-  color: #ffffff;
+  text-shadow: 1px 1px 0 #ffffff;
   position: relative;
 }
-.mission:before {
-  content: "";
-  display: inline-block;
-  border: solid;
-  border-width: 10px 14px;
-  border-color: #D32D31 transparent transparent transparent;
-  position: absolute;
-  bottom: -1.4em;
-  left: 1.4em;
+.mission-quote {
+  padding: 0;
 }
-.mission-mission {
-  padding: 1.2em 0 1em;
+.posts {
+  position: absolute;
+  top: 0;
+  width: 73.61111111%;
+  left: 25.69444444%;
+}
+.posts-ttl {
+  color: #ffffff;
+  font-size: 2rem;
+  font-size: 20px;
+  line-height: 1.2;
+  text-shadow: -1px -1px 0 #bfbfbf;
+  text-transform: uppercase;
+}
+.posts-label-nfo {
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  font-size: 12px;
+  line-height: 2;
+  color: #b49d9d;
+}
+.post-header-ttl-position,
+.post-header-ttl-company {
+  display: inline-block;
+}
+.post-header-ttl-position {
+  float: right;
+}
+.post-header-related-lst {
+  width: 31.94444444%;
+  display: inline-block;
+}
+.post-header-related-itm {
+  display: inline-block;
 }

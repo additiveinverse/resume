@@ -15,22 +15,40 @@ html( lang='en' )
 			script( src='js/app.js' )
 
 	body
-		.resume
-			header.header.header-info
-				h1.ttl.header-info-ttl #{resume.user.name}
+		header.header
+			h1.ttl.header-ttl #{resume.user.name}
 
+			.header-info
 				ul.lst.header-info-contact-lst
 					each link, i in resume.user.links
 						li.itm.header-info-contact-itm
 							a(href="#{link}").lnk.header-info-contact-lnk #{i}
-					
-					li.itm.header-info-contact-itm location: #{resume.user.location}
 
-			aside.mission
-				blockquote.mission-quote #{resume.mission}
+				aside.mission
+					blockquote.mission-philosophy #{resume.quote}
+						
+					blockquote.mission-skills #{resume.skills}
+
+		main.posts
+			blockquote.posts-mission-quote #{resume.mission}
+			h2.ttl.posts-ttl Work History
+
+			.posts-label
+				span.nfo.posts-label-nfo.posts-label-info-company Company
+				span.nfo.posts-label-nfo.posts-label-nfo-position Position
+				span.nfo.posts-label-nfo.posts-label-nfo-related Related Projects
+
+			each role, i in resume.timeline
+				article.post
+					header.post-header
+						h3.ttl.post-header-ttl-company #{role.company}
+						h4.ttl.post-header-ttl-position( itemprop="jobTitle" ) #{role.position}
+						h5.ttl.post-header-ttl-length #{role.start} - #{role.end}
+						
+						ul.lst.post-header-related-lst
+							each project in role.projects
+								li.itm.post-header-related-itm
+									a.lnk.post-header-related-lnk(itemprop="url", href="http://#{ project }") #{ project }
+
+					section.post-description	#{role.description}
 				
-				h1.mission-about about me
-				p #{resume.quote}
-				
-				h2.mission-skills skills 
-				blockquote.mission-quote #{resume.skills}

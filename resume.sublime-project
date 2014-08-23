@@ -3,7 +3,8 @@
 	[
 		{
 			"follow_symlinks": true,
-			"path": "C:\\UwAmp\\www\\resume"
+			"path": "C:\\UwAmp\\www\\resume",
+			"tab_size": 2,
 		}
 	]
 }

@@ -3,40 +3,88 @@
 @import './_grid';
 
 body {
-	background-image: -webkit-linear-gradient( #eaeaea 0%, #fff 8% );
-	background-image: -moz-linear-gradient(#eaeaea 0%, #fff 8%);
-	background-image: linear-gradient(#eaeaea 0%, #fff 8%);
-	-webkit-background-size: 100% 20px;
-	-moz-background-size: 100% 20px;
-	-ms-background-size: 100% 20px;
-	background-size: 100% 20px;
-	background: white;
-	/* ^ behold the deliciousness that is the background size */
+	background: @grey-lighter;
 }
 
-.resume {
-	background-image: -webkit-linear-gradient( 0, rgba(0,0,0,0.04) 108px, transparent 0 );
-	background-image: -moz-linear-gradient( 90deg, rgba(0,0,0,0.04) 108px, transparent 0 );
-	background-image: linear-gradient( 90deg, rgba(0,0,0,0.04) 108px, transparent 0 );
-	-webkit-background-size: 128px 10px;
-	-moz-background-size: 128px 10px;
-	-ms-background-size: 128px 10px;
-	background-size: 128px 10px;
+.header {
+	&-info {
+		padding: @base-margin;
+		.col(3);
+
+		&-ttl {
+			display: inline-block;
+		}
+
+		&-contact {
+			&-lst { 
+				padding: 0;
+				margin: 0;
+			}
+
+			&-itm { 
+				display: inline-block; 
+				padding: 0 @base-margin-half;
+			}
+		}
+	}
 }
 
 .mission {
-	color: @white;
-	// text-shadow: 1px 1px 0 rgba(0,0,0,0.25);
+	// color: @white;
+	// text-shadow: 1px 1px 0 fade(@grey-darker, 35%);
+	text-shadow: 1px 1px 0 @white;
 	position: relative;
-	&:before {
-		content: "";
-		display: inline-block;
-		border: solid;
-		border-width: 10px 14px;
-		border-color: #D32D31 transparent transparent transparent;
-		position: absolute;
-		bottom: -1.4em;
-		left: 1.4em;
+	&-quote {
+		padding: 0;
 	}
-	&-mission { padding: 1.2em 0 1em }
+	&-mission {}
+	&-skills {}
+}
+
+.posts {
+	position: absolute;
+	top: 0;
+	.col(9);
+	.push(3);
+	&-ttl {
+		color: @white;
+		.font-size(@base-type-h5);
+		text-shadow: -1px -1px 0 @grey-light;
+		text-transform: uppercase;
+	}
+
+	&-label-nfo {
+		text-transform: uppercase;
+		.font-size(@base-type-sm);
+		color: @red-desat;
+		&-company {}
+		&-position {}
+		&-projects {}
+	}
+}
+
+.post {
+	&-header {
+		&-ttl {
+
+			&-position,
+			&-company { 
+				display: inline-block; 
+			}
+			&-position {
+				float: right;
+			}
+		}
+
+		&-related {
+			&-lst { 
+				.col(4);
+				display: inline-block;
+			}
+
+			&-itm {
+				display: inline-block;
+			}
+		}
+	}	
 }
