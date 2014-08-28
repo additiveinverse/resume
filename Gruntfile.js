@@ -129,18 +129,10 @@ module.exports = function(grunt) {
 			options: {
 				reload: true,
 				livereload: true,
-				spawn: false,
+				spawn: true,
 				dateFormat: function( time ) {
 					grunt.log.writeln('Hickory Dickory Dock the Mouse ran up the clock in ' + time + 'ms');
 					grunt.log.writeln('MOAR changes... bring them you must!');
-				}
-			}
-		},
-		concurrent: {
-			target: {
-				tasks: ['newer:less:dev', 'newer:jade'],
-				options: {
-					logConcurrentOutput: true
 				}
 			}
 		}

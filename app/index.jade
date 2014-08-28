@@ -8,7 +8,7 @@ html( lang='en' )
 
 			title [#{resume.user.name}] resume 2014-2015
 
-			link( rel='stylesheet', href='http://fonts.googleapis.com/css?family=Roboto:300,900,400' )
+			link( rel='stylesheet', href='http://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,700,300' )
 			link( rel='stylesheet', href='css/layout.min.css' )
 			link( rel='stylesheet', href='css/global.css' )
 			script( src='js/jquery.min.js' )
@@ -25,25 +25,29 @@ html( lang='en' )
 							a(href="#{link}").lnk.header-info-contact-lnk #{i}
 
 				aside.mission
-					blockquote.mission-philosophy #{resume.quote}
-						
-					blockquote.mission-skills #{resume.skills}
+					blockquote.mission-quote.mission-quote-ethics #{resume.mission}
+					figure.mission-quote-pic 
+						img(src="../img/me.jpg").img
+					blockquote.mission-quote.mission-quote-philosophy #{resume.quote}
+							
+					blockquote.mission-quote.mission-quote-skills #{resume.skills}
 
 		main.posts
-			blockquote.posts-mission-quote #{resume.mission}
 			h2.ttl.posts-ttl Work History
 
-			.posts-label
-				span.nfo.posts-label-nfo.posts-label-info-company Company
-				span.nfo.posts-label-nfo.posts-label-nfo-position Position
-				span.nfo.posts-label-nfo.posts-label-nfo-related Related Projects
+			//- .posts-label
+			//- 	span.nfo.posts-label-nfo.posts-label-info-company Company
+			//- 	span.nfo.posts-label-nfo.posts-label-nfo-position Position
+			//- 	span.nfo.posts-label-nfo.posts-label-nfo-related Related Projects
 
 			each role, i in resume.timeline
 				article.post
 					header.post-header
 						h3.ttl.post-header-ttl-company #{role.company}
-						h4.ttl.post-header-ttl-position( itemprop="jobTitle" ) #{role.position}
-						h5.ttl.post-header-ttl-length #{role.start} - #{role.end}
+
+						ul.lst.post-header-role-lst
+							li.itm.post-header-role-lst-itm.post-header-role-position( itemprop="jobTitle" ) #{role.position}
+							li.itm.post-header-role-lst-itm.post-header-role-duration #{role.start} - #{role.end}
 						
 						ul.lst.post-header-related-lst
 							each project in role.projects

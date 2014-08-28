@@ -3,14 +3,22 @@
 @import './_grid';
 
 body {
-	background: @grey-lighter;
+	background: darken(@grey-lighter, 65%) url(../img/paper-grunge.png) center fixed no-repeat;
+	background-size: cover;
+}
+
+.cnt {
+	padding: @base-margin;
+	background-color: fade(@black, 38%);
+	margin: 0 4.86111%;
+
 }
 
 .header {
-	&-info {
-		padding: @base-margin;
-		.col(3);
+	position: relative;
+	&:extend(.cnt);
 
+	&-info {
 		&-ttl {
 			display: inline-block;
 		}
@@ -30,35 +38,59 @@ body {
 }
 
 .mission {
-	// color: @white;
-	// text-shadow: 1px 1px 0 fade(@grey-darker, 35%);
-	text-shadow: 1px 1px 0 @white;
-	position: relative;
 	&-quote {
+		text-shadow: 1px 1px 0 @black;
+		position: relative;
 		padding: 0;
+		vertical-align: top;
+		display: inline-block;
+
+		&-skills {
+			.col(3);
+		}
+
+		&-philosophy {
+			.col(6);
+		}
+
+		&-ethics {
+			background-color: @black;
+			padding: @base-margin;
+			margin: @base-margin 0;
+		}
+
+		&-pic {
+			display: inline-block;
+			margin-right: 0;
+			.col(2);
+			border: 10px solid @grey-darker;
+			box-shadow: 0 0 15px 5px @black;
+			font-size: 0;
+			overflow: hidden;
+			border-radius: 100%;
+		}
 	}
-	&-mission {}
-	&-skills {}
+
 }
 
 .posts {
-	position: absolute;
-	top: 0;
-	.col(9);
-	.push(3);
+	&:extend(.cnt);
+
 	&-ttl {
 		color: @white;
 		.font-size(@base-type-h5);
-		text-shadow: -1px -1px 0 @grey-light;
 		text-transform: uppercase;
 	}
 
 	&-label-nfo {
 		text-transform: uppercase;
-		.font-size(@base-type-sm);
 		color: @red-desat;
+
 		&-company {}
-		&-position {}
+		&-position {
+			.push(8);
+			text-align: right;
+		}
 		&-projects {}
 	}
 }
@@ -66,24 +98,35 @@ body {
 .post {
 	&-header {
 		&-ttl {
+			&-company {}
+		}
 
-			&-position,
-			&-company { 
-				display: inline-block; 
+		&-role {
+			&-lst { 
+				.col(6);
+				display: inline-block;
+				padding-left: 0;
 			}
-			&-position {
-				float: right;
+
+			&-position { 
+				.font-size(@base-type-h4);
+				color: darken(@orange, 10%);
 			}
+			&-duration {}
 		}
 
 		&-related {
-			&-lst { 
-				.col(4);
+			&-lst {
+				.col(6);
+				text-align: right;
 				display: inline-block;
+				vertical-align: text-bottom;
+				margin: 0;
+				padding: 0;
 			}
-
-			&-itm {
-				display: inline-block;
+			&-itm { 
+				padding: 0 0 0 @base-margin;
+				display: inline;
 			}
 		}
 	}	

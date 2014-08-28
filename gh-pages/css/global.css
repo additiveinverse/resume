@@ -11,16 +11,27 @@
   -webkit-font-smoothing: antialiased;
   font-smoothing: antialiased;
 }
-.gd-pull,
-.gd-push {
+.grid-column {
+  display: inline;
+  float: left;
+}
+.grid-pull,
+.grid-push {
   position: relative;
 }
 body {
-  background: #e6e6e6;
+  background: #4a4230 url(../img/paper-grunge.png) center fixed no-repeat;
+  background-size: cover;
 }
-.header-info {
+.cnt,
+.header,
+.posts {
   padding: 1.5em;
-  width: 23.61111111%;
+  background-color: rgba(0, 0, 0, 0.38);
+  margin: 0 4.86111%;
+}
+.header {
+  position: relative;
 }
 .header-info-ttl {
   display: inline-block;
@@ -33,45 +44,69 @@ body {
   display: inline-block;
   padding: 0 0.75em;
 }
-.mission {
-  text-shadow: 1px 1px 0 #ffffff;
-  position: relative;
-}
 .mission-quote {
+  text-shadow: 1px 1px 0 #000000;
+  position: relative;
   padding: 0;
+  vertical-align: top;
+  display: inline-block;
 }
-.posts {
-  position: absolute;
-  top: 0;
-  width: 73.61111111%;
-  left: 25.69444444%;
+.mission-quote-skills {
+  width: 23.61111111%;
+}
+.mission-quote-philosophy {
+  width: 48.61111111%;
+}
+.mission-quote-ethics {
+  background-color: #000000;
+  padding: 1.5em;
+  margin: 1.5em 0;
+}
+.mission-quote-pic {
+  display: inline-block;
+  margin-right: 0;
+  width: 15.27777778%;
+  border: 10px solid #454549;
+  box-shadow: 0 0 15px 5px #000000;
+  font-size: 0;
+  overflow: hidden;
+  border-radius: 100%;
 }
 .posts-ttl {
   color: #ffffff;
   font-size: 2rem;
   font-size: 20px;
   line-height: 1.2;
-  text-shadow: -1px -1px 0 #bfbfbf;
   text-transform: uppercase;
 }
 .posts-label-nfo {
   text-transform: uppercase;
-  font-size: 1.2rem;
-  font-size: 12px;
-  line-height: 2;
   color: #b49d9d;
 }
-.post-header-ttl-position,
-.post-header-ttl-company {
-  display: inline-block;
+.posts-label-nfo-position {
+  left: 67.36111111%;
+  text-align: right;
 }
-.post-header-ttl-position {
-  float: right;
+.post-header-role-lst {
+  width: 48.61111111%;
+  display: inline-block;
+  padding-left: 0;
+}
+.post-header-role-position {
+  font-size: 2.6rem;
+  font-size: 26px;
+  line-height: 0.92307692;
+  color: #a63f00;
 }
 .post-header-related-lst {
-  width: 31.94444444%;
+  width: 48.61111111%;
+  text-align: right;
   display: inline-block;
+  vertical-align: text-bottom;
+  margin: 0;
+  padding: 0;
 }
 .post-header-related-itm {
-  display: inline-block;
+  padding: 0 0 0 1.5em;
+  display: inline;
 }

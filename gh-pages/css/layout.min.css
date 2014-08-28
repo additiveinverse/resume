@@ -11,7 +11,7 @@
 .ico:after {
   position: relative;
   line-height: 1;
-  font-family: "typicons";
+  font-family: 'typicons';
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -49,7 +49,7 @@
   border: 0 none;
   padding: 0.375em 0.375em;
   width: calc(100% - @label-total);
-  box-shadow: 2px 2px 10px #9e9ea3;
+  box-shadow: 2px 2px 10px #ffffff;
 }
 .sel:hover,
 .txtarea:hover,
@@ -145,7 +145,7 @@
 .ico:after {
   position: relative;
   line-height: 1;
-  font-family: "typicons";
+  font-family: 'typicons';
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -161,17 +161,17 @@
 html,
 body {
   font-family: 'Roboto', sans-serif;
-  color: #202022;
+  color: #ffffff;
   height: 100%;
   margin: 0;
 }
 a,
 .lnk {
   text-decoration: none;
-  color: #d32d31;
+  color: #009ca4;
 }
 a:hover {
-  color: #e99698;
+  color: #009ca4;
 }
 a:focus {
   outline: none;
@@ -301,6 +301,6 @@ fieldset {
   border: none;
 }
 .ttl {
-  font-family: 'Roboto', sans-serif;
-  color: #000000;
+  font-family: 'Roboto Slab', serif;
+  color: #d95200;
 }
