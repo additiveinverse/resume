@@ -3,15 +3,14 @@
 @import './_grid';
 
 body {
-	background: darken(@grey-lighter, 65%) url(../img/paper-grunge.png) center fixed no-repeat;
-	background-size: cover;
+	background: darken(@grey-lighter, 65%) url(../img/minimal02-1.png) center fixed;
 }
 
 .cnt {
 	padding: @base-margin;
 	background-color: fade(@black, 38%);
 	margin: 0 4.86111%;
-
+	
 }
 
 .header {
@@ -63,11 +62,27 @@ body {
 			display: inline-block;
 			margin-right: 0;
 			.col(2);
-			border: 10px solid @grey-darker;
-			box-shadow: 0 0 15px 5px @black;
+			// border: 8px solid @grey-darker;
+			// box-shadow: 0 0 15px 5px @black;
+			box-shadow: 0 0 0 14px @grey inset, 0 0 0 16px fade(@black,25%);
 			font-size: 0;
 			overflow: hidden;
-			border-radius: 100%;
+			border-radius: 200%;
+			text-align: center;
+			&:after {
+
+			}
+			&:before {
+				
+			}
+
+			img {
+				border-radius: 100%;
+				border: 2px solid @grey-lighter;
+				width: 94%;
+				height: 94%;
+				margin: 2%;
+			}
 		}
 	}
 

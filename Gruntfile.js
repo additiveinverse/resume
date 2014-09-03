@@ -2,9 +2,10 @@
 module.exports = function(grunt) {
 	var name    = '<%= pkg.name %>-v<%= pkg.version%>',
 			manifest = { '<%= prod.CSS %>layout.min.css': [  '<%= app.LESS %>normalize.less', '<%= app.LESS %>base-*.less'],
-    							 '<%= prod.CSS %>global.css': '<%= app.LESS %>global.less'};
+									 '<%= prod.CSS %>global.css': '<%= app.LESS %>global.less'};
 
-	grunt.initConfig({
+	grunt.initConfig(
+	{
 		pkg: grunt.file.readJSON('package.json'),
 		app: {
 			root: 'app/',
@@ -67,10 +68,23 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		htmlmin: {
+			dist: {
+				options: {
+					removeComments: true,
+					removeAttributeQuotes: true,
+					useShortDocType: true,
+					collapseWhitespace: true
+				},
+				files: {
+					'<%= prod.root %>index.html': '<%= prod.root %>index.html'
+				}
+			}
+		},
 		imagemin: {
 			dynamic: {
 				options: {
-					optimizationLevel: 5,
+					optimizationLevel: 2,
 					pngquant: true
 				},
 				files: [{
@@ -144,5 +158,5 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', [ 'connect', 'watch' ]);
 
 	// Deploy
-	grunt.registerTask('deploy', [ 'jade', 'less:production', 'copy', 'imagemin' ]);
+	grunt.registerTask('deploy', [ 'jade', 'htmlmin', 'less:production', 'copy', 'imagemin' ]);
 };

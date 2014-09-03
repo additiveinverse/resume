@@ -20,8 +20,7 @@
   position: relative;
 }
 body {
-  background: #4a4230 url(../img/paper-grunge.png) center fixed no-repeat;
-  background-size: cover;
+  background: #4a4230 url(../img/minimal02-1.png) center fixed;
 }
 .cnt,
 .header,
@@ -66,11 +65,18 @@ body {
   display: inline-block;
   margin-right: 0;
   width: 15.27777778%;
-  border: 10px solid #454549;
-  box-shadow: 0 0 15px 5px #000000;
+  box-shadow: 0 0 0 14px #5e5e63 inset, 0 0 0 16px rgba(0, 0, 0, 0.25);
   font-size: 0;
   overflow: hidden;
+  border-radius: 200%;
+  text-align: center;
+}
+.mission-quote-pic img {
   border-radius: 100%;
+  border: 2px solid #e9e5dd;
+  width: 94%;
+  height: 94%;
+  margin: 2%;
 }
 .posts-ttl {
   color: #ffffff;
