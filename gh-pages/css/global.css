@@ -1,16 +1,3 @@
-.ico_base,
-.ico:before,
-.ico:after {
-  position: relative;
-  line-height: 1;
-  font-family: 'typicons';
-  font-style: normal;
-  font-weight: normal;
-  speak: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-}
 .grid-column {
   display: inline;
   float: left;
@@ -20,7 +7,7 @@
   position: relative;
 }
 body {
-  background: #4a4230 url(../img/minimal02-1.png) center fixed;
+  background: #4e575e url(../img/minimal02-1.png) center fixed;
 }
 .cnt,
 .header,
@@ -28,91 +15,133 @@ body {
   padding: 1.5em;
   background-color: rgba(0, 0, 0, 0.38);
   margin: 0 4.86111%;
+  border-left: 16px solid rgba(0, 0, 0, 0.25);
+  border-right: 16px solid rgba(0, 0, 0, 0.25);
+}
+.flare,
+.header-pic:after,
+.header-pic:before {
+  content: "";
+  display: block;
+  border: 16px solid;
+  position: absolute;
+  top: 42%;
+  z-index: 3;
 }
 .header {
   position: relative;
 }
-.header-info-ttl {
-  display: inline-block;
+.header-ttl {
+  color: #4e575e;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
 }
-.header-info-contact-lst {
+.header-pic {
+  margin-left: 1%;
+  float: left;
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 1px #ffffff inset, 0 0 0 8px #a5652d, 0 0 0 16px rgba(0, 0, 0, 0.25);
+  font-size: 0;
+  border-radius: 200%;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  text-align: center;
+}
+.header-pic:after {
+  border-color: #a5652d transparent #a5652d #a5652d;
+}
+.header-pic:before {
+  border-color: #a5652d #a5652d #a5652d transparent;
+  right: 0;
+}
+.header-pic .img {
+  -webkit-transform: rotate(-8deg);
+  -ms-transform: rotate(-8deg);
+  transform: rotate(-8deg);
+  -webkit-transform-origin: center;
+  -moz-transform-origin: center;
+  -ms-transform-origin: center;
+  transform-origin: center;
+  border-radius: 100%;
+  width: 96%;
+  height: auto;
+  margin: 2%;
+  z-index: 0;
+}
+.header-contact-lst {
+  display: inline-block;
   padding: 0;
   margin: 0;
 }
-.header-info-contact-itm {
+.header-contact-itm {
+  display: inline;
+}
+.header-contact-lnk {
+  text-transform: capitalize;
+  padding: 0.375em 0.75em;
   display: inline-block;
-  padding: 0 0.75em;
+}
+.header-contact-lnk:hover {
+  background-color: rgba(0, 0, 0, 0.75);
 }
 .mission-quote {
   text-shadow: 1px 1px 0 #000000;
   position: relative;
-  padding: 0;
   vertical-align: top;
   display: inline-block;
 }
+.mission-quote-skills,
+.mission-quote-philosophy {
+  margin-bottom: 0;
+  background-color: rgba(165, 101, 45, 0.2);
+  padding: 1.5em;
+}
 .mission-quote-skills {
-  width: 23.61111111%;
+  width: 31.94444444%;
+  margin-right: 0;
+  margin-left: 0;
 }
 .mission-quote-philosophy {
-  width: 48.61111111%;
+  margin-left: 0;
+  width: 65.27777778%;
 }
 .mission-quote-ethics {
-  background-color: #000000;
-  padding: 1.5em;
-  margin: 1.5em 0;
-}
-.mission-quote-pic {
-  display: inline-block;
-  margin-right: 0;
-  width: 15.27777778%;
-  box-shadow: 0 0 0 14px #5e5e63 inset, 0 0 0 16px rgba(0, 0, 0, 0.25);
-  font-size: 0;
-  overflow: hidden;
-  border-radius: 200%;
-  text-align: center;
-}
-.mission-quote-pic img {
-  border-radius: 100%;
-  border: 2px solid #e9e5dd;
-  width: 94%;
-  height: 94%;
-  margin: 2%;
+  width: 77.77777778%;
+  margin-left: 0;
 }
 .posts-ttl {
-  color: #ffffff;
-  font-size: 2rem;
-  font-size: 20px;
-  line-height: 1.2;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+  color: rgba(231, 235, 206, 0.25);
   text-transform: uppercase;
 }
-.posts-label-nfo {
-  text-transform: uppercase;
-  color: #b49d9d;
+.post {
+  padding: 1.5em 0;
 }
-.posts-label-nfo-position {
-  left: 67.36111111%;
-  text-align: right;
+.post-header {
+  display: inline-block;
+  vertical-align: top;
+  width: 31.94444444%;
 }
 .post-header-role-lst {
-  width: 48.61111111%;
-  display: inline-block;
   padding-left: 0;
 }
 .post-header-role-position {
-  font-size: 2.6rem;
-  font-size: 26px;
-  line-height: 0.92307692;
-  color: #a63f00;
+  color: #a5652d;
 }
-.post-header-related-lst {
-  width: 48.61111111%;
-  text-align: right;
+.post-header-role-duration {
+  color: #808080;
+}
+.post-description {
   display: inline-block;
-  vertical-align: text-bottom;
-  margin: 0;
+  vertical-align: top;
+  width: 65.27777778%;
+}
+.post-related-lst {
+  margin: 0.75em;
+  margin-left: 0;
   padding: 0;
 }
-.post-header-related-itm {
-  padding: 0 0 0 1.5em;
+.post-related-itm {
   display: inline;
+  padding-right: 1.5em;
 }

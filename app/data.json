@@ -9,7 +9,7 @@
 			},
 			"location": "King of Prussia, PA"
 		},
-		"mission": "I am a UI developer / designer with experience leading enterprise development teams in a wide variety of technology initiatives. My personal mission is to make the internet a much nicer place to look at inside and out. I have a solid understanding of user-centred design and pragmatic coding practices. I have a soft spot for team building, mentoring, building better codebases and even better developers.",
+		"mission": "I am a UI developer / designer with experience leading enterprise development teams in a wide variety of technology initiatives. My personal mission is to make the internet a much nicer place to look at inside and out. I have a solid understanding of user-centered application design and pragmatic coding practices. I have a soft spot for team building, mentoring, refactoring large codebases and UI architecture.",
 		"skills": "Usability, HTML5, CSS3, Jquery, front end performance tuning and optimization, using the least amount of markup to get the job done before the deadline. Also, I like tools (Gruntjs, Bower, Powershell, Sublime text, Node, Wordpress, Drupal just to name a few).",
 		"quote": "I having been building things I think are cool my entire life. Sometimes that is a Lego city whose only inhabitants are coffee cups. Sometimes it's painting with a variety of mediums on canvas and papers of all sizes. Sometimes it's making labels and marketing materials for my friends craft brew start up. There are times even when its spending hours and days on end making music with synthesizers. Most of the time, at least for the last several years its been designing and implementing UI's. If i could stop. I would. It's kind of a problem. Ok. its not REALLY a problem. And if I stop it will be when I'm dead.",
 		"timeline": [
@@ -17,7 +17,7 @@
 				"position" : "Lead UI Engineer",
 				"start" : "August 2010",
 				"end" : "Present",
-				"projects" : [ "ralphlauren.co.uk",  "timberland.com" ],
+				"projects" : [ "ralphlauren.co.uk",  "timberland.com", "petsmart.com" ],
 				"description" : "I help implement semantic, performance focused HTML/CSS enhancements for Radio Shack, GNC, Adidas, Ralph Lauren, Timberland, and PetSmart. I have been involved in Interviewing, mentoring and training new developers in web standards, modular CSS approaches and emerging browser technologies. I also led an internal development tools team utilizing a variety of technologies such as HTML5, CSS3, Javascript, LESS, Gruntjs, Angularjs, Jstl, CakePHP."
 			},
 			{	"company" : "Additive Inverse",	

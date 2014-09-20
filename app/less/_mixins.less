@@ -2,24 +2,28 @@
 
 .box-sizing ( @sizing: border-box ) {
 	-webkit-box-sizing: @sizing;
-	   -moz-box-sizing: @sizing;
+		 -moz-box-sizing: @sizing;
 			box-sizing: @sizing;
 }
 
 .background-origin( @origin ) {
 	-webkit-origin-size: @origin;
-	   -moz-origin-size: @origin;
-	   		origin-size: @origin;
+		 -moz-origin-size: @origin;
+				origin-size: @origin;
 }
 
 .background-size( @size ) {
 	-webkit-background-size: @size;
-	   -moz-background-size: @size;
+		 -moz-background-size: @size;
 			background-size: @size;
 }
 
 .background-clip( @type: padding-box ) {
 	background-clip: @arguments;
+}
+
+.background-color( @color: @black, @opacity: 100 ){
+	background-color: fadeout( @color, unit(@opacity,%) );
 }
 
 .font-size( @font-size: @base-type-size, @offset: 1 ) {
@@ -35,104 +39,57 @@
 }
 
 //////////////////////////// Helper Class
-.ico_base {
-	position: relative;
-	line-height: 1;
-	font-family: @font-icon;
-	font-style: normal;
-	font-weight: normal;
-	speak: none;
-	text-rendering: optimizeLegibility;
-	-webkit-font-smoothing: antialiased;
-			font-smoothing: antialiased;
-}
 
-.ico {
-	&:before,
-	&:after {
-		&:extend( .ico_base );
-	}
-}
-
-//////////////////////////// Let's go ahead and set the base icon styles
-._ico( @_ico, @font-size: 14 ) {
-	&:extend( .ico_base );
-	.font-size( @font-size );
-	._inject( @_ico );
-}
-
-//////////////////////////// Let's make some icons
-// 	Here's where the magic happens
-.icon( @place, @_ico, @fs: 14 ) when ( @place = "pre" ) {
-	&:before {
-		margin-right: 0.25em;
-		._ico( @_ico, @fs );
-	}
-}
-
-.icon( @place, @_ico, @fs ) when ( @place = "app" ) {
-	&:after {
-		// margin-left: 0.25em;
-		._ico( @_ico, @fs );
-	}
-}
 
 // @note: these all do nothing but switch the direction.
 // @note: offset is based on border @width sent by .arrow()
-.arrow_pointing( up, @-color, @offset ) {
-	margin-bottom: @offset / 2;
+.arrow_pointing( @direction, @-color ) when ( @direction = up ){
 	border-color: transparent transparent @-color transparent;
 }
 
-.arrow_pointing( down, @-color, @offset ) {
-	margin-top: @offset / 2;
+.arrow_pointing( @direction, @-color ) when ( @direction = down ){
 	border-color: @-color transparent transparent transparent;
 }
 
-.arrow_pointing( left, @-color, @offset ) {
-	margin-right: @offset / 2;
+.arrow_pointing( @direction, @-color ) when ( @direction = left ){
 	border-color: transparent transparent transparent @-color;
 }
 
-.arrow_pointing( right, @-color, @offset ) {
-	margin-left: @offset / 2;
+.arrow_pointing( @direction, @-color ) when ( @direction = right ){
 	border-color: transparent @-color transparent transparent;
 }
 
 .arrow( @_, @width: 5px, @-color: @border-color ) {
-	&:after {
-		position: relative;
-		border: @width solid;
-		._inject();
-		.arrow_pointing( @_, @-color, @width );
-	}
+	.border(@width, 'solid', @-color);
+	._inject;
+	.arrow_pointing( @_, @-color );
 }
 
 // Border helpers
-.border ( @width: 1px, @style: solid, @color ) {
-	border: @arguments;
-}
+// .border ( ... ) {
+// 	border: @arguments;
+// }
 
-.bt ( @width: 1px, @style: solid, @color: @border-color ) {
-	border-top: @arguments
-}
+// .border (@side, @width: 1px, @style: solid, @color: @border-color ) {
+// 	border-@{side}: @width @style @color;
+// }
 
-.br ( @width: 1px, @style: solid, @color: @border-color ) {
-	border-right: @arguments
-}
+// .bt ( @width: 1px, @style: solid, @color: @border-color ) {
+// 	.border(top)
+// }
 
-.bb ( @width: 1px, @style: solid, @color: @border-color ) {
-	border-bottom: @arguments
-}
+// .bb ( @width: 1px, @style: solid, @color: @border-color ) {
+// 	border-bottom: @arguments
+// }
 
-.bl ( @width: 1px, @style: solid, @color: @border-color ) {
-	border-left: @arguments
-}
+// .bl ( @width: 1px, @style: solid, @color: @border-color ) {
+// 	border-left: @arguments
+// }
 
 // box shadows
-.shadow( @x-axis: 0, @y-axis: 1px, @blur: 2px, @color: #000, @alpha: 0.1 ) {
-	box-shadow: @x-axis @y-axis @blur fade( @color, @alpha );
-}
+// .shadow( @x-axis: 0, @y-axis: 1px, @blur: 2px, @offset, @color: #000, @alpha: 0.1 ) {
+// 	box-shadow: @x-axis @y-axis @blur @offset fade( @color, @alpha );
+// }
 
 .gradient( @deg, @start: #EEE, @start-percent: 0%, @stop: #FFF, @stop-percent: 100% ) {
 	background-color: @start;
@@ -149,7 +106,7 @@
 
 .transform-origin(...) {
 	-webkit-transform-origin: @arguments;
-	   -moz-transform-origin: @arguments;
+		 -moz-transform-origin: @arguments;
 		-ms-transform-origin: @arguments;
 			transform-origin: @arguments;
 }

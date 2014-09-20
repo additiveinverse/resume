@@ -3,34 +3,84 @@
 @import './_grid';
 
 body {
-	background: darken(@grey-lighter, 65%) url(../img/minimal02-1.png) center fixed;
+	background: @blue-grey url(../img/minimal02-1.png) center fixed;
 }
 
 .cnt {
 	padding: @base-margin;
 	background-color: fade(@black, 38%);
 	margin: 0 4.86111%;
-	
+	border-left: @base-unit-px solid fade(@black,25%);
+	border-right: @base-unit-px solid fade(@black,25%);
+}
+
+.flare {
+	content: "";
+	display: block;
+	border: 16px solid;
+	position: absolute;
+	top: 50% - 8px;
+	z-index: 3;
 }
 
 .header {
 	position: relative;
 	&:extend(.cnt);
 
-	&-info {
-		&-ttl {
-			display: inline-block;
+	&-ttl {
+		color: @blue-grey;
+		text-shadow: -1px -1px 0 fade(@black, 50);
+	}
+
+	&-pic {
+		margin-left: 1%;
+		float: left;
+		background-color: fade(@black, 50%);
+		box-shadow: 0 0 0 1px @white inset, 0 0 0 8px @brown, 0 0 0 16px fade(@black,25%);
+		font-size: 0;
+		border-radius: 200%;
+		height: 200px;
+		width: 200px;
+		position: relative;
+		text-align: center;
+
+		&:after {
+			&:extend(.flare);
+			border-color: @brown transparent @brown @brown;
 		}
 
-		&-contact {
-			&-lst { 
-				padding: 0;
-				margin: 0;
-			}
+		&:before {
+			&:extend(.flare);				
+			border-color: @brown @brown @brown transparent;
+			right: 0;
+		}
 
-			&-itm { 
-				display: inline-block; 
-				padding: 0 @base-margin-half;
+		.img {
+			.rotate(-8deg, center);
+			border-radius: 100%;
+			width: 100% - 4px;
+			height: auto;
+			margin: 2%;
+			z-index: 0;
+		}
+	}
+
+	&-contact {
+		&-lst { 
+			display: inline-block;
+			padding: 0;
+			margin: 0;
+		}
+
+		&-itm { display: inline; }
+
+		&-lnk {
+			text-transform: capitalize;
+			padding: @base-margin-half / 2  @base-margin-half;
+			display: inline-block; 
+
+			&:hover { 
+				background-color: fadeout(@black, 25%);
 			}
 		}
 	}
@@ -40,109 +90,78 @@ body {
 	&-quote {
 		text-shadow: 1px 1px 0 @black;
 		position: relative;
-		padding: 0;
 		vertical-align: top;
 		display: inline-block;
 
+		&-skills,
+		&-philosophy {
+			margin-bottom: 0;
+			.background-color(@brown,80);
+			padding: @base-margin;
+		}
+
 		&-skills {
-			.col(3);
+			.col(4);
+			margin-right: 0;
+			margin-left: 0;
 		}
 
 		&-philosophy {
-			.col(6);
+			margin-left: 0;
+			.col(8);
 		}
 
 		&-ethics {
-			background-color: @black;
-			padding: @base-margin;
-			margin: @base-margin 0;
-		}
-
-		&-pic {
-			display: inline-block;
-			margin-right: 0;
-			.col(2);
-			// border: 8px solid @grey-darker;
-			// box-shadow: 0 0 15px 5px @black;
-			box-shadow: 0 0 0 14px @grey inset, 0 0 0 16px fade(@black,25%);
-			font-size: 0;
-			overflow: hidden;
-			border-radius: 200%;
-			text-align: center;
-			&:after {
-
-			}
-			&:before {
-				
-			}
-
-			img {
-				border-radius: 100%;
-				border: 2px solid @grey-lighter;
-				width: 94%;
-				height: 94%;
-				margin: 2%;
-			}
+			.col(9.5);
+			margin-left: 0;
 		}
 	}
-
 }
 
 .posts {
 	&:extend(.cnt);
-
 	&-ttl {
-		color: @white;
-		.font-size(@base-type-h5);
+		text-shadow: -1px -1px 0 fade(@black, 50);
+		color: fade(@eggshell, 25);
 		text-transform: uppercase;
-	}
-
-	&-label-nfo {
-		text-transform: uppercase;
-		color: @red-desat;
-
-		&-company {}
-		&-position {
-			.push(8);
-			text-align: right;
-		}
-		&-projects {}
 	}
 }
 
 .post {
+	padding: @base-margin 0;
+
 	&-header {
+		display: inline-block;
+		vertical-align: top;
+		.col(4);
+
 		&-ttl {
 			&-company {}
 		}
 
 		&-role {
-			&-lst { 
-				.col(6);
-				display: inline-block;
-				padding-left: 0;
-			}
-
-			&-position { 
-				.font-size(@base-type-h4);
-				color: darken(@orange, 10%);
-			}
-			&-duration {}
-		}
-
-		&-related {
-			&-lst {
-				.col(6);
-				text-align: right;
-				display: inline-block;
-				vertical-align: text-bottom;
-				margin: 0;
-				padding: 0;
-			}
-			&-itm { 
-				padding: 0 0 0 @base-margin;
-				display: inline;
-			}
+			&-lst { padding-left: 0; }
+			&-position { color: @brown; }
+			&-duration { color: @grey-med; }
 		}
 	}	
+
+	&-description {
+		display: inline-block;
+		vertical-align: top;
+		.col(8);
+	}
+
+	&-related {
+		&-lst {
+			margin: @base-margin-half;
+			margin-left: 0;
+			padding: 0;
+		}
+
+		&-itm { 
+			display: inline;
+			padding-right: @base-margin;
+		}
+	}
 }

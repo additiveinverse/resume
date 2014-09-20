@@ -16,29 +16,23 @@ html( lang='en' )
 
 	body
 		header.header
+			figure.header-pic 
+				img(src="../img/me.jpg").img.header-pic-img
+
 			h1.ttl.header-ttl #{resume.user.name}
 
-			.header-info
-				ul.lst.header-info-contact-lst
-					each link, i in resume.user.links
-						li.itm.header-info-contact-itm
-							a(href="#{link}").lnk.header-info-contact-lnk #{i}
+			ul.lst.header-contact-lst
+				each link, i in resume.user.links
+					li.itm.header-contact-itm
+						a(href="#{link}").lnk.header-contact-lnk #{i}
 
-				aside.mission
-					blockquote.mission-quote.mission-quote-ethics #{resume.mission}
-					figure.mission-quote-pic 
-						img(src="../img/me.jpg").img
-					blockquote.mission-quote.mission-quote-philosophy #{resume.quote}
-							
-					blockquote.mission-quote.mission-quote-skills #{resume.skills}
+			aside.mission
+				blockquote.mission-quote.mission-quote-ethics #{resume.mission}
+				blockquote.mission-quote.mission-quote-philosophy #{resume.quote}
+				blockquote.mission-quote.mission-quote-skills #{resume.skills}
 
 		main.posts
 			h2.ttl.posts-ttl Work History
-
-			//- .posts-label
-			//- 	span.nfo.posts-label-nfo.posts-label-info-company Company
-			//- 	span.nfo.posts-label-nfo.posts-label-nfo-position Position
-			//- 	span.nfo.posts-label-nfo.posts-label-nfo-related Related Projects
 
 			each role, i in resume.timeline
 				article.post
@@ -46,13 +40,15 @@ html( lang='en' )
 						h3.ttl.post-header-ttl-company #{role.company}
 
 						ul.lst.post-header-role-lst
-							li.itm.post-header-role-lst-itm.post-header-role-position( itemprop="jobTitle" ) #{role.position}
+							li.itm.post-header-role-lst-itm.post-header-role-position( itemprop="jobTitle" ) 
+								h4 #{role.position}
 							li.itm.post-header-role-lst-itm.post-header-role-duration #{role.start} - #{role.end}
 						
-						ul.lst.post-header-related-lst
-							each project in role.projects
-								li.itm.post-header-related-itm
-									a.lnk.post-header-related-lnk(itemprop="url", href="http://#{ project }") #{ project }
+					section.post-description
+						p #{role.description}
 
-					section.post-description	#{role.description}
-				
+						h5.ttl.post-related-lst project work:
+						ul.lst.post-related-lst
+							each project in role.projects
+								li.itm.post-related-itm
+									a.lnk.post-related-lnk(itemprop="url", href="http://#{ project }") #{ project }

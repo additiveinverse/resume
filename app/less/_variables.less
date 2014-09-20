@@ -1,19 +1,25 @@
 // //////////////////////// Greyscale
 @black: 										rgb( 0, 0, 0 );
-@grey-darker:								darken( @grey, 10% );
-@grey-dark:									darken( @grey, 25% );
-@grey:											rgb( 94, 94, 99 );
-@grey-light:								lighten( @grey, 75% );
-@grey-lighter: 							rgb(233,229,221);
-@white: 										rgb( 255, 255, 255 );
+
+@grey-dark: 								lighten(@black, 10%);
+@grey-med:									lighten(@black, 50%);
+@grey-light: 								lighten(@black, 75%);
+
+@white: 										rgb(255,255,255);
 
 // //////////////////////// Branding
-@red:												rgb(211,45,49);
-@red-desat:									rgb(180,157,157);
+@eggshell:									rgb(231,235,206);
 
-@orange:										rgb(217,82,0);
+@red:												rgb(206,0,0);
+@red-desat:									desaturate(@red, 25%);
 
-@teal: 											rgb(0,156,164);
+@brown:											rgb(165,101,45);
+@brown-med:									lighten(@brown, 25%);
+@brown-light:								lighten(@brown, 50%);
+
+@blue-grey:									rgb(78,87,94);
+@blue-grey-med:							lighten(@blue-grey, 50%);
+@blue-grey-light:						lighten(@blue-grey, 70%);
 
 @font-sans-serif: 					'Roboto', sans-serif;
 @font-serif:								serif, cursive;
@@ -24,16 +30,19 @@
 // ------------------------ Typography
 @base-type:        					@font-sans-serif;
 @base-type-size:   					16;
-@base-type-color: 					@white;
+@base-type-color: 					@eggshell;
+
+@base-unit-px:							unit(@base-type-size, px);
+@base-unit-rem:							unit(@base-type-size, rem);
 
 @base-type-heading:					@font-heading;
-@base-type-heading-color:   @orange;
+@base-type-heading-color:   @brown;
 
 @base-line-height: 					1.5;
 @base-line-multiplier:			@base-type-size * @base-line-height; // 24
 
-@base-link:									@teal;
-@base-link-hover:	 					@teal;
+@base-link:									@red;
+@base-link-hover:	 					@red-desat;
 @base-input-focus:					darken( @base-link, 25% );
 
 // ------------------------ Typography - headings
@@ -52,12 +61,12 @@
 
 // ------------------------ Forms - Messaging
 @error: 										@red;
-@alert: 										@orange;
-@note:											@teal;
+@alert: 										@red-desat;
+@note:											@grey-light;
 
 // ------------------------ Forms - buttons
 @btn-primary: 							@black;
-@btn-secondary:	 						@grey;
+@btn-secondary:	 						@grey-med;
 
 // ------------------------ Forms - labels
 @label-width: 							30%;
@@ -67,21 +76,21 @@
 // ------------------------ Forms - inputs
 @input-width:								calc( ~"100% - @label-total" );
 @input-bg:									@white;
-@input-bg-disabled: 				@grey-lighter;
+@input-bg-disabled: 				@grey-light;
 
-@input-color:								@grey;
-@input-border:							@grey;
+@input-color:								@grey-med;
+@input-border:							@grey-med;
 @input-focus:								darken( @input-color, 50% );
 @input-height-base:					( @base-line-height + ( @base-margin-half * 2 ) + 2 );
 
 @legend-color:							@grey-dark;
-@legend-border-color:				@grey;
+@legend-border-color:				@grey-med;
 
 @btn-type-color:						@white;
 @btn-pad:										@base-margin @base-margin-half;
 @btn-bg:										@btn-primary;
 
 // ------------------------ icons
-@icon-color: 								@grey;
+@icon-color: 								@grey-med;
 
 // @import './_typicons';
