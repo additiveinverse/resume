@@ -9,6 +9,17 @@
 body {
   background: #4e575e url(../img/minimal02-1.png) center fixed;
 }
+.ul-reset {
+  margin: 0;
+  padding: 0;
+}
+.anti-float,
+.mission-quote,
+.post-header,
+.post-description {
+  display: inline-block;
+  vertical-align: top;
+}
 .cnt,
 .header,
 .posts {
@@ -36,8 +47,6 @@ body {
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
 }
 .header-pic {
-  margin-left: 1%;
-  float: left;
   background-color: rgba(0, 0, 0, 0.5);
   box-shadow: 0 0 0 1px #ffffff inset, 0 0 0 8px #a5652d, 0 0 0 16px rgba(0, 0, 0, 0.25);
   font-size: 0;
@@ -70,8 +79,8 @@ body {
 }
 .header-contact-lst {
   display: inline-block;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 .header-contact-itm {
   display: inline;
@@ -87,26 +96,17 @@ body {
 .mission-quote {
   text-shadow: 1px 1px 0 #000000;
   position: relative;
-  vertical-align: top;
-  display: inline-block;
 }
 .mission-quote-skills,
 .mission-quote-philosophy {
   margin-bottom: 0;
-  background-color: rgba(165, 101, 45, 0.2);
-  padding: 1.5em;
 }
 .mission-quote-skills {
-  width: 31.94444444%;
   margin-right: 0;
   margin-left: 0;
 }
-.mission-quote-philosophy {
-  margin-left: 0;
-  width: 65.27777778%;
-}
+.mission-quote-philosophy,
 .mission-quote-ethics {
-  width: 77.77777778%;
   margin-left: 0;
 }
 .posts-ttl {
@@ -117,11 +117,6 @@ body {
 .post {
   padding: 1.5em 0;
 }
-.post-header {
-  display: inline-block;
-  vertical-align: top;
-  width: 31.94444444%;
-}
 .post-header-role-lst {
   padding-left: 0;
 }
@@ -131,11 +126,6 @@ body {
 .post-header-role-duration {
   color: #808080;
 }
-.post-description {
-  display: inline-block;
-  vertical-align: top;
-  width: 65.27777778%;
-}
 .post-related-lst {
   margin: 0.75em;
   margin-left: 0;
@@ -144,4 +134,66 @@ body {
 .post-related-itm {
   display: inline;
   padding-right: 1.5em;
+}
+@media only screen and (min-width: 320px) {
+  .header-pic {
+    margin: auto;
+    float: none;
+  }
+  .header-ttl {
+    text-align: center;
+  }
+  .header-contact-lst {
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+  }
+  .mission-quote {
+    width: 100%;
+  }
+  .mission-quote-ethics {
+    margin-bottom: 0;
+  }
+  .mission-quote-skills,
+  .mission-quote-philosophy {
+    padding: 1.5em;
+  }
+  .post-header,
+  .post-description {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .header-pic {
+    margin-left: 1%;
+    float: left;
+  }
+  .header-ttl {
+    text-align: left;
+  }
+  .header-contact-lst {
+    text-align: left;
+    width: auto;
+  }
+  .mission-quote-skills,
+  .mission-quote-philosophy {
+    background-color: rgba(165, 101, 45, 0.2);
+  }
+  .post-header {
+    width: 31.94444444%;
+  }
+  .post-description {
+    width: 65.27777778%;
+  }
+}
+@media only screen and (min-width: 992px) {
+  .mission-quote-skills {
+    width: 31.94444444%;
+  }
+  .mission-quote-philosophy {
+    width: 65.27777778%;
+  }
+  .mission-quote-ethics {
+    width: 77.77777778%;
+  }
 }

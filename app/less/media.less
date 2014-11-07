@@ -1,0 +1,123 @@
+// 320px
+@media only screen and ( min-width: 320px ) {
+	.header {
+		&-pic {
+			margin: auto;
+			float: none;
+		}
+
+		&-ttl {
+			text-align: center;
+		}
+
+		&-contact {
+			&-lst { 
+				margin: 0 auto;
+				text-align: center;
+				width: 100%;
+			}
+		}
+	}
+
+	.mission {
+		&-quote {
+			width: 100%;
+
+			&-ethics {
+				margin-bottom: 0;
+			}
+	
+			&-skills,
+			&-philosophy {
+				// .background-color(@brown,80);
+				padding: @base-margin;				
+			}
+		}
+	}
+
+	.post {
+		&-header,
+		&-description {
+			width: 100%;
+		}	
+	}
+}
+
+// 480px
+@media only screen and ( min-width: 480px ) {
+
+}
+
+// 640px
+@media only screen and ( min-width: 640px ) {
+
+}
+
+// 768px
+@media only screen and ( min-width: 768px ) {
+	.header {
+		&-pic {
+			margin-left: 1%;
+			float: left;
+		}
+
+		&-ttl {
+			text-align: left;
+		}
+
+		&-contact {
+			&-lst { 
+				text-align: left;
+				width: auto;
+			}
+		}
+	}	
+	.mission {
+		&-quote {
+			&-skills,
+			&-philosophy {
+				.background-color(@brown,80);
+			}
+		}
+	}
+
+	.post {
+		&-header {
+			.col(4);
+		}	
+
+		&-description {
+			.col(8);
+		}
+	}
+
+}
+
+// 980px
+@media only screen and ( min-width: 992px ) {
+	.mission {
+		&-quote {
+			&-skills {
+				.col(4);
+			}
+
+			&-philosophy {
+				.col(8);
+			}
+
+			&-ethics {
+				.col(9.5);
+			}
+		}
+	}
+}
+
+// 1024px
+@media only screen and ( min-width: 1024px ) {
+
+}
+
+// 1280px
+@media only screen and ( min-width: 1280px ) {
+
+}

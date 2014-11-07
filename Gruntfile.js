@@ -4,8 +4,7 @@ module.exports = function(grunt) {
 			manifest = { '<%= prod.CSS %>layout.min.css': [  '<%= app.LESS %>normalize.less', '<%= app.LESS %>base-*.less'],
 									 '<%= prod.CSS %>global.css': '<%= app.LESS %>global.less'};
 
-	grunt.initConfig(
-	{
+	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		app: {
 			root: 'app/',
@@ -133,6 +132,42 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		bump: {
+			options: {
+				files: ['package.json', 'bower.json'],
+				updateConfigs: [],
+				commit: true,
+				commitMessage: 'Release v%VERSION%',
+				commitFiles: ['package.json', 'bower.json'],
+				createTag: true,
+				tagName: '%VERSION%abv',
+				tagMessage: '%VERSION%abv',
+				push: true,
+				pushTo: 'upstream',
+				gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d',
+				globalReplace: false
+			}
+		},
+		buildcontrol: {
+			options: {
+				dir: 'build',
+				commit: true,
+				push: true,
+				message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+			},
+			pages: {
+				options: {
+					remote: 'git@github.com:example_user/example_webapp.git',
+					branch: 'gh-pages'
+				}
+			},
+			local: {
+				options: {
+					remote: '../',
+					branch: 'build'
+				}
+			}
+		},		
 		watch: {
 			files: [
 				'<%= prod.root %>**/*',
@@ -157,6 +192,9 @@ module.exports = function(grunt) {
 	// Default
 	grunt.registerTask('default', [ 'connect', 'watch' ]);
 
-	// Deploy
-	grunt.registerTask('deploy', [ 'jade', 'htmlmin', 'less:production', 'copy', 'imagemin' ]);
+	// build
+	grunt.registerTask('build', [ 'jade', 'htmlmin', 'less:production', 'copy', 'imagemin' ]);
+
+	// deploy
+	grunt.registerTask('deply', [ 'build', 'bump:minor', 'build-control' ]);	
 };
