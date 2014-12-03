@@ -162,4 +162,157 @@ body {
 	}
 }
 
-@import './media';
+// 320px
+@media only screen and ( min-width: 320px ) {
+	.header {
+		&-pic {
+			margin: 0 auto (@base-margin-percent * 2) auto;
+		}
+
+		&-ttl {
+			line-height: 1;
+			text-align: center;
+			margin-bottom: @base-margin-percent * 4;
+		}
+
+		&-contact {
+			&-lst { 
+				margin: 0 auto;
+				text-align: center;
+				width: 100%;
+			}
+		}
+	}
+
+	.mission {
+		&-quote {
+			width: 100%;
+			padding: 0;
+
+			&-ethics {
+				margin-bottom: 0;
+			}
+	
+			&-skills,
+			&-philosophy {
+				// .background-color(@brown,80);
+				padding: 0;				
+			}
+		}
+	}
+
+	.post {
+		&-header,
+		&-description {
+			width: 100%;
+		}	
+	}
+}
+
+// 480px
+@media only screen and ( min-width: 480px ) {
+
+}
+
+// 640px
+@media only screen and ( min-width: 640px ) {
+	.header {
+		&-pic {
+			margin-bottom: unit(@base-line-height * 2, %);
+		}
+
+		&-ttl {}
+
+		&-contact {}
+	}
+}
+
+// 768px
+@media only screen and ( min-width: 768px ) {
+	.header {
+		&-pic {
+			float: left;
+			margin: auto @base-margin-percent * 2 0 @base-margin-percent; 
+		}
+
+		&-ttl {
+			text-align: left;
+			display: inline-block;
+			line-height: @base-line-height;
+			margin: auto 0 0 0.2em;
+		}
+
+		&-contact {
+			&-lst { 
+				text-align: left;
+				.col(8);
+			}
+		}
+	}	
+
+	.mission {
+		display: inline;
+
+		&-quote {
+			&-skills,
+			&-philosophy {
+				.background-color(@brown,80);
+				padding: @base-margin;   
+			}
+			
+			&-skills {
+				.col(5);
+				margin-right: 0;
+			}
+
+			&-philosophy {
+				.col(7);
+			}
+
+			&-ethics {
+				display: inline;
+				margin-left: 0.5em;
+			}
+		}
+	}
+
+	.post {
+		&-header {
+			.col(4);
+		}	
+
+		&-description {
+			.col(8);
+		}
+	}
+
+}
+
+// 980px
+@media only screen and ( min-width: 992px ) {
+	.mission {
+		&-quote {
+			&-skills {
+				.col(4);
+			}
+
+			&-philosophy {
+				.col(8);
+			}
+
+			&-ethics {
+				.col(9.5);
+			}
+		}
+	}
+}
+
+// 1024px
+@media only screen and ( min-width: 1024px ) {
+
+}
+
+// 1280px
+@media only screen and ( min-width: 1280px ) {
+
+}

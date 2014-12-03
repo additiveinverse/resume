@@ -150,7 +150,7 @@ module.exports = function(grunt) {
 		},
 		buildcontrol: {
 			options: {
-				dir: 'build',
+				dir: 'build/',
 				commit: true,
 				push: true,
 				message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
@@ -174,11 +174,11 @@ module.exports = function(grunt) {
 				'<%= app.root %>**/*',
 				'Gruntfile.js'
 			],
-			tasks: [ 'newer:less:dev', 'newer:jade' ],
+			tasks: [ 'less:dev', 'jade' ],
 			options: {
 				reload: true,
 				livereload: true,
-				spawn: true,
+				spawn: false,
 				dateFormat: function( time ) {
 					grunt.log.writeln('Hickory Dickory Dock the Mouse ran up the clock in ' + time + 'ms');
 					grunt.log.writeln('MOAR changes... bring them you must!');
