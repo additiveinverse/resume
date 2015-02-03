@@ -136,22 +136,30 @@ body {
   padding-right: 1.5em;
 }
 @media only screen and (min-width: 320px) {
+  .header {
+    text-align: center;
+  }
   .header-pic {
+    position: absolute;
+    top: 2.5%;
+    left: 17.5%;
     margin: 0 auto 3% auto;
   }
   .header-ttl {
+    font-size: 2rem;
+    margin-top: 100%;
     line-height: 1;
-    text-align: center;
     margin-bottom: 6%;
   }
   .header-contact-lst {
     margin: 0 auto;
     text-align: center;
-    width: 100%;
+    width: 98.61111111%;
   }
   .mission-quote {
     width: 100%;
     padding: 0;
+    text-align: left;
   }
   .mission-quote-ethics {
     margin-bottom: 0;
@@ -164,10 +172,38 @@ body {
   .post-description {
     width: 100%;
   }
+  .post-header-ttl-company {
+    line-height: 1;
+  }
+}
+@media only screen and (min-width: 480px) {
+  .header-pic {
+    left: 27.5%;
+  }
+  .header-ttl {
+    font-size: 3rem;
+    margin-top: 60%;
+  }
 }
 @media only screen and (min-width: 640px) {
+  .header {
+    text-align: left;
+  }
   .header-pic {
-    margin-bottom: 3%;
+    left: 0%;
+  }
+  .header-ttl {
+    margin: 0;
+  }
+  .mission-quote {
+    width: 100%;
+    padding: 0;
+    text-align: left;
+  }
+  .mission-quote-ethics {
+    width: 48.61111111%;
+    margin-left: 1.5em;
+    margin-bottom: 0;
   }
 }
 @media only screen and (min-width: 768px) {
@@ -185,8 +221,32 @@ body {
     text-align: left;
     width: 65.27777778%;
   }
+  .mission-quote-skills,
+  .mission-quote-philosophy {
+    background-color: rgba(165, 101, 45, 0.2);
+    padding: 1.5em;
+  }
+  .mission-quote-skills {
+    width: 40.27777778%;
+    margin-right: 0;
+  }
+  .mission-quote-philosophy {
+    width: 56.94444444%;
+  }
+  .mission-quote-ethics {
+    width: 73.61111111%;
+    display: inline-block;
+  }
+  .post-header {
+    width: 31.94444444%;
+  }
+  .post-description {
+    width: 65.27777778%;
+  }
+}
+@media only screen and (min-width: 992px) {
   .mission {
-    display: inline;
+    display: block;
   }
   .mission-quote-skills,
   .mission-quote-philosophy {
@@ -202,23 +262,11 @@ body {
   }
   .mission-quote-ethics {
     display: inline;
-    margin-left: 0.5em;
   }
   .post-header {
-    width: 31.94444444%;
+    width: 23.61111111%;
   }
   .post-description {
-    width: 65.27777778%;
-  }
-}
-@media only screen and (min-width: 992px) {
-  .mission-quote-skills {
-    width: 31.94444444%;
-  }
-  .mission-quote-philosophy {
-    width: 65.27777778%;
-  }
-  .mission-quote-ethics {
-    width: 77.77777778%;
+    width: 73.61111111%;
   }
 }

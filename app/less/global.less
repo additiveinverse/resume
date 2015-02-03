@@ -165,13 +165,19 @@ body {
 // 320px
 @media only screen and ( min-width: 320px ) {
 	.header {
+		text-align: center;
+
 		&-pic {
+			position: absolute;
+			top: 2.5%;
+			left: 17.5%;
 			margin: 0 auto (@base-margin-percent * 2) auto;
 		}
 
 		&-ttl {
+			font-size: 2rem;
+			margin-top: 100%;
 			line-height: 1;
-			text-align: center;
 			margin-bottom: @base-margin-percent * 4;
 		}
 
@@ -179,7 +185,7 @@ body {
 			&-lst { 
 				margin: 0 auto;
 				text-align: center;
-				width: 100%;
+				.col(12);
 			}
 		}
 	}
@@ -188,6 +194,7 @@ body {
 		&-quote {
 			width: 100%;
 			padding: 0;
+			text-align: left;
 
 			&-ethics {
 				margin-bottom: 0;
@@ -206,25 +213,63 @@ body {
 		&-description {
 			width: 100%;
 		}	
+
+		&-header {
+			&-ttl-company {
+				line-height: 1;
+			}
+		}
 	}
 }
 
 // 480px
 @media only screen and ( min-width: 480px ) {
+	.header {
+		&-pic {
+			left: 27.5%;
+		}
 
+		&-ttl {
+			font-size: 3rem;
+			margin-top: 60%;
+		}
+
+		&-contact {}
+	}
 }
 
 // 640px
 @media only screen and ( min-width: 640px ) {
 	.header {
+		text-align: left;
+
 		&-pic {
-			margin-bottom: unit(@base-line-height * 2, %);
+			left: 0%;
 		}
 
-		&-ttl {}
-
-		&-contact {}
+		&-ttl {
+			margin: 0;
+		}
 	}
+
+	.mission {
+		&-quote {
+			width: 100%;
+			padding: 0;
+			text-align: left;
+
+			&-ethics {
+				.col(6);
+				margin-left: 1.5em;
+				margin-bottom: 0;
+			}
+	
+			&-skills,
+			&-philosophy {
+			}
+		}
+	}
+
 }
 
 // 768px
@@ -251,7 +296,44 @@ body {
 	}	
 
 	.mission {
-		display: inline;
+		&-quote {
+			&-skills,
+			&-philosophy {
+				.background-color(@brown,80);
+				padding: @base-margin;   
+			}
+			
+			&-skills {
+				.col(5);
+				margin-right: 0;
+			}
+
+			&-philosophy {
+				.col(7);
+			}
+
+			&-ethics {
+				.col(9);
+				display: inline-block;
+			}
+		}
+	}
+
+	.post {
+		&-header {
+			.col(4);
+		}	
+
+		&-description {
+			.col(8);
+		}
+	}
+}
+
+// 980px
+@media only screen and ( min-width: 992px ) {
+	.mission {
+		display: block;
 
 		&-quote {
 			&-skills,
@@ -271,38 +353,16 @@ body {
 
 			&-ethics {
 				display: inline;
-				margin-left: 0.5em;
 			}
 		}
 	}
-
 	.post {
 		&-header {
-			.col(4);
+			.col(3);
 		}	
 
 		&-description {
-			.col(8);
-		}
-	}
-
-}
-
-// 980px
-@media only screen and ( min-width: 992px ) {
-	.mission {
-		&-quote {
-			&-skills {
-				.col(4);
-			}
-
-			&-philosophy {
-				.col(8);
-			}
-
-			&-ethics {
-				.col(9.5);
-			}
+			.col(9);
 		}
 	}
 }

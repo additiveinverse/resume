@@ -174,11 +174,11 @@ module.exports = function(grunt) {
 				'<%= app.root %>**/*',
 				'Gruntfile.js'
 			],
-			tasks: [ 'less:dev', 'jade' ],
+			tasks: [ 'newer:less:dev', 'newer:jade' ],
 			options: {
-				reload: true,
+				reload: false,
 				livereload: true,
-				spawn: false,
+				spawn: true,
 				dateFormat: function( time ) {
 					grunt.log.writeln('Hickory Dickory Dock the Mouse ran up the clock in ' + time + 'ms');
 					grunt.log.writeln('MOAR changes... bring them you must!');

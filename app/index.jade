@@ -13,7 +13,14 @@ html( lang='en' )
 			link( rel='stylesheet', href='css/global.css' )
 			script( src='js/jquery.min.js' )
 			script( src='js/app.js' )
+			script.
+				(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+				})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
+				ga('create', 'UA-58831899-1', 'auto');
+				ga('send', 'pageview');
 	body
 		header.header
 			figure.header-pic 
@@ -31,6 +38,8 @@ html( lang='en' )
 				blockquote.mission-quote.mission-quote-philosophy #{resume.quote}
 				blockquote.mission-quote.mission-quote-skills #{resume.skills}
 
+
+
 		main.posts
 			h2.ttl.posts-ttl Work History
 
@@ -47,7 +56,7 @@ html( lang='en' )
 					section.post-description
 						p #{role.description}
 
-						h5.ttl.post-related-lst project work:
+						h5.ttl.post-related-ttl project work:
 						ul.lst.post-related-lst
 							each project in role.projects
 								li.itm.post-related-itm
