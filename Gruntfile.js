@@ -80,20 +80,20 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		imagemin: {
-			dynamic: {
-				options: {
-					optimizationLevel: 2,
-					pngquant: true
-				},
-				files: [{
-					expand: true,
-					cwd: '<%= app.IMG.dist %>',
-					src: [ '**/*.{png,jpg,gif}' ],
-					dest: '<%= prod.IMG %>'
-				}]
-			}
-		},
+		// imagemin: {
+		// 	dynamic: {
+		// 		options: {
+		// 			optimizationLevel: 2,
+		// 			pngquant: true
+		// 		},
+		// 		files: [{
+		// 			expand: true,
+		// 			cwd: '<%= app.IMG.dist %>',
+		// 			src: [ '**/*.{png,jpg,gif}' ],
+		// 			dest: '<%= prod.IMG %>'
+		// 		}]
+		// 	}
+		// },
 		copy: {
 			less: {
 				expand: true,

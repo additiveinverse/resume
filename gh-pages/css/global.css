@@ -20,12 +20,21 @@ body {
   display: inline-block;
   vertical-align: top;
 }
+.trans,
+.header,
+.header-ttl,
+.header-pic,
+.header-contact-lnk,
+.mission {
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s;
+}
 .cnt,
 .header,
+.mission,
 .posts {
-  padding: 1.5em;
+  padding: 1.5em 1.5em 0;
   background-color: rgba(0, 0, 0, 0.38);
-  margin: 0 4.86111%;
   border-left: 16px solid rgba(0, 0, 0, 0.25);
   border-right: 16px solid rgba(0, 0, 0, 0.25);
 }
@@ -87,27 +96,14 @@ body {
 }
 .header-contact-lnk {
   text-transform: capitalize;
-  padding: 0.375em 0.75em;
+  margin: 0 1.5em 0 0;
   display: inline-block;
-}
-.header-contact-lnk:hover {
-  background-color: rgba(0, 0, 0, 0.75);
 }
 .mission-quote {
   text-shadow: 1px 1px 0 #000000;
   position: relative;
-}
-.mission-quote-skills,
-.mission-quote-philosophy {
-  margin-bottom: 0;
-}
-.mission-quote-skills {
-  margin-right: 0;
   margin-left: 0;
-}
-.mission-quote-philosophy,
-.mission-quote-ethics {
-  margin-left: 0;
+  margin-top: 0;
 }
 .posts-ttl {
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
@@ -141,28 +137,19 @@ body {
   }
   .header-pic {
     position: absolute;
-    top: 2.5%;
-    left: 17.5%;
-    margin: 0 auto 3% auto;
+    top: 10%;
+    margin: 0;
+    left: 59px;
   }
   .header-ttl {
     font-size: 2rem;
-    margin-top: 100%;
     line-height: 1;
+    margin-top: 95%;
     margin-bottom: 6%;
-  }
-  .header-contact-lst {
-    margin: 0 auto;
-    text-align: center;
-    width: 98.61111111%;
   }
   .mission-quote {
     width: 100%;
-    padding: 0;
     text-align: left;
-  }
-  .mission-quote-ethics {
-    margin-bottom: 0;
   }
   .mission-quote-skills,
   .mission-quote-philosophy {
@@ -176,9 +163,18 @@ body {
     line-height: 1;
   }
 }
+@media only screen and (min-width: 360px) {
+  .header-pic {
+    left: 79px;
+  }
+  .header-ttl {
+    font-size: 2.5rem;
+    margin-top: 75%;
+  }
+}
 @media only screen and (min-width: 480px) {
   .header-pic {
-    left: 27.5%;
+    left: 144px;
   }
   .header-ttl {
     font-size: 3rem;
@@ -190,26 +186,37 @@ body {
     text-align: left;
   }
   .header-pic {
-    left: 0%;
+    position: relative;
+    left: 0;
+    margin-top: -10%;
+    float: left;
   }
   .header-ttl {
-    margin: 0;
+    padding-left: 36.11111111%;
+    margin-top: 0;
+    margin-bottom: 3%;
+  }
+  .header-contact-lst {
+    padding-left: 4.86111111%;
   }
   .mission-quote {
-    width: 100%;
-    padding: 0;
+    margin: 0 auto 1.5% auto;
     text-align: left;
   }
   .mission-quote-ethics {
-    width: 48.61111111%;
-    margin-left: 1.5em;
-    margin-bottom: 0;
+    float: right;
+    width: 65.27777778%;
+    padding-left: 2.25694444%;
   }
 }
 @media only screen and (min-width: 768px) {
+  .header,
+  .mission,
+  .posts {
+    margin: 0 4.86111%;
+  }
   .header-pic {
-    float: left;
-    margin: auto 3% 0 1.5%;
+    margin-top: -10%;
   }
   .header-ttl {
     text-align: left;
@@ -245,6 +252,9 @@ body {
   }
 }
 @media only screen and (min-width: 992px) {
+  .header-pic {
+    margin-top: 0;
+  }
   .mission {
     display: block;
   }

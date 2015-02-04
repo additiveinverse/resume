@@ -21,24 +21,24 @@ html( lang='en' )
 
 				ga('create', 'UA-58831899-1', 'auto');
 				ga('send', 'pageview');
+
 	body
 		header.header
-			figure.header-pic 
-				img(src="../img/me.jpg").img.header-pic-img
 
 			h1.ttl.header-ttl #{resume.user.name}
+
+			figure.header-pic 
+				img(src="../img/me.jpg").img.header-pic-img
 
 			ul.lst.header-contact-lst
 				each link, i in resume.user.links
 					li.itm.header-contact-itm
 						a(href="#{link}").lnk.header-contact-lnk #{i}
 
-			aside.mission
-				blockquote.mission-quote.mission-quote-ethics #{resume.mission}
-				blockquote.mission-quote.mission-quote-philosophy #{resume.quote}
-				blockquote.mission-quote.mission-quote-skills #{resume.skills}
-
-
+		aside.mission
+			blockquote.mission-quote.mission-quote-ethics #{resume.mission}
+			blockquote.mission-quote.mission-quote-philosophy #{resume.quote}
+			blockquote.mission-quote.mission-quote-skills #{resume.skills}
 
 		main.posts
 			h2.ttl.posts-ttl Work History

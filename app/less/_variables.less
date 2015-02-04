@@ -11,6 +11,7 @@
 @eggshell:									rgb(231,235,206);
 
 @yellow:										rgb(255,189,48);
+@yellow-desat:							desaturate(@yellow, 50%);
 
 @red:												rgb(206,0,0);
 @red-desat:									desaturate(@red, 25%);
@@ -44,7 +45,7 @@
 @base-line-multiplier:			@base-type-size * @base-line-height; // 24
 
 @base-link:									@yellow;
-@base-link-hover:	 					@red-desat;
+@base-link-hover:	 					@yellow-desat;
 @base-input-focus:					darken( @base-link, 25% );
 
 // ------------------------ Typography - headings

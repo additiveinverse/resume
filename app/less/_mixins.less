@@ -65,31 +65,9 @@
 	.arrow_pointing( @_, @-color );
 }
 
-// Border helpers
-// .border ( ... ) {
-// 	border: @arguments;
-// }
-
-// .border (@side, @width: 1px, @style: solid, @color: @border-color ) {
-// 	border-@{side}: @width @style @color;
-// }
-
-// .bt ( @width: 1px, @style: solid, @color: @border-color ) {
-// 	.border(top)
-// }
-
-// .bb ( @width: 1px, @style: solid, @color: @border-color ) {
-// 	border-bottom: @arguments
-// }
-
-// .bl ( @width: 1px, @style: solid, @color: @border-color ) {
-// 	border-left: @arguments
-// }
-
-// box shadows
-// .shadow( @x-axis: 0, @y-axis: 1px, @blur: 2px, @offset, @color: #000, @alpha: 0.1 ) {
-// 	box-shadow: @x-axis @y-axis @blur @offset fade( @color, @alpha );
-// }
+.center-abs(@parent, @element) {
+	left: (@parent - @element) / 2;
+}
 
 .gradient( @deg, @start: #EEE, @start-percent: 0%, @stop: #FFF, @stop-percent: 100% ) {
 	background-color: @start;

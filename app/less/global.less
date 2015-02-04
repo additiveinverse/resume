@@ -16,10 +16,17 @@ body {
 	vertical-align: top;
 }
 
+.cnt-margin() {
+	margin+: 0 4.86111%;
+}
+
+.trans {
+	.transition( all, 0.25s, ease-in-out, 0s)
+}
+
 .cnt {
-	padding: @base-margin;
+	padding: @base-margin @base-margin 0;
 	background-color: fade(@black, 38%);
-	margin: 0 4.86111%;
 	border-left: @base-unit-px solid fade(@black,25%);
 	border-right: @base-unit-px solid fade(@black,25%);
 }
@@ -36,8 +43,10 @@ body {
 .header {
 	position: relative;
 	&:extend(.cnt);
+	&:extend(.trans);
 
 	&-ttl {
+		&:extend(.trans);
 		color: @blue-grey;
 		text-shadow: -1px -1px 0 fade(@black, 50);
 	}
@@ -51,6 +60,7 @@ body {
 		width: 200px;
 		position: relative;
 		text-align: center;
+		&:extend(.trans);
 
 		&:after {
 			&:extend(.flare);
@@ -83,38 +93,27 @@ body {
 
 		&-lnk {
 			text-transform: capitalize;
-			padding: @base-margin-half / 2  @base-margin-half;
+			margin: 0 @base-margin 0 0;
 			display: inline-block; 
+			&:extend(.trans);
 
-			&:hover { 
-				background-color: fadeout(@black, 25%);
-			}
+			// &:hover { 
+			// 	background-color: fadeout(@black, 25%);
+			// }
 		}
 	}
 }
 
 .mission {
+	&:extend(.trans);
+	&:extend(.cnt);
+
 	&-quote {
 		text-shadow: 1px 1px 0 @black;
 		position: relative;
+		margin-left: 0;
+		margin-top: 0;
 		&:extend(.anti-float);
-
-		&-skills,
-		&-philosophy {
-			margin-bottom: 0;
-			// .background-color(@brown,80);
-			// padding: @base-margin;
-		}
-
-		&-skills {
-			margin-right: 0;
-			margin-left: 0;
-		}
-
-		&-philosophy,
-		&-ethics {
-			margin-left: 0;
-		}
 	}
 }
 
@@ -162,6 +161,8 @@ body {
 	}
 }
 
+// @import './media';
+
 // 320px
 @media only screen and ( min-width: 320px ) {
 	.header {
@@ -169,37 +170,24 @@ body {
 
 		&-pic {
 			position: absolute;
-			top: 2.5%;
-			left: 17.5%;
-			margin: 0 auto (@base-margin-percent * 2) auto;
+			top: 10%;
+			margin: 0;
+			.center-abs(326px, 208px);
 		}
 
 		&-ttl {
 			font-size: 2rem;
-			margin-top: 100%;
 			line-height: 1;
+			margin-top: 95%;
 			margin-bottom: @base-margin-percent * 4;
-		}
-
-		&-contact {
-			&-lst { 
-				margin: 0 auto;
-				text-align: center;
-				.col(12);
-			}
 		}
 	}
 
 	.mission {
 		&-quote {
 			width: 100%;
-			padding: 0;
 			text-align: left;
 
-			&-ethics {
-				margin-bottom: 0;
-			}
-	
 			&-skills,
 			&-philosophy {
 				// .background-color(@brown,80);
@@ -222,19 +210,30 @@ body {
 	}
 }
 
+// 360px
+@media only screen and ( min-width: 360px ) {
+	.header {
+		&-pic {
+			.center-abs(366px, 208px);
+		}
+		&-ttl {
+			font-size: 2.5rem;
+			margin-top: 75%;
+		}
+	}
+}
+
 // 480px
 @media only screen and ( min-width: 480px ) {
 	.header {
 		&-pic {
-			left: 27.5%;
+			.center-abs(488px, 200px);
 		}
 
 		&-ttl {
 			font-size: 3rem;
 			margin-top: 60%;
 		}
-
-		&-contact {}
 	}
 }
 
@@ -244,28 +243,37 @@ body {
 		text-align: left;
 
 		&-pic {
-			left: 0%;
+			position: relative;
+			left: 0;
+			margin-top: -10%;
+			float: left;
 		}
 
 		&-ttl {
-			margin: 0;
+			.prefix(4.25);
+			margin-top: 0;
+			margin-bottom: @base-margin-percent * 2;
+		}
+
+		&-contact-lst {
+			.prefix(@base-margin-percent / 3 );
 		}
 	}
 
 	.mission {
 		&-quote {
-			width: 100%;
-			padding: 0;
+			margin: 0 auto @base-margin-percent auto;
 			text-align: left;
 
 			&-ethics {
-				.col(6);
-				margin-left: 1.5em;
-				margin-bottom: 0;
+				float: right;
+				.col(8);
+				.prefix( @base-margin-percent / 8 );
 			}
 	
 			&-skills,
 			&-philosophy {
+
 			}
 		}
 	}
@@ -274,10 +282,15 @@ body {
 
 // 768px
 @media only screen and ( min-width: 768px ) {
+	.header,
+	.mission,
+	.posts {
+		margin: 0 4.86111%;
+	}
+
 	.header {
 		&-pic {
-			float: left;
-			margin: auto @base-margin-percent * 2 0 @base-margin-percent; 
+			margin-top: -10%;
 		}
 
 		&-ttl {
@@ -332,6 +345,12 @@ body {
 
 // 980px
 @media only screen and ( min-width: 992px ) {
+	.header {
+		&-pic {
+			margin-top: 0;
+		}
+	}
+
 	.mission {
 		display: block;
 
@@ -356,6 +375,7 @@ body {
 			}
 		}
 	}
+
 	.post {
 		&-header {
 			.col(3);
