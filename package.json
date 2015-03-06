@@ -1,7 +1,7 @@
 {
   "name": "resume",
   "version": "2.0.0",
-  "description": "Resume of Richard Bailey. Doubles as a code sample, because front end dev",
+  "description": "Resume of Richard Bailey. Doubles as a code sample",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -38,6 +38,7 @@
     "matchdep": "~0.3.0",
     "grunt-jsonlint": "~1.0.4",
     "grunt-bump": "0.0.16",
-    "grunt-build-control": "~0.1.3"
+    "grunt-build-control": "~0.1.3",
+    "grunt-svgmin": "~2.0.1"
   }
 }

@@ -106,9 +106,37 @@ body {
   margin-top: 0;
 }
 .posts-ttl {
+  text-align: center;
   text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
   color: rgba(231, 235, 206, 0.25);
   text-transform: uppercase;
+}
+.posts-ttl:after,
+.posts-ttl:before {
+  content: "";
+  display: inline-block;
+  width: 23.61111111%;
+  height: 35px;
+  background: url(../img/simple_flourish.svg) no-repeat;
+  background-size: 95% 100%;
+}
+.posts-ttl:before {
+  -webkit-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  transform: scale(1, 1);
+  -webkit-transform-origin: top;
+  -moz-transform-origin: top;
+  -ms-transform-origin: top;
+  transform-origin: top;
+}
+.posts-ttl:after {
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+  -webkit-transform-origin: top;
+  -moz-transform-origin: top;
+  -ms-transform-origin: top;
+  transform-origin: top;
 }
 .post {
   padding: 1.5em 0;
@@ -187,8 +215,8 @@ body {
   }
   .header-pic {
     position: relative;
-    left: 0;
-    margin-top: -10%;
+    left: 6px;
+    margin-top: -5%;
     float: left;
   }
   .header-ttl {
@@ -216,33 +244,31 @@ body {
     margin: 0 4.86111%;
   }
   .header-pic {
-    margin-top: -10%;
+    margin-top: -5%;
   }
   .header-ttl {
-    text-align: left;
-    display: inline-block;
-    line-height: 1.5;
-    margin: auto 0 0 0.2em;
-  }
-  .header-contact-lst {
-    text-align: left;
-    width: 65.27777778%;
+    padding-left: 33.19444444%;
+    margin-top: 0;
+    margin-bottom: 3%;
   }
   .mission-quote-skills,
   .mission-quote-philosophy {
     background-color: rgba(165, 101, 45, 0.2);
     padding: 1.5em;
   }
+  .mission-quote-ethics {
+    float: none;
+    display: block;
+    width: 100%;
+    padding-left: 34.02777778%;
+  }
   .mission-quote-skills {
     width: 40.27777778%;
     margin-right: 0;
+    float: right;
   }
   .mission-quote-philosophy {
     width: 56.94444444%;
-  }
-  .mission-quote-ethics {
-    width: 73.61111111%;
-    display: inline-block;
   }
   .post-header {
     width: 31.94444444%;
