@@ -24,6 +24,7 @@
     "tests"
   ],
   "devDependencies": {
-    "normalize-less": "*"
+    "normalize-less": "*",
+    "lesshat": "~3.0.2"
   }
 }
