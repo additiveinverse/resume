@@ -1,27 +1,5 @@
 @import './_variables';
 
-.box-sizing ( @sizing: border-box ) {
-	-webkit-box-sizing: @sizing;
-		 -moz-box-sizing: @sizing;
-			box-sizing: @sizing;
-}
-
-.background-origin( @origin ) {
-	-webkit-origin-size: @origin;
-		 -moz-origin-size: @origin;
-				origin-size: @origin;
-}
-
-.background-size( @size ) {
-	-webkit-background-size: @size;
-		 -moz-background-size: @size;
-			background-size: @size;
-}
-
-.background-clip( @type: padding-box ) {
-	background-clip: @arguments;
-}
-
 .background-color( @color: @black, @opacity: 100 ){
 	background-color: fadeout( @color, unit(@opacity,%) );
 }
@@ -39,7 +17,6 @@
 }
 
 //////////////////////////// Helper Class
-
 
 // @note: these all do nothing but switch the direction.
 // @note: offset is based on border @width sent by .arrow()

@@ -1,5 +1,6 @@
 @import './_variables';
 @import './_mixins';
+@import './lesshat';
 @import './_grid';
 
 body {
@@ -25,7 +26,7 @@ body {
 }
 
 .cnt {
-	padding: @base-margin @base-margin 0;
+	padding+: 0 @base-margin 0;
 	background-color: fade(@black, 38%);
 	border-left: @base-unit-px solid fade(@black,25%);
 	border-right: @base-unit-px solid fade(@black,25%);
@@ -43,6 +44,8 @@ body {
 .header {
 	position: relative;
 	&:extend(.cnt);
+	padding-top: @base-margin;
+
 	&:extend(.trans);
 
 	&-ttl {
@@ -74,6 +77,7 @@ body {
 		}
 
 		.img {
+			.grayscale(100%);
 			.rotate(-8deg, center);
 			border-radius: 100%;
 			width: 100% - 4px;
@@ -86,15 +90,16 @@ body {
 	&-contact {
 		&-lst { 
 			display: inline-block;
-			.ul-reset;
+			margin-bottom: 0;
+
 		}
 
 		&-itm { display: inline; }
 
 		&-lnk {
 			text-transform: capitalize;
-			margin: 0 @base-margin 0 0;
 			display: inline-block; 
+			padding: 0 @base-margin / 6;
 			&:extend(.trans);
 		}
 	}
@@ -107,9 +112,8 @@ body {
 	&-quote {
 		text-shadow: 1px 1px 0 @black;
 		position: relative;
-		margin-left: 0;
-		margin-top: 0;
 		&:extend(.anti-float);
+		.hyphens(auto);
 	}
 }
 
@@ -117,11 +121,13 @@ body {
 
 .posts {
 	&:extend(.cnt);
+
 	&-ttl {
 		text-align: center;
 		text-shadow: -1px -1px 0 fade(@black, 50);
 		color: fade(@eggshell, 25);
 		text-transform: uppercase;
+
 		&:after,
 		&:before {
 			._inject();
@@ -134,6 +140,7 @@ body {
 		&:before {
 			.scale(1, 1, top);
 		}
+
 		&:after {
 			.scale(-1, 1, top);
 		}
@@ -157,8 +164,9 @@ body {
 		}
 	}	
 
-	&-description {		
+	&-description {
 		&:extend(.anti-float);
+		.hyphens(auto);		
 	}
 
 	&-related {
@@ -175,234 +183,4 @@ body {
 	}
 }
 
-// @import './media';
-
-// 320px
-@media only screen and ( min-width: 320px ) {
-	.header {
-		text-align: center;
-
-		&-pic {
-			position: absolute;
-			top: 10%;
-			margin: 0;
-			.center-abs(326px, 208px);
-		}
-
-		&-ttl {
-			font-size: 2rem;
-			line-height: 1;
-			margin-top: 95%;
-			margin-bottom: @base-margin-percent * 4;
-		}
-	}
-
-	.mission {
-		&-quote {
-			width: 100%;
-			text-align: left;
-
-			&-skills,
-			&-philosophy {
-				// .background-color(@brown,80);
-				padding: 0;				
-			}
-		}
-	}
-
-	.post {
-		&-header,
-		&-description {
-			width: 100%;
-		}	
-
-		&-header {
-			&-ttl-company {
-				line-height: 1;
-			}
-		}
-	}
-}
-
-// 360px
-@media only screen and ( min-width: 360px ) {
-	.header {
-		&-pic {
-			.center-abs(366px, 208px);
-		}
-		&-ttl {
-			font-size: 2.5rem;
-			margin-top: 75%;
-		}
-	}
-}
-
-// 480px
-@media only screen and ( min-width: 480px ) {
-	.header {
-		&-pic {
-			.center-abs(488px, 200px);
-		}
-
-		&-ttl {
-			font-size: 3rem;
-			margin-top: 60%;
-		}
-	}
-}
-
-// 640px
-@media only screen and ( min-width: 640px ) {
-	.header {
-		text-align: left;
-
-		&-pic {
-			position: relative;
-			left: 6px;
-			margin-top: -5%;
-			float: left;
-		}
-
-		&-ttl {
-			.prefix(4.25);
-			margin-top: 0;
-			margin-bottom: @base-margin-percent * 2;
-		}
-
-		&-contact-lst {
-			.prefix(@base-margin-percent / 3 );
-		}
-	}
-
-	.mission {
-		&-quote {
-			margin: 0 auto @base-margin-percent auto;
-			text-align: left;
-
-			&-ethics {
-				float: right;
-				.col(8);
-				.prefix( @base-margin-percent / 8 );
-			}
-	
-			&-skills,
-			&-philosophy {
-
-			}
-		}
-	}
-
-}
-
-// 768px
-@media only screen and ( min-width: 768px ) {
-	.header,
-	.mission,
-	.posts {
-		margin: 0 4.86111%;
-	}
-
-	.header {
-		&-pic {
-			margin-top: -5%;
-		}
-
-		&-ttl {
-			.prefix(3.9);
-			margin-top: 0;
-			margin-bottom: @base-margin-percent * 2;
-		}
-	}	
-
-	.mission {
-		&-quote {
-
-			&-skills,
-			&-philosophy {
-				.background-color(@brown,80);
-				padding: @base-margin;   
-			}
-
-			&-ethics {
-				float: none;
-				display: block;
-				width: 100%;
-				.prefix(4);
-			}
-			
-			&-skills {
-				.col(5);
-				margin-right: 0;
-				float: right;
-			}
-
-			&-philosophy {
-				.col(7);
-			}
-		}
-	}
-
-	.post {
-		&-header {
-			.col(4);
-		}	
-
-		&-description {
-			.col(8);
-		}
-	}
-}
-
-// 980px
-@media only screen and ( min-width: 992px ) {
-	.header {
-		&-pic {
-			margin-top: 0;
-		}
-	}
-
-	.mission {
-		display: block;
-
-		&-quote {
-			&-skills,
-			&-philosophy {
-				.background-color(@brown,80);
-				padding: @base-margin;   
-			}
-			
-			&-skills {
-				.col(5);
-				margin-right: 0;
-			}
-
-			&-philosophy {
-				.col(7);
-			}
-
-			&-ethics {
-				display: inline;
-			}
-		}
-	}
-
-	.post {
-		&-header {
-			.col(3);
-		}	
-
-		&-description {
-			.col(9);
-		}
-	}
-}
-
-// 1024px
-@media only screen and ( min-width: 1024px ) {
-
-}
-
-// 1280px
-@media only screen and ( min-width: 1280px ) {
-
-}
+@import 'media';

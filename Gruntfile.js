@@ -113,8 +113,8 @@ module.exports = function(grunt) {
 		copy: {
 			less: {
 				expand: true,
-				cwd: 'bower_components/',
-				src: ['/normalize-less/normalize.less'],
+				cwd: '<%= bower %>',
+				src: ['normalize-less/normalize.less', 'lesshat/build/*.less' ],
 				dest: 'app/less/',
 				flatten: true
 			},
@@ -186,11 +186,10 @@ module.exports = function(grunt) {
 		},		
 		watch: {
 			files: [
-				'<%= prod.root %>**/*',
 				'<%= app.root %>**/*',
 				'Gruntfile.js'
 			],
-			tasks: [ 'newer:less:dev', 'newer:jade' ],
+			tasks: [ 'less:dev', 'newer:jade' ],
 			options: {
 				reload: false,
 				livereload: true,

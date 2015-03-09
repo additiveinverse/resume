@@ -1,137 +1,127 @@
 // 320px
-@media only screen and ( min-width: 320px ) {
+@media ( min-width: 320px ) {
+	body {
+		.font-size(18, 1.25);
+	}
+
 	.header {
 		text-align: center;
-		.cnt-margin();
-		margin+: 0 4.86111%;
-		
-
-		&-pic {
-			position: absolute;
-			top: 10%;
-			margin: 0;
-			.center-abs(300px, 208px);
-		}
 
 		&-ttl {
-			font-size: 2rem;
-			margin-top: 100%;
-			line-height: 1;
-			margin-bottom: @base-margin-percent * 4;
+			.font-size(@base-type-h3, 1.5);
+			margin-bottom: @base-margin;
+		}
+
+		&-pic {
+			margin: 0 auto;
 		}
 
 		&-contact {
-			&-lst { 
-				margin: 0 auto;
-				text-align: center;
-				.col(12);
+			&-lst {
+				padding-left: 0;
 			}
 		}
 	}
 
 	.mission {
 		&-quote {
-			width: 100%;
-			padding: 0;
-			text-align: left;
+			margin-left: 0;
+			margin-right: 0;
 
-			&-ethics {
-				margin-bottom: 0;
-			}
-	
 			&-skills,
 			&-philosophy {
-				// .background-color(@brown,80);
+				margin-top: 0;
 				padding: 0;				
 			}
 		}
 	}
 
-	.post {
-		&-header,
-		&-description {
-			width: 100%;
-		}	
-
-		&-header {
-			&-ttl-company {
-				line-height: 1;
-			}
+	.posts {
+		&-ttl {
+			.font-size(@base-type-h5);
 		}
 	}
 }
 
 // 480px
-@media only screen and ( min-width: 480px ) {
+@media ( min-width: 480px ) {
 	.header {
-		&-pic {
-			left: 27.5%;
-		}
-
 		&-ttl {
-			font-size: 3rem;
-			margin-top: 60%;
+			.font-size(@base-type-h2, 2);
+			margin-bottom: @base-margin-half;
 		}
-
-		&-contact {}
 	}
 }
 
 // 640px
-@media only screen and ( min-width: 640px ) {
+@media ( min-width: 640px ) {
+	body {
+		.font-size(17, 1.25);
+	}
+
 	.header {
 		text-align: left;
 
-		&-pic {
-			left: 5%;
+		&-ttl {
+			margin-bottom: 0;
+			float: right;
+			.font-size(@base-type-h2);
 		}
 
-		&-ttl {
-			margin: 0;
+		&-pic {
+			position: relative;
+			left: 6px;
+			float: left;
+		}
+
+		&-contact-lst {
+			float: right;
 		}
 	}
 
 	.mission {
 		&-quote {
-			width: 100%;
-			padding: 0;
-			text-align: left;
-
 			&-ethics {
-				.col(6);
-				margin-left: 1.5em;
-				margin-bottom: 0;
+				float: right;
+				width: calc(~"100% / 1.75");
 			}
-	
-			&-skills,
-			&-philosophy {
 
+			&-philosophy {
+				float: left;
+				width: calc(~"100% / 2.75");
+				margin-top: @base-margin;
+			}
+
+
+			&-skills {
+				float: right;
+				width: calc(~"100% / 1.75");
 			}
 		}
 	}
 
+	.posts {
+		&-ttl {
+			clear: both;
+		}
+	}
 }
 
 // 768px
-@media only screen and ( min-width: 768px ) {
+@media ( min-width: 768px ) {
+	body {
+		.font-size(@base-type-size);
+	}
+
+	.header,
+	.mission,
+	.posts {
+		margin: 0 4.86111%;
+	}
+
 	.header {
-		&-pic {
-			float: left;
-			margin: auto @base-margin-percent * 2 0 @base-margin-percent; 
-		}
-
 		&-ttl {
-			text-align: left;
-			display: inline-block;
-			line-height: @base-line-height;
-			margin: auto 0 0 0.2em;
-		}
-
-		&-contact {
-			&-lst { 
-				text-align: left;
-				.col(8);
-			}
+			.font-size(@base-type-h1, 2);
 		}
 	}	
 
@@ -141,37 +131,30 @@
 			&-philosophy {
 				.background-color(@brown,80);
 				padding: @base-margin;   
-			}
-			
-			&-skills {
-				.col(5);
-				margin-right: 0;
-			}
-
-			&-philosophy {
-				.col(7);
-			}
-
-			&-ethics {
-				.col(9);
-				display: inline-block;
+				float: none;
 			}
 		}
 	}
 
-	.post {
-		&-header {
-			.col(4);
-		}	
+	// .post {
+	// 	&-header {
+	// 		.col(5);
+	// 	}	
 
-		&-description {
-			.col(8);
-		}
-	}
+	// 	&-description {
+	// 		.col(7);
+	// 	}
+	// }
 }
 
 // 980px
-@media only screen and ( min-width: 992px ) {
+@media ( min-width: 992px ) {
+	.header {
+		&-pic {
+			margin-top: 0;
+		}
+	}
+
 	.mission {
 		display: block;
 
@@ -199,21 +182,21 @@
 
 	.post {
 		&-header {
-			.col(3);
+			.col(4);
 		}	
 
 		&-description {
-			.col(9);
+			.col(8);
 		}
 	}
 }
 
 // 1024px
-@media only screen and ( min-width: 1024px ) {
+@media ( min-width: 1024px ) {
 
 }
 
 // 1280px
-@media only screen and ( min-width: 1280px ) {
+@media ( min-width: 1280px ) {
 
 }

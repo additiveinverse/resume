@@ -1,8 +1,9 @@
 @import '_variables';
 @import '_mixins';
+@import 'lesshat';
 
 * {
-	.box-sizing;
+	.box-sizing(border-box);
 }
 
 html,
@@ -47,11 +48,11 @@ h2 {
 }
 
 h3 {
-	.font-size( @base-type-h3 );
+	.font-size( @base-type-h3, 1 );
 }
 
 h4 {
-	.font-size( @base-type-h4 );
+	.font-size( @base-type-h4, 1 );
 }
 
 h5 {
@@ -69,7 +70,7 @@ blockquote {
 p,
 th,
 td {
-	.font-size( @base-type-size );
+	// .font-size( @base-type-size );
 }
 
 p { 
@@ -162,21 +163,6 @@ img {
 fieldset { 
 	border: none;
 }
-
-// Lists
-.lst {}
-
-// List items
-.itm {}
-
-// Information wrappers
-.nfo {}
-
-// Information type
-.typ {}
-
-// Information values
-.val {}
 
 .lnk {
 	&:extend(a);
