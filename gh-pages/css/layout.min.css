@@ -328,10 +328,10 @@ body {
 a,
 .lnk {
   text-decoration: none;
-  color: #ffbd30;
+  color: #cbaa64;
 }
 a:hover {
-  color: #cbaa64;
+  color: #ffbd30;
 }
 a:focus {
   outline: none;
