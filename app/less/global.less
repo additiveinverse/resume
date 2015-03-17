@@ -3,6 +3,10 @@
 @import './lesshat';
 @import './_grid';
 
+@font-face {
+	.font-face('Mono Social Icons Font', 'MonoSocialIconsFont-1.10');
+}
+
 body {
 	background: @blue-grey url(../img/minimal02-1.png) center fixed;
 }
@@ -180,7 +184,6 @@ body {
 		}
 
 		&-itm { 
-			display: inline;
 			padding-right: @base-margin;
 		}
 	}
@@ -230,6 +233,14 @@ body {
 			.font-size(@base-type-h5);
 		}
 	}
+
+	// .post {
+	// 	&-related {
+	// 		&-itm {
+	// 			display: block;
+	// 		}
+	// 	}
+	// }
 }
 
 // 480px
@@ -240,6 +251,14 @@ body {
 			margin-bottom: @base-margin-half;
 		}
 	}
+
+	.post {
+		&-related {
+			&-itm {
+				display: inline-block;
+			}
+		}
+	}	
 }
 
 // 640px
@@ -331,6 +350,12 @@ body {
 		&-description {
 			.col(7);
 		}
+
+		&-related {
+			&-itm {
+				display: inline;
+			}
+		}
 	}
 }
 
@@ -375,21 +400,16 @@ body {
 			}
 		}
 	}
-
-	.post {
-		&-header {
-			.col(4);
-		}	
-
-		&-description {
-			.col(8);
-		}
-	}
 }
 
 // 1024px
 @media ( min-width: 1024px ) {
-
+	.header,
+	.mission,
+	.posts {
+		width: 992px;
+		margin: 0 auto;
+	}
 }
 
 // 1280px

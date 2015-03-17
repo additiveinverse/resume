@@ -208,7 +208,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', [ 'connect', 'watch' ]);
 
 	// build
-	grunt.registerTask('build', [ 'jade', 'htmlmin', 'less:production', 'copy', 'imagemin' ]);
+	grunt.registerTask('build', [ 'copy', 'jade', 'htmlmin', 'less:prod'  ]);
 
 	// deploy
 	grunt.registerTask('deply', [ 'build', 'bump:minor', 'build-control' ]);	

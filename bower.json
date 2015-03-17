@@ -25,6 +25,7 @@
   ],
   "devDependencies": {
     "normalize-less": "*",
-    "lesshat": "~3.0.2"
+    "lesshat": "~3.0.2",
+    "monosocialiconsfont": "*"
   }
 }

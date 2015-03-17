@@ -53,43 +53,6 @@
 	}
 
 // transforms
-.transform(...) {
-	-webkit-transform: @arguments;
-		-ms-transform: @arguments;
-			transform: @arguments;
-}
-
-.transform-origin(...) {
-	-webkit-transform-origin: @arguments;
-		 -moz-transform-origin: @arguments;
-		-ms-transform-origin: @arguments;
-			transform-origin: @arguments;
-}
-
-	.rotate( @deg: 5deg, @origin: center ) {
-		.transform( rotate( @deg ) );
-		.transform-origin( @origin );
-	}
-
-	.scale( @r1: 1, @r2: 1, @origin: center ) {
-		.transform( scale( @r1, @r2 ) );
-		.transform-origin( @origin );
-	}
-
-	.translate( @x:0, @y:0, @origin: center ) {
-		.transform( translate( @x, @y ) );
-		.transform-origin( @origin );
-	}
-
-	.translate3d( @x:0, @y:0, @origin: center ) {
-		.transform( translate3d( @x, @y ) );
-		.transform-origin( @origin );
-	}
-
-.transition( @thing: all, @dur: 0.2s, @ease: ease-in-out, @delay: 0s) {
-	-webkit-transition: @arguments;
-			transition: @arguments;
-}
 
 .animator( @name, @time: 0.5s, @iteration: infinite, @delay: 0.5s, @fillmode: both ) {
 	-webkit-animation: @arguments;
