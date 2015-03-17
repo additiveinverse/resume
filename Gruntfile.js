@@ -8,7 +8,6 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		app: {
 			root: 'app/',
-			JS: 'app/js/',
 			LESS: 'app/less/',
 			IMG: {
 				root: 'app/image/',
@@ -19,14 +18,10 @@ module.exports = function(grunt) {
 		prod: {
 			root: 'gh-pages/',
 			IMG: 'gh-pages/img/',
-			JS: 'gh-pages/js/', 
 			CSS: 'gh-pages/css/'
 		},
 		bower: 'bower_components/',
 		jshint: {
-			sitefiles: {
-				src: '<%= prod.JS %>*.js'
-			},
 			gruntfile: {
 				src: 'Gruntfile.js'
 			}
@@ -92,24 +87,21 @@ module.exports = function(grunt) {
 					expand: true,
 					cwd: '<%= app.IMG.src %>',
 					src: [ '**/*.svg' ],
-					dest: '<%= prod.IMG %>'
+					dest: '<%= app.IMG.dist %>'
 				}]				
 			}
 		},
-		imagemin: {
+		tinyimg: {
 			dynamic: {
-				options: {
-					optimizationLevel: 2,
-					pngquant: true
-				},
 				files: [{
 					expand: true,
-					cwd: '<%= app.IMG.dist %>',
-					src: [ '**/*.{png,jpg,gif}' ],
-					dest: '<%= prod.IMG %>'
+					cwd: '<%= app.IMG.src %>', 
+					src: ['*.{png,jpg}'],
+					dest: '<%= app.IMG.dist %>',
+					flatten: true
 				}]
 			}
-		},
+		},		
 		copy: {
 			less: {
 				expand: true,
@@ -118,18 +110,11 @@ module.exports = function(grunt) {
 				dest: 'app/less/',
 				flatten: true
 			},
-			main: {
+			img: {
 				expand: true,
-				cwd: '<%= app.JS %>',
-				src: '*.js',
-				dest: '<%= prod.JS %>',
-				flatten: true
-			},
-			jslibs: {
-				expand: true,
-				cwd: '<%= app.bower %>',
-				src: [ 'jq/dist/jquery.min.js' ],
-				dest: '<%= app.JS %>',
+				cwd: '<%= app.IMG.dist %>',
+				src: ['*.{png,jpg,svg}'],
+				dest: '<%= prod.IMG %>',
 				flatten: true
 			}
 		},
@@ -173,7 +158,7 @@ module.exports = function(grunt) {
 			},
 			pages: {
 				options: {
-					remote: 'git@github.com:example_user/example_webapp.git',
+					remote: 'git@github.com:additiveinverse/resume.git',
 					branch: 'gh-pages'
 				}
 			},
@@ -186,10 +171,10 @@ module.exports = function(grunt) {
 		},		
 		watch: {
 			files: [
-				'<%= app.root %>**/*',
+				'<%= app.root %>',
 				'Gruntfile.js'
 			],
-			tasks: [ 'less:dev', 'newer:jade' ],
+			tasks: [ 'less:dev', 'newer:jade',  ],
 			options: {
 				reload: false,
 				livereload: true,
@@ -208,7 +193,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', [ 'connect', 'watch' ]);
 
 	// build
-	grunt.registerTask('build', [ 'copy', 'jade', 'htmlmin', 'less:prod'  ]);
+	grunt.registerTask('build', [ 'tinyimg', 'svgmin', 'copy:img', 'jade', 'htmlmin', 'less:prod'  ]);
 
 	// deploy
 	grunt.registerTask('deply', [ 'build', 'bump:minor', 'build-control' ]);	
