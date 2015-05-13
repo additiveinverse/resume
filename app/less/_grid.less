@@ -2,8 +2,8 @@
 @import './_mixins';
 
 // Defaults which you can freely override
-@column-width: 40;
-@gutter-width: 8;
+@column-width: 60;
+@gutter-width: 0;
 @columns: 12;
 
 // Set @total-width to 100% for a fluid layout
@@ -21,7 +21,7 @@
 	&:after { clear: both; }
 }
 
-.grid-row() {
+.grid-row {
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -29,14 +29,16 @@
 }
 
 .grid-column {
-	display: inline;
-	float: left;
+	display: inline-block;
+	vertical-align: top;
 }
 
 .grid-pull,
 .grid-push { position: relative; }
 
-.col( @x, @columns: @columns ) { width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width); }
+.col( @x, @columns: @columns ) { 
+	width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width); 
+}
 
 .row(@columns:@columns) {
 	width: @total-width*((@gutter-width + @gridsystem-width)/@gridsystem-width);
@@ -64,9 +66,13 @@
 	left: @col-width;
 }
 // call the guards with new mixins
-.push( @offset:1 ) { .position( push, @offset ); }
-.pull( @offset:1 ) { .position( push, @offset ); }
+.push( @offset:1 ) { 
+	.position( push, @offset ); 
+}
 
+.pull( @offset:1 ) { 
+	.position( push, @offset ); 
+}
 
 // adding some guards to tighten things up a little
 .padding(@type, @offset: 1 ) when ( @type = prefix ) {

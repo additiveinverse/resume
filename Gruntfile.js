@@ -171,7 +171,7 @@ module.exports = function(grunt) {
 		},		
 		watch: {
 			files: [
-				'<%= app.root %>',
+				'<%= app.root %>**/*',
 				'Gruntfile.js'
 			],
 			tasks: [ 'less:dev', 'newer:jade',  ],

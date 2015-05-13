@@ -1,1 +1,352 @@
-.grid-column{display:inline;float:left}.grid-pull,.grid-push{position:relative}@font-face{font-family:"Mono Social Icons Font";src:url(MonoSocialIconsFont-1.10.eot);src:url(MonoSocialIconsFont-1.10.eot?#iefix) format("embedded-opentype"),url(MonoSocialIconsFont-1.10.woff) format("woff"),url(MonoSocialIconsFont-1.10.ttf) format("truetype"),url("MonoSocialIconsFont-1.10.svg#Mono Social Icons Font") format("svg");font-weight:400;font-style:normal}body{background:#4e575e url(../img/minimal02-1.png) center fixed}.ul-reset{margin:0;padding:0}.anti-float,.mission-quote,.post-header,.post-description{display:inline-block;vertical-align:top}.trans,.cnt,.lnk,.header,.header-ttl,.header-pic,.mission,.header,.mission,.posts{-webkit-transition:all .25s ease-in-out 0s;-moz-transition:all .25s ease-in-out 0s;-o-transition:all .25s ease-in-out 0s;transition:all .25s ease-in-out 0s}.cnt,.header,.mission,.posts{padding:0 1.5em;background-color:rgba(0,0,0,.38);border-left:16px solid rgba(0,0,0,.25);border-right:16px solid rgba(0,0,0,.25)}.flare,.header-pic:after,.header-pic:before{content:"";display:block;border:16px solid;position:absolute;top:42%;z-index:3}.header{position:relative;padding-top:1.5em}.header-ttl{color:#4e575e;text-shadow:-1px -1px 0 rgba(0,0,0,.5)}.header-pic{background-color:rgba(0,0,0,.5);box-shadow:0 0 0 1px #fff inset,0 0 0 8px #a5652d,0 0 0 16px rgba(0,0,0,.25);font-size:0;border-radius:200%;height:200px;width:200px;position:relative;text-align:center}.header-pic:after{border-color:#a5652d transparent #a5652d #a5652d}.header-pic:before{border-color:#a5652d #a5652d #a5652d transparent;right:0}.header-pic .img{-webkit-filter:grayscale(100%);-moz-filter:grayscale(100%);-ms-filter:grayscale(100%);filter:grayscale(100%);-webkit-transform:rotate(-8deg,center);-moz-transform:rotate(-8deg,center);-o-transform:rotate(-8deg,center);-ms-transform:rotate(-8deg,center);transform:rotate(-8deg,center);border-radius:100%;width:96%;height:auto;margin:2%;z-index:0}.header-contact-lst{display:inline-block;margin-bottom:0}.header-contact-itm{display:inline}.header-contact-lnk{text-transform:capitalize;display:inline-block;padding:0 .25em}.mission-quote{text-shadow:1px 1px 0 #000;position:relative;-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto}.posts-ttl{text-align:center;text-shadow:-1px -1px 0 rgba(0,0,0,.5);color:rgba(231,235,206,.25);text-transform:uppercase}.posts-ttl:after,.posts-ttl:before{content:"";display:inline-block;width:23.61111111%;height:35px;background:url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0D%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2015.1.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0D%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1%20Tiny//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd%22%3E%0D%0A%3Csvg%20version%3D%221.1%22%20baseProfile%3D%22tiny%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%0D%0A%09%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22241.426px%22%20height%3D%2239.185px%22%20viewBox%3D%220%200%20241.426%2039.185%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cg%3E%0D%0A%09%3Cpolygon%20fill-rule%3D%22evenodd%22%20fill%3D%22%23010101%22%20points%3D%22220.54%2C18.222%20218.401%2C19.027%20216.427%2C19.673%20214.454%2C20.158%20212.645%2C20.641%20%0D%0A%09%09210.672%2C21.123%20208.862%2C21.447%20207.218%2C21.607%20205.409%2C21.769%20203.765%2C21.932%20201.955%2C21.932%20200.311%2C21.769%20198.666%2C21.607%20%0D%0A%09%09197.022%2C21.283%20195.378%2C20.962%20193.568%2C20.479%20191.924%2C19.995%20190.442%2C19.349%20189.127%2C18.543%20187.812%2C17.576%20186.661%2C16.448%20%0D%0A%09%09185.673%2C15.319%20185.017%2C14.029%20184.522%2C12.739%20184.357%2C11.45%20184.522%2C10.159%20184.688%2C9.191%20185.18%2C8.224%20186.002%2C7.418%20%0D%0A%09%09186.989%2C6.772%20188.305%2C6.128%20189.786%2C5.645%20191.759%2C4.999%20193.403%2C4.515%20195.047%2C4.031%20196.691%2C3.708%20198.338%2C3.225%20199.982%2C3.064%20%0D%0A%09%09201.626%2C2.741%20203.271%2C2.581%20204.915%2C2.581%20206.56%2C2.418%20208.203%2C2.418%20209.85%2C2.581%20211.494%2C2.581%20213.139%2C2.741%20214.948%2C2.903%20%0D%0A%09%09216.593%2C3.225%20218.236%2C3.548%20221.855%2C4.515%20225.308%2C5.805%20228.761%2C7.579%20231.722%2C9.676%20234.024%2C12.094%20235.506%2C14.996%20%0D%0A%09%09235.997%2C18.06%20235.012%2C21.607%20234.024%2C23.221%20232.874%2C24.834%20231.393%2C26.283%20229.749%2C27.736%20227.61%2C29.186%20225.308%2C30.316%20%0D%0A%09%09222.841%2C31.605%20220.046%2C32.572%20216.921%2C33.539%20213.467%2C34.186%20209.85%2C34.83%20205.902%2C35.152%20201.79%2C35.475%20197.351%2C35.475%20%0D%0A%09%09192.581%2C35.314%20187.648%2C34.83%20184.357%2C34.508%20181.069%2C34.025%20178.108%2C33.701%20175.148%2C33.219%20172.352%2C32.732%20169.722%2C32.25%20%0D%0A%09%09166.925%2C31.605%20164.294%2C30.959%20161.662%2C30.316%20159.032%2C29.51%20156.4%2C28.703%20153.769%2C27.736%20150.972%2C26.607%20148.177%2C25.477%20%0D%0A%09%09145.382%2C24.188%20142.257%2C22.736%20136.337%2C19.673%20131.401%2C16.77%20127.456%2C14.029%20124.496%2C11.45%20122.521%2C9.191%20121.699%2C7.418%20%0D%0A%09%09121.863%2C6.289%20123.344%2C5.966%20126.469%2C6.128%20129.264%2C6.772%20131.896%2C7.74%20134.033%2C9.03%20135.843%2C10.32%20137.159%2C11.771%20137.98%2C13.222%20%0D%0A%09%09138.31%2C14.352%20137.815%2C16.609%20136.337%2C18.06%20134.198%2C18.706%20131.567%2C18.867%20128.936%2C18.543%20126.304%2C17.899%20124%2C17.253%20%0D%0A%09%09122.193%2C16.609%20118.409%2C15.158%20114.463%2C13.868%20110.681%2C12.578%20106.897%2C11.45%20102.951%2C10.481%2099.169%2C9.514%2095.386%2C8.707%20%0D%0A%09%0991.439%2C8.063%2087.656%2C7.418%2083.874%2C6.935%2080.092%2C6.45%2076.31%2C6.128%2072.525%2C5.966%2068.579%2C5.805%2064.797%2C5.805%2061.014%2C5.805%20%0D%0A%09%0957.231%2C5.966%2053.449%2C6.128%2049.666%2C6.45%2045.884%2C6.935%2041.938%2C7.418%2038.154%2C7.902%2034.371%2C8.546%2030.59%2C9.353%2026.807%2C10.159%20%0D%0A%09%0923.023%2C11.126%2019.078%2C12.094%2015.294%2C13.062%2011.512%2C14.191%207.729%2C15.48%203.782%2C16.77%200%2C18.06%203.946%2C16.932%207.895%2C15.964%20%0D%0A%09%0911.676%2C14.996%2015.459%2C14.029%2019.242%2C13.222%2023.023%2C12.417%2026.643%2C11.61%2030.26%2C10.965%2033.878%2C10.32%2037.496%2C9.676%2040.949%2C9.191%20%0D%0A%09%0944.568%2C8.707%2048.021%2C8.386%2051.64%2C8.063%2055.094%2C7.74%2058.712%2C7.74%2062.33%2C7.579%2065.783%2C7.74%2069.401%2C7.74%2073.02%2C8.063%2076.638%2C8.386%20%0D%0A%09%0980.42%2C8.707%2084.203%2C9.353%2087.985%2C9.998%2091.768%2C10.643%2095.715%2C11.45%2099.661%2C12.417%20103.773%2C13.545%20107.885%2C14.835%20111.996%2C16.125%20%0D%0A%09%09116.271%2C17.576%20120.713%2C19.188%20128.936%2C21.932%20135.021%2C22.896%20138.969%2C22.736%20141.435%2C21.607%20142.585%2C19.834%20142.751%2C17.737%20%0D%0A%09%09142.257%2C15.803%20141.27%2C14.191%20140.119%2C12.739%20138.638%2C11.288%20136.665%2C9.836%20134.527%2C8.386%20132.061%2C7.095%20129.264%2C6.128%20%0D%0A%09%09126.469%2C5.482%20123.344%2C5.161%20122.028%2C5.322%20121.041%2C5.805%20120.548%2C6.45%20120.548%2C7.256%20120.713%2C8.224%20121.371%2C9.514%20122.356%2C10.804%20%0D%0A%09%09123.674%2C12.094%20125.153%2C13.707%20126.797%2C15.319%20128.77%2C16.77%20131.073%2C18.383%20133.377%2C19.995%20135.843%2C21.607%20138.475%2C23.061%20%0D%0A%09%09141.106%2C24.51%20143.901%2C25.801%20146.698%2C27.09%20149.493%2C28.219%20152.288%2C29.349%20155.085%2C30.477%20157.88%2C31.443%20160.677%2C32.412%20%0D%0A%09%09163.637%2C33.379%20166.597%2C34.186%20169.392%2C34.992%20172.352%2C35.637%20175.478%2C36.281%20178.438%2C36.926%20181.563%2C37.412%20184.688%2C37.895%20%0D%0A%09%09187.977%2C38.379%20191.265%2C38.701%20194.884%2C39.021%20198.501%2C39.186%20202.283%2C39.186%20206.065%2C39.021%20209.85%2C38.701%20213.632%2C38.215%20%0D%0A%09%09217.414%2C37.572%20221.031%2C36.605%20224.485%2C35.475%20227.776%2C34.186%20230.736%2C32.412%20233.53%2C30.477%20235.997%2C28.057%20238.135%2C25.477%20%0D%0A%09%09239.944%2C22.414%20240.933%2C19.673%20241.426%2C17.253%20241.426%2C14.835%20240.933%2C12.9%20239.944%2C10.965%20238.794%2C9.191%20237.149%2C7.74%20%0D%0A%09%09235.341%2C6.45%20233.368%2C5.161%20231.229%2C4.192%20229.092%2C3.387%20226.954%2C2.581%20224.65%2C1.935%20222.678%2C1.451%20220.703%2C1.129%20218.894%2C0.807%20%0D%0A%09%09217.086%2C0.484%20215.276%2C0.323%20213.467%2C0.161%20211.657%2C0.161%20210.013%2C0%20208.369%2C0%20206.725%2C0%20205.08%2C0.161%20203.437%2C0.323%20201.79%2C0.484%20%0D%0A%09%09200.146%2C0.807%20198.501%2C1.129%20196.856%2C1.451%20195.047%2C1.935%20193.403%2C2.418%20191.594%2C2.903%20188.964%2C3.708%20186.989%2C4.676%20185.345%2C5.482%20%0D%0A%09%09184.194%2C6.612%20183.207%2C7.579%20182.713%2C8.869%20182.55%2C10.159%20182.55%2C11.771%20182.713%2C13.384%20183.207%2C14.835%20184.029%2C16.125%20%0D%0A%09%09185.017%2C17.253%20186.167%2C18.383%20187.812%2C19.51%20189.621%2C20.479%20191.759%2C21.283%20193.403%2C21.932%20195.047%2C22.414%20196.691%2C22.736%20%0D%0A%09%09198.338%2C23.061%20199.982%2C23.221%20201.626%2C23.381%20203.437%2C23.381%20205.08%2C23.221%20206.89%2C23.061%20208.697%2C22.736%20210.507%2C22.254%20%0D%0A%09%09212.479%2C21.769%20214.289%2C20.962%20216.427%2C20.158%20218.401%2C19.349%20220.54%2C18.222%20%09%22/%3E%0D%0A%3C/g%3E%0D%0A%3C/svg%3E%0D%0A') no-repeat;background-size:95% 100%}.posts-ttl:before{-webkit-transform:scale(1,1,top);-moz-transform:scale(1,1,top);-o-transform:scale(1,1,top);-ms-transform:scale(1,1,top);transform:scale(1,1,top)}.posts-ttl:after{-webkit-transform:scale(-1,1,top);-moz-transform:scale(-1,1,top);-o-transform:scale(-1,1,top);-ms-transform:scale(-1,1,top);transform:scale(-1,1,top)}.post{padding:1.5em 0}.post-header-role-lst{padding-left:0}.post-header-role-position{color:#a5652d}.post-header-role-duration{color:gray}.post-description{-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto}.post-related-lst{margin:.75em;margin-left:0;padding:0}.post-related-itm{padding-right:1.5em}@media (min-width:320px){body{font-size:1.8rem;font-size:18px;line-height:1.66666667}.header{text-align:center}.header-ttl{font-size:2.8rem;font-size:28px;line-height:1.28571429;margin-bottom:1.5em}.header-pic{margin:0 auto}.header-contact-lst{padding-left:0}.mission-quote{margin-left:0;margin-right:0}.mission-quote-skills,.mission-quote-philosophy{margin-top:0;padding:0}.posts-ttl{font-size:2rem;font-size:20px;line-height:1.2}}@media (min-width:480px){.header-ttl{font-size:3.2rem;font-size:32px;line-height:1.5;margin-bottom:.75em}.post-related-itm{display:inline-block}}@media (min-width:640px){body{font-size:1.7rem;font-size:17px;line-height:1.76470588}.header{text-align:left}.header-ttl{margin-bottom:0;float:right;font-size:3.2rem;font-size:32px;line-height:.75}.header-pic{position:relative;left:6px;float:left}.header-contact-lst{float:right}.mission-quote-ethics{float:right;width:calc(100% / 1.75)}.mission-quote-philosophy{float:left;width:calc(100% / 2.55);margin-top:1.5em}.mission-quote-skills{float:right;width:calc(100% / 1.75)}.posts-ttl{clear:both}}@media (min-width:768px){body{font-size:1.6rem;font-size:16px;line-height:1.5}.header,.mission,.posts{margin:0 4.86111%}.header-ttl{font-size:3.6rem;font-size:36px;line-height:1.33333333}.mission-quote-skills,.mission-quote-philosophy{background-color:rgba(165,101,45,.2);padding:1.5em}.post-header{width:40.27777778%}.post-description{width:56.94444444%}.post-related-itm{display:inline}}@media (min-width:980px){.header{text-align:left}.header-ttl{float:none;left:23.19444444%;font-size:3.2rem;font-size:32px;line-height:.75}.header-pic{height:175px;width:175px}.header-contact-lst{text-align:left;width:77%}.mission-quote-ethics{float:right;width:calc(100% / 1.3)}.mission-quote-philosophy{float:left;width:calc(100% / 2);margin-top:0}.mission-quote-skills{float:right;width:calc(100% / 2.12)}}@media (min-width:1024px){.header,.mission,.posts{width:992px;margin:0 auto}}
+.grid-row {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.grid-row:before,
+.grid-row:after {
+  content: "";
+  display: table;
+}
+.grid-row:after {
+  clear: both;
+}
+.grid-column {
+  display: inline-block;
+  vertical-align: top;
+}
+.grid-pull,
+.grid-push {
+  position: relative;
+}
+@font-face {
+  font-family: "Mono Social Icons Font";
+  src: url("MonoSocialIconsFont-1.10.eot");
+  src: url("MonoSocialIconsFont-1.10.eot?#iefix") format("embedded-opentype"), url("MonoSocialIconsFont-1.10.woff") format("woff"), url("MonoSocialIconsFont-1.10.ttf") format("truetype"), url("MonoSocialIconsFont-1.10.svg#Mono Social Icons Font") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  background: #4e575e url(../img/minimal02-1.png) center fixed;
+}
+.ul-reset {
+  margin: 0;
+  padding: 0;
+}
+.anti-float,
+.mission-quote,
+.post-header,
+.post-description {
+  display: inline-block;
+  vertical-align: top;
+}
+.trans,
+.cnt,
+.lnk,
+.header,
+.header-ttl,
+.header-pic,
+.mission,
+.header,
+.mission,
+.posts {
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  -moz-transition: all 0.25s ease-in-out 0s;
+  -o-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s;
+}
+.cnt,
+.header,
+.mission,
+.posts {
+  padding: 0 1.5em 0;
+  background-color: rgba(0, 0, 0, 0.38);
+  border-left: 16px solid rgba(0, 0, 0, 0.25);
+  border-right: 16px solid rgba(0, 0, 0, 0.25);
+}
+.flare,
+.header-pic:after,
+.header-pic:before {
+  content: "";
+  display: block;
+  border: 16px solid;
+  position: absolute;
+  top: 42%;
+  z-index: 3;
+}
+.header {
+  position: relative;
+  padding-top: 1.5em;
+}
+.header-ttl {
+  color: #4e575e;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+}
+.header-pic {
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 1px #ffffff inset, 0 0 0 8px #a5652d, 0 0 0 16px rgba(0, 0, 0, 0.25);
+  font-size: 0;
+  border-radius: 200%;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  text-align: center;
+}
+.header-pic:after {
+  border-color: #a5652d transparent #a5652d #a5652d;
+}
+.header-pic:before {
+  border-color: #a5652d #a5652d #a5652d transparent;
+  right: 0;
+}
+.header-pic .img {
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  -ms-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -webkit-transform: rotate(-8deg, center);
+  -moz-transform: rotate(-8deg, center);
+  -o-transform: rotate(-8deg, center);
+  -ms-transform: rotate(-8deg, center);
+  transform: rotate(-8deg, center);
+  border-radius: 100%;
+  width: 96%;
+  height: auto;
+  margin: 2%;
+  z-index: 0;
+}
+.header-contact-lst {
+  display: inline-block;
+  margin-bottom: 0;
+}
+.header-contact-itm {
+  display: inline;
+}
+.header-contact-lnk {
+  text-transform: capitalize;
+  display: inline-block;
+  padding: 0 0.25em;
+}
+.mission-quote {
+  text-shadow: 1px 1px 0 #000000;
+  position: relative;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+.posts-ttl {
+  text-align: center;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+  color: rgba(231, 235, 206, 0.25);
+  text-transform: uppercase;
+}
+.posts-ttl:after,
+.posts-ttl:before {
+  content: "";
+  display: inline-block;
+  width: 25%;
+  height: 35px;
+  background: url('data:image/svg+xml;charset=US-ASCII,%3C%3Fxml%20version%3D%221.0%22%20encoding%3D%22utf-8%22%3F%3E%0D%0A%3C%21--%20Generator%3A%20Adobe%20Illustrator%2015.1.0%2C%20SVG%20Export%20Plug-In%20.%20SVG%20Version%3A%206.00%20Build%200%29%20%20--%3E%0D%0A%3C%21DOCTYPE%20svg%20PUBLIC%20%22-//W3C//DTD%20SVG%201.1%20Tiny//EN%22%20%22http%3A//www.w3.org/Graphics/SVG/1.1/DTD/svg11-tiny.dtd%22%3E%0D%0A%3Csvg%20version%3D%221.1%22%20baseProfile%3D%22tiny%22%20id%3D%22Layer_1%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20xmlns%3Axlink%3D%22http%3A//www.w3.org/1999/xlink%22%0D%0A%09%20x%3D%220px%22%20y%3D%220px%22%20width%3D%22241.426px%22%20height%3D%2239.185px%22%20viewBox%3D%220%200%20241.426%2039.185%22%20xml%3Aspace%3D%22preserve%22%3E%0D%0A%3Cg%3E%0D%0A%09%3Cpolygon%20fill-rule%3D%22evenodd%22%20fill%3D%22%23010101%22%20points%3D%22220.54%2C18.222%20218.401%2C19.027%20216.427%2C19.673%20214.454%2C20.158%20212.645%2C20.641%20%0D%0A%09%09210.672%2C21.123%20208.862%2C21.447%20207.218%2C21.607%20205.409%2C21.769%20203.765%2C21.932%20201.955%2C21.932%20200.311%2C21.769%20198.666%2C21.607%20%0D%0A%09%09197.022%2C21.283%20195.378%2C20.962%20193.568%2C20.479%20191.924%2C19.995%20190.442%2C19.349%20189.127%2C18.543%20187.812%2C17.576%20186.661%2C16.448%20%0D%0A%09%09185.673%2C15.319%20185.017%2C14.029%20184.522%2C12.739%20184.357%2C11.45%20184.522%2C10.159%20184.688%2C9.191%20185.18%2C8.224%20186.002%2C7.418%20%0D%0A%09%09186.989%2C6.772%20188.305%2C6.128%20189.786%2C5.645%20191.759%2C4.999%20193.403%2C4.515%20195.047%2C4.031%20196.691%2C3.708%20198.338%2C3.225%20199.982%2C3.064%20%0D%0A%09%09201.626%2C2.741%20203.271%2C2.581%20204.915%2C2.581%20206.56%2C2.418%20208.203%2C2.418%20209.85%2C2.581%20211.494%2C2.581%20213.139%2C2.741%20214.948%2C2.903%20%0D%0A%09%09216.593%2C3.225%20218.236%2C3.548%20221.855%2C4.515%20225.308%2C5.805%20228.761%2C7.579%20231.722%2C9.676%20234.024%2C12.094%20235.506%2C14.996%20%0D%0A%09%09235.997%2C18.06%20235.012%2C21.607%20234.024%2C23.221%20232.874%2C24.834%20231.393%2C26.283%20229.749%2C27.736%20227.61%2C29.186%20225.308%2C30.316%20%0D%0A%09%09222.841%2C31.605%20220.046%2C32.572%20216.921%2C33.539%20213.467%2C34.186%20209.85%2C34.83%20205.902%2C35.152%20201.79%2C35.475%20197.351%2C35.475%20%0D%0A%09%09192.581%2C35.314%20187.648%2C34.83%20184.357%2C34.508%20181.069%2C34.025%20178.108%2C33.701%20175.148%2C33.219%20172.352%2C32.732%20169.722%2C32.25%20%0D%0A%09%09166.925%2C31.605%20164.294%2C30.959%20161.662%2C30.316%20159.032%2C29.51%20156.4%2C28.703%20153.769%2C27.736%20150.972%2C26.607%20148.177%2C25.477%20%0D%0A%09%09145.382%2C24.188%20142.257%2C22.736%20136.337%2C19.673%20131.401%2C16.77%20127.456%2C14.029%20124.496%2C11.45%20122.521%2C9.191%20121.699%2C7.418%20%0D%0A%09%09121.863%2C6.289%20123.344%2C5.966%20126.469%2C6.128%20129.264%2C6.772%20131.896%2C7.74%20134.033%2C9.03%20135.843%2C10.32%20137.159%2C11.771%20137.98%2C13.222%20%0D%0A%09%09138.31%2C14.352%20137.815%2C16.609%20136.337%2C18.06%20134.198%2C18.706%20131.567%2C18.867%20128.936%2C18.543%20126.304%2C17.899%20124%2C17.253%20%0D%0A%09%09122.193%2C16.609%20118.409%2C15.158%20114.463%2C13.868%20110.681%2C12.578%20106.897%2C11.45%20102.951%2C10.481%2099.169%2C9.514%2095.386%2C8.707%20%0D%0A%09%0991.439%2C8.063%2087.656%2C7.418%2083.874%2C6.935%2080.092%2C6.45%2076.31%2C6.128%2072.525%2C5.966%2068.579%2C5.805%2064.797%2C5.805%2061.014%2C5.805%20%0D%0A%09%0957.231%2C5.966%2053.449%2C6.128%2049.666%2C6.45%2045.884%2C6.935%2041.938%2C7.418%2038.154%2C7.902%2034.371%2C8.546%2030.59%2C9.353%2026.807%2C10.159%20%0D%0A%09%0923.023%2C11.126%2019.078%2C12.094%2015.294%2C13.062%2011.512%2C14.191%207.729%2C15.48%203.782%2C16.77%200%2C18.06%203.946%2C16.932%207.895%2C15.964%20%0D%0A%09%0911.676%2C14.996%2015.459%2C14.029%2019.242%2C13.222%2023.023%2C12.417%2026.643%2C11.61%2030.26%2C10.965%2033.878%2C10.32%2037.496%2C9.676%2040.949%2C9.191%20%0D%0A%09%0944.568%2C8.707%2048.021%2C8.386%2051.64%2C8.063%2055.094%2C7.74%2058.712%2C7.74%2062.33%2C7.579%2065.783%2C7.74%2069.401%2C7.74%2073.02%2C8.063%2076.638%2C8.386%20%0D%0A%09%0980.42%2C8.707%2084.203%2C9.353%2087.985%2C9.998%2091.768%2C10.643%2095.715%2C11.45%2099.661%2C12.417%20103.773%2C13.545%20107.885%2C14.835%20111.996%2C16.125%20%0D%0A%09%09116.271%2C17.576%20120.713%2C19.188%20128.936%2C21.932%20135.021%2C22.896%20138.969%2C22.736%20141.435%2C21.607%20142.585%2C19.834%20142.751%2C17.737%20%0D%0A%09%09142.257%2C15.803%20141.27%2C14.191%20140.119%2C12.739%20138.638%2C11.288%20136.665%2C9.836%20134.527%2C8.386%20132.061%2C7.095%20129.264%2C6.128%20%0D%0A%09%09126.469%2C5.482%20123.344%2C5.161%20122.028%2C5.322%20121.041%2C5.805%20120.548%2C6.45%20120.548%2C7.256%20120.713%2C8.224%20121.371%2C9.514%20122.356%2C10.804%20%0D%0A%09%09123.674%2C12.094%20125.153%2C13.707%20126.797%2C15.319%20128.77%2C16.77%20131.073%2C18.383%20133.377%2C19.995%20135.843%2C21.607%20138.475%2C23.061%20%0D%0A%09%09141.106%2C24.51%20143.901%2C25.801%20146.698%2C27.09%20149.493%2C28.219%20152.288%2C29.349%20155.085%2C30.477%20157.88%2C31.443%20160.677%2C32.412%20%0D%0A%09%09163.637%2C33.379%20166.597%2C34.186%20169.392%2C34.992%20172.352%2C35.637%20175.478%2C36.281%20178.438%2C36.926%20181.563%2C37.412%20184.688%2C37.895%20%0D%0A%09%09187.977%2C38.379%20191.265%2C38.701%20194.884%2C39.021%20198.501%2C39.186%20202.283%2C39.186%20206.065%2C39.021%20209.85%2C38.701%20213.632%2C38.215%20%0D%0A%09%09217.414%2C37.572%20221.031%2C36.605%20224.485%2C35.475%20227.776%2C34.186%20230.736%2C32.412%20233.53%2C30.477%20235.997%2C28.057%20238.135%2C25.477%20%0D%0A%09%09239.944%2C22.414%20240.933%2C19.673%20241.426%2C17.253%20241.426%2C14.835%20240.933%2C12.9%20239.944%2C10.965%20238.794%2C9.191%20237.149%2C7.74%20%0D%0A%09%09235.341%2C6.45%20233.368%2C5.161%20231.229%2C4.192%20229.092%2C3.387%20226.954%2C2.581%20224.65%2C1.935%20222.678%2C1.451%20220.703%2C1.129%20218.894%2C0.807%20%0D%0A%09%09217.086%2C0.484%20215.276%2C0.323%20213.467%2C0.161%20211.657%2C0.161%20210.013%2C0%20208.369%2C0%20206.725%2C0%20205.08%2C0.161%20203.437%2C0.323%20201.79%2C0.484%20%0D%0A%09%09200.146%2C0.807%20198.501%2C1.129%20196.856%2C1.451%20195.047%2C1.935%20193.403%2C2.418%20191.594%2C2.903%20188.964%2C3.708%20186.989%2C4.676%20185.345%2C5.482%20%0D%0A%09%09184.194%2C6.612%20183.207%2C7.579%20182.713%2C8.869%20182.55%2C10.159%20182.55%2C11.771%20182.713%2C13.384%20183.207%2C14.835%20184.029%2C16.125%20%0D%0A%09%09185.017%2C17.253%20186.167%2C18.383%20187.812%2C19.51%20189.621%2C20.479%20191.759%2C21.283%20193.403%2C21.932%20195.047%2C22.414%20196.691%2C22.736%20%0D%0A%09%09198.338%2C23.061%20199.982%2C23.221%20201.626%2C23.381%20203.437%2C23.381%20205.08%2C23.221%20206.89%2C23.061%20208.697%2C22.736%20210.507%2C22.254%20%0D%0A%09%09212.479%2C21.769%20214.289%2C20.962%20216.427%2C20.158%20218.401%2C19.349%20220.54%2C18.222%20%09%22/%3E%0D%0A%3C/g%3E%0D%0A%3C/svg%3E%0D%0A') no-repeat;
+  background-size: 95% 100%;
+}
+.posts-ttl:before {
+  -webkit-transform: scale(1, 1, top);
+  -moz-transform: scale(1, 1, top);
+  -o-transform: scale(1, 1, top);
+  -ms-transform: scale(1, 1, top);
+  transform: scale(1, 1, top);
+}
+.posts-ttl:after {
+  -webkit-transform: scale(-1, 1, top);
+  -moz-transform: scale(-1, 1, top);
+  -o-transform: scale(-1, 1, top);
+  -ms-transform: scale(-1, 1, top);
+  transform: scale(-1, 1, top);
+}
+.post {
+  padding: 1.5em 0;
+}
+.post-header-role-lst {
+  padding-left: 0;
+}
+.post-header-role-position {
+  color: #a5652d;
+}
+.post-header-role-duration {
+  color: #808080;
+}
+.post-description {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+.post-related-lst {
+  margin: 0.75em;
+  margin-left: 0;
+  padding: 0;
+}
+.post-related-itm {
+  padding-right: 1.5em;
+}
+@media (min-width: 320px) {
+  body {
+    font-size: 1.8rem;
+    font-size: 18px;
+    line-height: 1.66666667;
+  }
+  .header {
+    text-align: center;
+  }
+  .header-ttl {
+    font-size: 2.8rem;
+    font-size: 28px;
+    line-height: 1.28571429;
+    margin-bottom: 1.5em;
+  }
+  .header-pic {
+    margin: 0 auto;
+  }
+  .header-contact-lst {
+    padding-left: 0;
+  }
+  .mission-quote {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .mission-quote-skills,
+  .mission-quote-philosophy {
+    margin-top: 0;
+    padding: 0;
+  }
+  .posts-ttl {
+    font-size: 2rem;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+@media (min-width: 480px) {
+  .header-ttl {
+    font-size: 3.2rem;
+    font-size: 32px;
+    line-height: 1.5;
+    margin-bottom: 0.75em;
+  }
+  .post-related-itm {
+    display: inline-block;
+  }
+}
+@media (min-width: 640px) {
+  body {
+    font-size: 1.7rem;
+    font-size: 17px;
+    line-height: 1.76470588;
+  }
+  .header {
+    text-align: left;
+  }
+  .header-ttl {
+    margin-bottom: 0;
+    float: right;
+    font-size: 3.2rem;
+    font-size: 32px;
+    line-height: 0.75;
+  }
+  .header-pic {
+    position: relative;
+    left: 6px;
+    float: left;
+  }
+  .header-contact-lst {
+    float: right;
+  }
+  .mission-quote-ethics {
+    float: right;
+    width: calc(100% / 1.75);
+  }
+  .mission-quote-philosophy {
+    float: left;
+    width: calc(100% / 2.55);
+    margin-top: 1.5em;
+  }
+  .mission-quote-skills {
+    float: right;
+    width: calc(100% / 1.75);
+  }
+  .posts-ttl {
+    clear: both;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    font-size: 1.6rem;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .header,
+  .mission,
+  .posts {
+    margin: 0 4.86111%;
+  }
+  .header-ttl {
+    font-size: 3.6rem;
+    font-size: 36px;
+    line-height: 1.33333333;
+  }
+  .mission-quote-ethics {
+    background-color: rgba(165, 101, 45, 0.2);
+    padding: 1.5em;
+  }
+  .post-header {
+    width: 41.66666667%;
+  }
+  .post-description {
+    width: 58.33333333%;
+  }
+  .post-related-itm {
+    display: inline;
+  }
+}
+@media (min-width: 980px) {
+  .header {
+    text-align: left;
+  }
+  .header-ttl {
+    float: none;
+    left: 22.5%;
+    font-size: 3.2rem;
+    font-size: 32px;
+    line-height: 0.75;
+  }
+  .header-pic {
+    height: 175px;
+    width: 175px;
+  }
+  .header-contact-lst {
+    text-align: left;
+    width: 77%;
+  }
+  .mission-quote-ethics {
+    float: right;
+    width: calc(100% / 1.3);
+  }
+  .mission-quote-philosophy {
+    float: left;
+    width: calc(100% / 2);
+    margin-top: 0;
+  }
+  .mission-quote-skills {
+    float: right;
+    width: calc(100% / 2.12);
+  }
+}
+@media (min-width: 1024px) {
+  .header,
+  .mission,
+  .posts {
+    width: 992px;
+    margin: 0 auto;
+  }
+}

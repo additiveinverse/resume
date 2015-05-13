@@ -41,6 +41,14 @@
 			.font-size(@base-type-h5);
 		}
 	}
+
+	// .post {
+	// 	&-related {
+	// 		&-itm {
+	// 			display: block;
+	// 		}
+	// 	}
+	// }
 }
 
 // 480px
@@ -51,6 +59,14 @@
 			margin-bottom: @base-margin-half;
 		}
 	}
+
+	.post {
+		&-related {
+			&-itm {
+				display: inline-block;
+			}
+		}
+	}	
 }
 
 // 640px
@@ -88,10 +104,9 @@
 
 			&-philosophy {
 				float: left;
-				width: calc(~"100% / 2.75");
+				width: calc(~"100% / 2.55");
 				margin-top: @base-margin;
 			}
-
 
 			&-skills {
 				float: right;
@@ -116,7 +131,7 @@
 	.header,
 	.mission,
 	.posts {
-		margin: 0 4.86111%;
+		.cnt-margin;
 	}
 
 	.header {
@@ -127,67 +142,81 @@
 
 	.mission {
 		&-quote {
-			&-skills,
-			&-philosophy {
-				.background-color(@brown,80);
-				padding: @base-margin;   
-				float: none;
-			}
-		}
-	}
-
-	// .post {
-	// 	&-header {
-	// 		.col(5);
-	// 	}	
-
-	// 	&-description {
-	// 		.col(7);
-	// 	}
-	// }
-}
-
-// 980px
-@media ( min-width: 992px ) {
-	.header {
-	}
-
-	.mission {
-		display: block;
-
-		&-quote {
-			&-skills,
-			&-philosophy {
-				.background-color(@brown,80);
-				padding: @base-margin;   
-			}
-			
-			&-skills {
-				.col(5);
-				margin-right: 0;
-			}
-
-			&-philosophy,
 			&-ethics {
-				display: inline;
+				.background-color(@brown,80);
+				padding: @base-margin;
 			}
 		}
 	}
 
 	.post {
 		&-header {
-			.col(4);
+			.col(5);
 		}	
 
 		&-description {
-			.col(8);
+			.col(7);
+		}
+
+		&-related {
+			&-itm {
+				display: inline;
+			}
+		}
+	}
+}
+
+// 980px
+@media ( min-width: 980px ) {
+	.header {
+		text-align: left;
+
+		&-ttl {
+			float: none;
+			.push(2.7);
+			.font-size(@base-type-h2);
+		}
+
+		&-pic {
+			height: 175px;
+			width: 175px;
+		}
+
+		&-contact-lst {
+			text-align: left;
+			width: 77%;
+		}
+	}
+
+	.mission {
+		&-quote {
+			&-ethics {
+				float: right;
+				width: calc(~"100% / 1.3");
+			}
+
+			&-philosophy {
+				float: left;
+				width: calc(~"100% / 2");
+				margin-top: 0;
+			}
+
+			&-skills {
+				float: right;
+				width: calc(~"100% / 2.12");
+			}
 		}
 	}
 }
 
 // 1024px
 @media ( min-width: 1024px ) {
-
+	.header,
+	.mission,
+	.posts {
+		width: 992px;
+		margin: 0 auto;
+	}
 }
 
 // 1280px
