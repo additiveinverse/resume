@@ -1,1 +1,297 @@
-.grid-row{display:block;margin-left:auto;margin-right:auto;width:100%}.grid-row:before,.grid-row:after{content:"";display:table}.grid-row:after{clear:both}.grid-column{display:inline-block;vertical-align:top}.grid-pull,.grid-push{position:relative}@font-face{font-family:"Mono Social Icons Font";src:url(MonoSocialIconsFont-1.10.eot);src:url(MonoSocialIconsFont-1.10.eot?#iefix) format("embedded-opentype"),url(MonoSocialIconsFont-1.10.woff) format("woff"),url(MonoSocialIconsFont-1.10.ttf) format("truetype"),url("MonoSocialIconsFont-1.10.svg#Mono Social Icons Font") format("svg");font-weight:400;font-style:normal}body{background:#4e575e url(../img/minimal02-1.png) center fixed}.ul-reset{margin:0;padding:0}.anti-float,.mission-quote,.post-header,.post-description{display:inline-block;vertical-align:top}.trans,.cnt,.lnk,.header,.header-ttl,.header-pic,.mission,.header,.mission,.posts{-webkit-transition:all .25s ease-in-out 0s;-moz-transition:all .25s ease-in-out 0s;-o-transition:all .25s ease-in-out 0s;transition:all .25s ease-in-out 0s}.cnt,.header,.mission,.posts{padding:0 1.5em 0;background-color:rgba(0,0,0,.38);border-left:16px solid rgba(0,0,0,.25);border-right:16px solid rgba(0,0,0,.25)}.flare,.header-pic:after,.header-pic:before{content:"";display:block;border:16px solid;position:absolute;top:42%;z-index:3}.header{position:relative;padding-top:1.5em}.header-ttl{color:#4e575e;text-shadow:-1px -1px 0 rgba(0,0,0,.5)}.header-pic{background-color:rgba(0,0,0,.5);box-shadow:0 0 0 1px #fff inset,0 0 0 8px #a5652d,0 0 0 16px rgba(0,0,0,.25);font-size:0;border-radius:200%;height:200px;width:200px;position:relative;text-align:center}.header-pic:after{border-color:#a5652d transparent #a5652d #a5652d}.header-pic:before{border-color:#a5652d #a5652d #a5652d transparent;right:0}.header-pic .img{-webkit-filter:grayscale(100%);-moz-filter:grayscale(100%);-ms-filter:grayscale(100%);filter:grayscale(100%);-webkit-transform:rotate(-8deg,center);-moz-transform:rotate(-8deg,center);-o-transform:rotate(-8deg,center);-ms-transform:rotate(-8deg,center);transform:rotate(-8deg,center);border-radius:100%;width:96%;height:auto;margin:2%;z-index:0}.header-contact-lst{display:inline-block;margin-bottom:0}.header-contact-itm{display:inline}.header-contact-lnk{text-transform:capitalize;display:inline-block;padding:0 .25em}.mission-quote{text-shadow:1px 1px 0 #000;position:relative;-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto}.posts-ttl{text-align:center;text-shadow:-1px -1px 0 rgba(0,0,0,.5);color:rgba(231,235,206,.25);text-transform:uppercase}.post{padding:1.5em 0}.post-header-role-lst{padding-left:0}.post-header-role-position{color:#a5652d}.post-header-role-duration{color:gray}.post-description{-webkit-hyphens:auto;-moz-hyphens:auto;-ms-hyphens:auto;hyphens:auto}.post-related-lst{margin:.75em;margin-left:0;padding:0}.post-related-itm{padding-right:1.5em}@media (min-width:320px){body{font-size:1.8rem;font-size:18px;line-height:1.66666667}.header{text-align:center}.header-ttl{font-size:2.8rem;font-size:28px;line-height:1.28571429;margin-bottom:1.5em}.header-pic{margin:0 auto}.header-contact-lst{padding-left:0}.mission-quote{margin-left:0;margin-right:0}.mission-quote-skills,.mission-quote-philosophy{margin-top:0;padding:0}.posts-ttl{font-size:2rem;font-size:20px;line-height:1.2}}@media (min-width:480px){.header-ttl{font-size:3.2rem;font-size:32px;line-height:1.5;margin-bottom:.75em}.post-related-itm{display:inline-block}}@media (min-width:640px){body{font-size:1.7rem;font-size:17px;line-height:1.76470588}.header{text-align:left}.header-ttl{margin-bottom:0;float:right;font-size:3.2rem;font-size:32px;line-height:.75}.header-pic{position:relative;left:6px;float:left}.header-contact-lst{float:right}.mission-quote-ethics{float:right;width:calc(100% / 1.75)}.mission-quote-philosophy{float:left;width:calc(100% / 2.55);margin-top:1.5em}.mission-quote-skills{float:right;width:calc(100% / 1.75)}.posts-ttl{clear:both}}@media (min-width:768px){body{font-size:1.6rem;font-size:16px;line-height:1.5}.header,.mission,.posts{margin:0 4.86111%}.header-ttl{font-size:3.6rem;font-size:36px;line-height:1.33333333}.mission-quote-ethics{background-color:rgba(165,101,45,.2);padding:1.5em}.post-header{width:41.66666667%}.post-description{width:58.33333333%}.post-related-itm{display:inline}}@media (min-width:980px){.header{text-align:left}.header-ttl{float:none;left:22.5%;font-size:3.2rem;font-size:32px;line-height:.75}.header-pic{height:175px;width:175px}.header-contact-lst{text-align:left;width:77%}.mission-quote-ethics{float:right;width:calc(100% / 1.3)}.mission-quote-philosophy{float:left;width:calc(100% / 2);margin-top:0}.mission-quote-skills{float:right;width:calc(100% / 2.12)}}@media (min-width:1024px){.header,.mission,.posts{width:62.5%;margin:0 auto}.post-header{width:33.33333333%}.post-description{width:65.83333333%}.post-related-itm{display:inline}}
+.grid-row {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.grid-row:before,
+.grid-row:after {
+  content: "";
+  display: table;
+}
+.grid-row:after {
+  clear: both;
+}
+.grid-column {
+  display: inline-block;
+  vertical-align: top;
+}
+.grid-pull,
+.grid-push {
+  position: relative;
+}
+body {
+  background: #4e575e url(../img/minimal02-1.png) 0 0 fixed;
+}
+.ul-reset {
+  margin: 0;
+  padding: 0;
+}
+.anti-float,
+.mission-quote,
+.post-header,
+.post-description {
+  display: inline-block;
+  vertical-align: top;
+}
+.trans,
+.cnt,
+.lnk,
+.header,
+.header-ttl,
+.header-pic,
+.mission,
+.header,
+.mission,
+.posts {
+  -webkit-transition: all 0.25s ease-in-out 0s;
+  -moz-transition: all 0.25s ease-in-out 0s;
+  -o-transition: all 0.25s ease-in-out 0s;
+  transition: all 0.25s ease-in-out 0s;
+}
+.cnt,
+.header,
+.mission,
+.posts {
+  padding: 0 1.5em 0;
+  background-color: rgba(0, 0, 0, 0.38);
+  border-left: 16px solid rgba(0, 0, 0, 0.25);
+  border-right: 16px solid rgba(0, 0, 0, 0.25);
+}
+.flare,
+.header-pic:after,
+.header-pic:before {
+  content: "";
+  display: block;
+  border: 16px solid;
+  position: absolute;
+  top: 42%;
+  z-index: 3;
+}
+.header {
+  position: relative;
+  padding-top: 1.5em;
+}
+.header-ttl {
+  color: #4e575e;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+}
+.header-pic {
+  background-color: rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 0 1px #ffffff inset, 0 0 0 8px #a5652d, 0 0 0 16px rgba(0, 0, 0, 0.25);
+  font-size: 0;
+  border-radius: 200%;
+  position: relative;
+  text-align: center;
+}
+.header-pic:after {
+  border-color: #a5652d transparent #a5652d #a5652d;
+}
+.header-pic:before {
+  border-color: #a5652d #a5652d #a5652d transparent;
+  right: 0;
+}
+.header-pic .img {
+  -webkit-filter: grayscale(90%);
+  -moz-filter: grayscale(90%);
+  -ms-filter: grayscale(90%);
+  filter: grayscale(90%);
+  -webkit-transform: rotate(8deg, center);
+  -moz-transform: rotate(8deg, center);
+  -o-transform: rotate(8deg, center);
+  -ms-transform: rotate(8deg, center);
+  transform: rotate(8deg, center);
+  border-radius: 100%;
+  width: 96%;
+  height: auto;
+  margin: 2%;
+  z-index: 0;
+}
+.header-contact-lst {
+  display: inline-block;
+  margin-bottom: 0;
+}
+.header-contact-itm {
+  display: inline;
+}
+.header-contact-lnk {
+  text-transform: capitalize;
+  display: inline-block;
+  padding: 0 0.25em;
+}
+.mission-quote {
+  text-shadow: 1px 1px 0 #000000;
+  position: relative;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+.posts-ttl {
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.5);
+  color: rgba(231, 235, 206, 0.25);
+  text-transform: uppercase;
+}
+.post {
+  padding: 1.5em 0;
+}
+.post-header-role-lst {
+  padding-left: 0;
+}
+.post-header-role-position {
+  color: #a5652d;
+}
+.post-header-role-duration {
+  color: #808080;
+}
+.post-description {
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+}
+.post-related-lst {
+  margin: 0.75em;
+  margin-left: 0;
+  padding: 0;
+}
+.post-related-itm {
+  padding-right: 1.5em;
+}
+@media only screen and (min-width: 320px) {
+  body {
+    font-size: 1.8rem;
+    font-size: 18px;
+    line-height: 1.83333333;
+  }
+  .header {
+    text-align: center;
+  }
+  .header-ttl {
+    line-height: 1;
+    margin-bottom: 1.5em;
+  }
+  .header-pic {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+  .header-contact-lst {
+    padding-left: 0;
+  }
+  .mission-quote {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .mission-quote-skills,
+  .mission-quote-philosophy {
+    margin-top: 0;
+    padding: 0;
+  }
+  .posts-ttl {
+    font-size: 2rem;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+@media only screen and (min-width: 640px) {
+  .header:before,
+  .header:after {
+    content: "";
+    display: table;
+  }
+  .header:after {
+    clear: both;
+  }
+  .header-ttl {
+    float: right;
+    display: inline-block;
+    text-align: right;
+    font-size: 4.5rem;
+    font-size: 45px;
+    line-height: 1.06666667;
+    margin-bottom: 0;
+    width: 50%;
+  }
+  .header-pic {
+    float: left;
+    width: 29.16666667%;
+  }
+  .header-contact-lst {
+    float: right;
+  }
+  .posts-ttl {
+    clear: both;
+  }
+}
+@media only screen and (min-width: 768px) {
+  body {
+    font-size: 1.6rem;
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .header,
+  .mission,
+  .posts {
+    margin: 0 0.75em;
+  }
+  .header-pic {
+    margin-left: 5.5%;
+  }
+  .mission-quote-ethics {
+    background-color: rgba(165, 101, 45, 0.2);
+    padding: 1.5em;
+  }
+  .mission-quote-skills,
+  .mission-quote-philosophy {
+    width: calc(100% / 2 - 1em);
+  }
+  .mission-quote-skills {
+    margin-left: 1.5em;
+  }
+  .post-related-itm {
+    display: inline;
+  }
+}
+@media (min-width: 980px) {
+  .header {
+    text-align: left;
+  }
+  .header-ttl {
+    float: none;
+    text-align: left;
+    display: inline-block;
+    padding-left: 5%;
+  }
+  .header-pic {
+    width: 200px;
+    margin-left: 2%;
+  }
+  .header-contact-lst {
+    margin-top: 1em;
+    width: calc(100% / 1.4);
+  }
+  .mission-quote-ethics {
+    float: right;
+    width: calc(100% / 1.4);
+    margin-top: -5.5em;
+  }
+  .post-header {
+    display: inline-block;
+    width: calc(100% / 3.2);
+  }
+  .post-description {
+    width: 66.66666667%;
+  }
+  .post-related-itm {
+    display: inline;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .header,
+  .mission,
+  .posts {
+    max-width: 992px;
+    margin: 0 auto;
+  }
+}

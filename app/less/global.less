@@ -3,12 +3,8 @@
 @import './lesshat';
 @import './_grid';
 
-@font-face {
-	.font-face('Mono Social Icons Font', 'MonoSocialIconsFont-1.10');
-}
-
 body {
-	background: @blue-grey url(../img/minimal02-1.png) center fixed;
+	background: @blue-grey url(../img/minimal02-1.png) 0 0 fixed;
 }
 
 .ul-reset {
@@ -22,7 +18,7 @@ body {
 }
 
 .cnt-margin() {
-	margin+: 0 4.86111%;
+	margin+: 0 @base-margin-half;
 }
 
 .trans {
@@ -52,9 +48,8 @@ body {
 
 .header {
 	position: relative;
-	&:extend(.cnt);
+	&:extend(.trans, .cnt);
 	padding-top: @base-margin;
-	&:extend(.trans);
 
 	&-ttl {
 		&:extend(.trans);
@@ -67,8 +62,6 @@ body {
 		box-shadow: 0 0 0 1px @white inset, 0 0 0 8px @brown, 0 0 0 16px fade(@black,25%);
 		font-size: 0;
 		border-radius: 200%;
-		height: 200px;
-		width: 200px;
 		position: relative;
 		text-align: center;
 		&:extend(.trans);
@@ -85,8 +78,8 @@ body {
 		}
 
 		.img {
-			.grayscale(100%);
-			.rotate(-8deg, center);
+			.grayscale(90%);
+			.rotate(8deg, center);
 			border-radius: 100%;
 			width: 100% - 4px;
 			height: auto;
@@ -99,7 +92,6 @@ body {
 		&-lst { 
 			display: inline-block;
 			margin-bottom: 0;
-
 		}
 
 		&-itm { display: inline; }
@@ -113,8 +105,7 @@ body {
 }
 
 .mission {
-	&:extend(.trans);
-	&:extend(.cnt);
+	&:extend(.trans, .cnt);
 
 	&-quote {
 		text-shadow: 1px 1px 0 @black;
@@ -128,7 +119,6 @@ body {
 	&:extend(.cnt);
 
 	&-ttl {
-		text-align: center;
 		text-shadow: -1px -1px 0 fade(@black, 50);
 		color: fade(@eggshell, 25);
 		text-transform: uppercase;

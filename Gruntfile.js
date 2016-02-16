@@ -136,8 +136,8 @@ module.exports = function(grunt) {
 				commitMessage: 'Release v%VERSION%',
 				commitFiles: ['package.json', 'bower.json'],
 				createTag: true,
-				tagName: '%VERSION%abv',
-				tagMessage: '%VERSION%abv',
+				tagName: '%VERSION%',
+				tagMessage: '%VERSION%',
 				push: true,
 				pushTo: 'upstream',
 				gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d',
@@ -169,7 +169,7 @@ module.exports = function(grunt) {
 				'<%= app.root %>**/*',
 				'Gruntfile.js'
 			],
-			tasks: [ 'less:dev', 'newer:jade',  ],
+			tasks: [ 'less:dev', 'newer:jade', "copy:img", "newer:tinyimg" ],
 			options: {
 				reload: false,
 				livereload: true,
@@ -188,8 +188,8 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', [ 'connect', 'watch' ]);
 
 	// build
-	grunt.registerTask('build', [ 'tinyimg', 'svgmin', 'copy:img', 'jade', 'htmlmin', 'less:prod'  ]);
+	grunt.registerTask('build', [ 'tinyimg', 'copy:img', 'jade', 'htmlmin', 'less:prod'  ]);
 
 	// deploy
-	grunt.registerTask('deploy', [ 'build', 'bump:minor', 'build-control' ]);	
+	grunt.registerTask('deploy', [ 'build', 'bump:minor', 'buildcontrol:pages' ]);	
 };

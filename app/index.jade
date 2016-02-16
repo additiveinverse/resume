@@ -6,8 +6,7 @@ html( lang='en' )
 			meta( http-equiv='X-UA-Compatible', content='IE=edge,chrome=1' )
 			meta( name='viewport', content='width=device-width' )
 
-			title [#{resume.user.name}] 
-				new Date().getFullYear()
+			title #{resume.user.name} [ resume #{ new Date().getFullYear() } ]
 
 			link( rel='stylesheet', href='http://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,700,300' )
 			link( rel='stylesheet', href='css/layout.min.css' )

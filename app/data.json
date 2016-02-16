@@ -9,9 +9,9 @@
 			},
 			"location": "King of Prussia, PA"
 		},
-		"mission": "I am a seasoned UX developer and designer with experience crafting user focused solutions. I live and die by user-centered application design and pragmatic coding practices. I have a soft spot for team building, mentoring, and UX/UI architecture.",
-		"skills": "I have passion for user focused design, information architecture, UI performance, HTML5, CSS3 and Javascript. Also, I like tools like Gruntjs, Gulp, Bower, Powershell, Sublime text, Node, Wordpress, Drupal.",
-		"quote": "I am obsessed with building things: Teams, UI, UX, lego robots, office supply sculptures, you name it. My sweet spot is somewhere between art, design and development. I'd love to wear bigger leadership pants. I suspect though, that I would miss getting my hands in the code.",
+		"mission": "I am a seasoned UX developer and designer. I live and die by user-centered application design and pragmatic coding practices. I have a soft spot for team building, mentoring, and UX/UI architecture. I am a bit of a mad scientist.",
+		"skills": "I know my way around user focused design, information architecture, UI performance, HTML5, CSS3 and a few javascript frameworks. I've built things using Angular, Wordpress, Drupal, using tools like Grunt, Bower, Powershell, Sublime text, Node.  Most of all, I like solving problems.",
+		"quote": "Developing people, process and products are my passion. I love working closer to the top of the stack. I've lead enterprise UI teams with a lean startup mentality. I've had a couple years of leadership and UI architecture under my belt. I like what those things have done to my brain.",
 		"timeline": [
 			{	"company" : "Ebay Enterprise",
 				"position" : "Lead UX/UI developer",
@@ -21,7 +21,7 @@
 				"description" : "I helped implement semantic, user-centered front end implementations for Petsmart, Radio Shack, GNC, Adidas, Ralph Lauren, and Timberland. I was involved in interviewing, mentoring and training new developers in web standards, modular CSS approaches and emerging browser technologies. I also led an internal tools and prototyping team utilizing a variety of technologies such as HTML5, CSS3, Responsive Web Design, Javascript, LESS, Gruntjs, Angularjs, jQuery/UI, Jstl, CakePHP."
 			},
 			{	"company" : "Additive Inverse",	
-				"position" : "Founder / UI UX designer / UX architect",
+				"position" : "UI UX designer & developer",
 				"start" : "July 2008",
 				"end" : "January 2011",
 				"projects" : [ "additiveinverse.com", "bistrobyronz.com", "camerontexas.net" ],	
