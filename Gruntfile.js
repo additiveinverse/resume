@@ -43,11 +43,6 @@ module.exports = function(grunt) {
 				files: manifest
 			}
 		},
-		jsonlint: {
-			sample: {
-				src: [ '<%= app.root %>*.json' ]
-			}
-		},
 		jade: {
 			dev: {
 				options: {

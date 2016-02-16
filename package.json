@@ -32,14 +32,11 @@
     "grunt-contrib-copy": "~0.5.0",
     "grunt-contrib-htmlmin": "~0.3.0",
     "grunt-contrib-jade": "~0.12.0",
-    "grunt-contrib-jshint": "~0.10.0",
     "grunt-contrib-less": "~0.11.4",
     "grunt-contrib-watch": "~0.6.1",
-    "grunt-css-count": "~0.3.0",
     "grunt-jsonlint": "~1.0.4",
     "grunt-newer": "~0.7.0",
     "grunt-open": "~0.2.3",
-    "grunt-svgmin": "~2.0.1",
     "grunt-tinyimg": "0.0.5",
     "matchdep": "~0.3.0"
   }
