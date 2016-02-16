@@ -93,23 +93,23 @@
 // the ideal would be a single guard expression
 // that accepts @type: grid, push, pull, prefix, suffix
 // and @columns and then figures out which mixin to run.
-.grid-loop( @type; @i ) when ( @i > 0 ) {
-	.@{type}-@{i} {
-		.column(@i);
-	}
-	.grid-loop( @type, @i - 1 );
-}
+// .grid-loop( @type; @i ) when ( @i > 0 ) {
+// 	.@{type}-@{i} {
+// 		.column(@i);
+// 	}
+// 	.grid-loop( @type, @i - 1 );
+// }
 
-.position-loop( @type; @i ) when ( @i > 0 ) {
-	.@{type}-@{i} {
-		.position(@type, @i);
-	}
-	.position-loop( @type, @i - 1 );
-}
+// .position-loop( @type; @i ) when ( @i > 0 ) {
+// 	.@{type}-@{i} {
+// 		.position(@type, @i);
+// 	}
+// 	.position-loop( @type, @i - 1 );
+// }
 
-.padding-loop( @type; @i ) when ( @i > 0 ) {
-	.@{type}-@{i} {
-		.padding(@type, @i);
-	}
-	.padding-loop( @type, @i - 1 );
-}
+// .padding-loop( @type; @i ) when ( @i > 0 ) {
+// 	.@{type}-@{i} {
+// 		.padding(@type, @i);
+// 	}
+// 	.padding-loop( @type, @i - 1 );
+// }

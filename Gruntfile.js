@@ -196,5 +196,5 @@ module.exports = function(grunt) {
 	grunt.registerTask('build', [ 'tinyimg', 'svgmin', 'copy:img', 'jade', 'htmlmin', 'less:prod'  ]);
 
 	// deploy
-	grunt.registerTask('deply', [ 'build', 'bump:minor', 'build-control' ]);	
+	grunt.registerTask('deploy', [ 'build', 'bump:minor', 'build-control' ]);	
 };

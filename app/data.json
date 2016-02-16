@@ -9,22 +9,22 @@
 			},
 			"location": "King of Prussia, PA"
 		},
-		"mission": "I am a seasoned UX developer / designer with experience architecting user focused solutions and leading development teams in the execution. I have a solid understanding of user-centered application design, pragmatic coding practices. I have a soft spot for team building, mentoring, refactoring large codebases and UX/UI architecture.",
-		"skills": "I have passion for user focused design, information architecture, UI performance, HTML5, CSS3 and Javascript. Also, I like tools like Gruntjs, Bower, Powershell, Sublime text, Node, Wordpress, Drupal.",
+		"mission": "I am a seasoned UX developer and designer with experience crafting user focused solutions. I live and die by user-centered application design and pragmatic coding practices. I have a soft spot for team building, mentoring, and UX/UI architecture.",
+		"skills": "I have passion for user focused design, information architecture, UI performance, HTML5, CSS3 and Javascript. Also, I like tools like Gruntjs, Gulp, Bower, Powershell, Sublime text, Node, Wordpress, Drupal.",
 		"quote": "I am obsessed with building things: Teams, UI, UX, lego robots, office supply sculptures, you name it. My sweet spot is somewhere between art, design and development. I'd love to wear bigger leadership pants. I suspect though, that I would miss getting my hands in the code.",
 		"timeline": [
 			{	"company" : "Ebay Enterprise",
 				"position" : "Lead UX/UI developer",
 				"start" : "August 2010",
 				"end" : "Present",
-				"projects" : [ "ralphlauren.co.uk",  "timberland.com", "petsmart.com" ],
-				"description" : "I helped implement semantic, user-centered front end implementations for Petsmart, Radio Shack, GNC, Adidas, Ralph Lauren, and Timberland. I was involved in interviewing, mentoring and training new developers in web standards, modular CSS approaches and emerging browser technologies. I also led an internal tools and prototyping team utilizing a variety of technologies such as HTML5, CSS3, Responsive Web Design, Javascript, LESS, Gruntjs, Angularjs, Jstl, CakePHP."
+				"projects" : [ "petsmart.com", "zales.com", "ralphlauren.co.uk" ],
+				"description" : "I helped implement semantic, user-centered front end implementations for Petsmart, Radio Shack, GNC, Adidas, Ralph Lauren, and Timberland. I was involved in interviewing, mentoring and training new developers in web standards, modular CSS approaches and emerging browser technologies. I also led an internal tools and prototyping team utilizing a variety of technologies such as HTML5, CSS3, Responsive Web Design, Javascript, LESS, Gruntjs, Angularjs, jQuery/UI, Jstl, CakePHP."
 			},
 			{	"company" : "Additive Inverse",	
 				"position" : "Founder / UI UX designer / UX architect",
 				"start" : "July 2008",
 				"end" : "January 2011",
-				"projects" : [ "createdigitalmusic.com", "additiveinverse.com" ],	
+				"projects" : [ "additiveinverse.com", "bistrobyronz.com", "camerontexas.net" ],	
 				"description" : "I provided my clients an array of services including project planning, visual design, and rapid HTML, CSS, and JS based theme development for a variety of open source content management and ecommerce platforms (Drupal, Ubercart, CubeCart, Wordpress, and Textpattern)."
 			},
 			{	"company" : "Webcore Technologies",

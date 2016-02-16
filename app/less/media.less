@@ -41,14 +41,6 @@
 			.font-size(@base-type-h5);
 		}
 	}
-
-	// .post {
-	// 	&-related {
-	// 		&-itm {
-	// 			display: block;
-	// 		}
-	// 	}
-	// }
 }
 
 // 480px
@@ -214,8 +206,23 @@
 	.header,
 	.mission,
 	.posts {
-		width: 992px;
+		.col(10px, 16);
 		margin: 0 auto;
+	}
+	.post {
+		&-header {
+			.col(4);
+		}	
+
+		&-description {
+			.col(7.9);
+		}
+
+		&-related {
+			&-itm {
+				display: inline;
+			}
+		}
 	}
 }
 
