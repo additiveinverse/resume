@@ -16,16 +16,11 @@ module.exports = function(grunt) {
 			}
 		},
 		prod: {
-			root: 'gh-pages/',
-			IMG: 'gh-pages/img/',
-			CSS: 'gh-pages/css/'
+			root: 'build/',
+			IMG: 'build/img/',
+			CSS: 'build/css/'
 		},
 		bower: 'bower_components/',
-		jshint: {
-			gruntfile: {
-				src: 'Gruntfile.js'
-			}
-		},
 		less: {
 			dev: {
 				options: {
@@ -117,7 +112,7 @@ module.exports = function(grunt) {
 			server: {
 				options: {
 					port: '9001',
-					base: 'gh-pages',
+					base: '<%= prod.root %>',
 					protocol: 'http',
 					hostname: 'localhost',
 					livereload: true,
@@ -146,7 +141,7 @@ module.exports = function(grunt) {
 		},
 		buildcontrol: {
 			options: {
-				dir: 'gh-pages/',
+				dir: 'build/',
 				commit: true,
 				push: true,
 				message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%',
