@@ -149,7 +149,7 @@ module.exports = function(grunt) {
 			},
 			pages: {
 				options: {
-					remote: '<%= pkg.respository.url %>',
+					remote: 'git@github.com:additiveinverse/resume.git',
 					branch: 'gh-pages',
 				}
 			}
@@ -181,5 +181,5 @@ module.exports = function(grunt) {
 	grunt.registerTask('build', [ 'tinyimg', 'copy:img', 'jade', 'htmlmin', 'less:prod'  ]);
 
 	// deploy
-	grunt.registerTask('deploy', [ 'build', 'bump:minor', 'buildcontrol' ]);	
+	grunt.registerTask('deploy', [ 'build', 'buildcontrol' ]);	
 };
