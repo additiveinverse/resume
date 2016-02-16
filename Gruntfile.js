@@ -146,21 +146,16 @@ module.exports = function(grunt) {
 		},
 		buildcontrol: {
 			options: {
-				dir: 'build/',
+				dir: 'gh-pages/',
 				commit: true,
 				push: true,
-				message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
+				message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%',
+				tag: '<%= pkg.version %>',
 			},
 			pages: {
 				options: {
-					remote: 'git@github.com:additiveinverse/resume.git',
-					branch: 'gh-pages'
-				}
-			},
-			local: {
-				options: {
-					remote: '../',
-					branch: 'build'
+					remote: '<%= pkg.respository.url %>',
+					branch: 'gh-pages',
 				}
 			}
 		},		
@@ -191,5 +186,5 @@ module.exports = function(grunt) {
 	grunt.registerTask('build', [ 'tinyimg', 'copy:img', 'jade', 'htmlmin', 'less:prod'  ]);
 
 	// deploy
-	grunt.registerTask('deploy', [ 'build', 'bump:minor', 'buildcontrol:pages' ]);	
+	grunt.registerTask('deploy', [ 'build', 'bump:minor', 'buildcontrol' ]);	
 };
