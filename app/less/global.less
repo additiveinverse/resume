@@ -3,8 +3,21 @@
 @import './lesshat';
 @import './_grid';
 
-body {
-	background: @blue-grey url(../img/minimal02-1.png) 0 0 fixed;
+@media screen {
+	body {
+		background: @blue-grey url(../img/minimal02-1.png) 0 0 fixed;
+	}
+
+	.cnt {
+		padding+: 0 @base-margin 0;
+		background-color: fade(@black, 38%);
+		border-left: @base-unit-px solid fade(@black,25%);
+		border-right: @base-unit-px solid fade(@black,25%);
+		&:extend(.trans);
+	}
+	.mission-quote {
+		text-shadow: 1px 1px 0 @black;
+	}
 }
 
 .ul-reset {
@@ -25,13 +38,6 @@ body {
 	.transition( all, 0.25s, ease-in-out, 0s)
 }
 
-.cnt {
-	padding+: 0 @base-margin 0;
-	background-color: fade(@black, 38%);
-	border-left: @base-unit-px solid fade(@black,25%);
-	border-right: @base-unit-px solid fade(@black,25%);
-	&:extend(.trans);
-}
 
 .flare {
 	content: "";
@@ -108,7 +114,6 @@ body {
 	&:extend(.trans, .cnt);
 
 	&-quote {
-		text-shadow: 1px 1px 0 @black;
 		position: relative;
 		&:extend(.anti-float);
 		.hyphens(auto);
