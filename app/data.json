@@ -2,30 +2,44 @@
 	"resume": {
 		"user": {
 			"name": "Richard Bailey",
-			"links": {
-					"github": "https://github.com/additiveinverse/",
-					"twitter": "http://www.twitter.com/wallofknives",
-					"portfolio": "http://www.additiveinverse.com"
-			},
+			"links": [{
+								"github": "https://github.com/additiveinverse/",
+								"twitter": "http://www.twitter.com/wallofknives",
+								"portfolio": "http://www.additiveinverse.com"
+						}],
 			"location": "King of Prussia, PA"
 		},
 		"mission": "I am a seasoned UX developer and designer. I live and die by user-centered application design and pragmatic coding practices. I have a soft spot for team building, mentoring, and UX/UI architecture. I am a bit of a mad scientist.",
-		"skills": "I know my way around user focused design, information architecture, UI performance, HTML5, CSS3 and a few javascript frameworks. I've built things using Angular, Wordpress, Drupal, using tools like Grunt, Bower, Powershell, Sublime text, Node.  Most of all, I like solving problems.",
-		"quote": "Developing people, process and products are my passion. I love working closer to the top of the stack. I've lead enterprise UI teams with a lean startup mentality. I've had a couple years of leadership and UI architecture under my belt. I like what those things have done to my brain.",
+		"skills": "I know my way around UX design principles, information architecture, front end performance, HTML5, CSS3 and a few javascript frameworks. I've built things using Angular, Wordpress, CraftCMS, and Drupal; using tools like Grunt, Bower, Powershell, Sublime text, Node.  Most of all, I like solving problems.",
+		"quote": "Developing people, process and products are my passion. I love working closer to the top of the stack. I've lead enterprise UI teams with a lean startup mentality. I've spent some time in the creative salt mines of an agency environment. I've had a couple years of leadership and UI architecture under my belt. I like what those things have done to my brain.",
 		"timeline": [
+			{	"company": "Content Watch",
+				"position": "UI Designer / developer",
+				"start": "July 2016",
+				"end": "present",
+				"projects": ["netnanny.com", "wezift.com"],
+				"description": "I collaborated with design & web development teams to implement new features, test plans and content for our custom ecommerce platform. I worked closely with marketing stakeholders on the structure, logic, and design of a number of key marketing initiatives. I also standardized workflow, brand guidelines, and mentored designers and developers. There was even the occasional power point presentation for the sales team. Using adobe creative suite plus tools like gulp, sass, jquery I made these projects not only functional and compelling, but brand driven."
+			},
+			{	"company": "Brash Beers",
+				"position": "Art Director",
+				"start": "July 2013",
+				"end": "present",
+				"projects": "",
+				"description": "I created and designed the brand identity. As well as all of the illustration work and layouts for the line of cans, tshirts and glassware."
+			},
 			{	"company" : "Ebay Enterprise",
 				"position" : "Lead UX/UI developer",
 				"start" : "August 2010",
-				"end" : "Present",
+				"end" : "March 2016",
 				"projects" : [ "petsmart.com", "zales.com", "ralphlauren.co.uk" ],
 				"description" : "I helped implement semantic, user-centered front end implementations for Petsmart, Radio Shack, GNC, Adidas, Ralph Lauren, and Timberland. I was involved in interviewing, mentoring and training new developers in web standards, modular CSS approaches and emerging browser technologies. I also led an internal tools and prototyping team utilizing a variety of technologies such as HTML5, CSS3, Responsive Web Design, Javascript, LESS, Gruntjs, Angularjs, jQuery/UI, Jstl, CakePHP."
 			},
-			{	"company" : "Additive Inverse",	
+			{	"company" : "Additive Inverse",
 				"position" : "UI UX designer & developer",
 				"start" : "July 2008",
 				"end" : "January 2011",
-				"projects" : [ "additiveinverse.com", "bistrobyronz.com", "camerontexas.net" ],	
-				"description" : "I provided my clients an array of services including project planning, visual design, and rapid HTML, CSS, and JS based theme development for a variety of open source content management and ecommerce platforms (Drupal, Ubercart, CubeCart, Wordpress, and Textpattern)."
+				"projects" : [ "additiveinverse.com", "bistrobyronz.com", "camerontexas.net" ],
+				"description" : "I provided my clients an array of services including project planning, visual and user experience design, and front end theme development for a variety of open source content management and ecommerce platforms (Drupal, Ubercart, CubeCart, Wordpress, and Textpattern)."
 			},
 			{	"company" : "Webcore Technologies",
 				"position" : "UI/UX consultant",
@@ -41,6 +55,6 @@
 				"projects" : [ "lammes.com", "bargainjill.com" ],
 				"description" : "Focused largely on Wordpress theme development, I worked within a small team of cross discipline developers and designers to deliver dynamic web projects for a wide variety of clients and industries."
 			}
-		]	
+		]
 	}
 }

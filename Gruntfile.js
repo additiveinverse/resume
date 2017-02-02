@@ -38,7 +38,7 @@ module.exports = function(grunt) {
 				files: manifest
 			}
 		},
-		jade: {
+		pug: {
 			dev: {
 				options: {
 					data: function(dest, src) {
@@ -48,7 +48,7 @@ module.exports = function(grunt) {
 					pretty: true
 				},
 				files: {
-					"<%= prod.root %>index.html": "<%= app.root %>index.jade"
+					"<%= prod.root %>index.html": "<%= app.root %>index.pug"
 				}
 			}
 		},
@@ -68,7 +68,7 @@ module.exports = function(grunt) {
 		svgmin: {
 			options: {
 				plugins: [
-					{ removeViewBox: false }, 
+					{ removeViewBox: false },
 					{	removeUselessStrokeAndFill: false }
 				]
 			},
@@ -78,20 +78,20 @@ module.exports = function(grunt) {
 					cwd: '<%= app.IMG.src %>',
 					src: [ '**/*.svg' ],
 					dest: '<%= app.IMG.dist %>'
-				}]				
+				}]
 			}
 		},
 		tinyimg: {
 			dynamic: {
 				files: [{
 					expand: true,
-					cwd: '<%= app.IMG.src %>', 
+					cwd: '<%= app.IMG.src %>',
 					src: ['*.{png,jpg}'],
 					dest: '<%= app.IMG.dist %>',
 					flatten: true
 				}]
 			}
-		},		
+		},
 		copy: {
 			less: {
 				expand: true,
@@ -106,21 +106,6 @@ module.exports = function(grunt) {
 				src: ['*.{png,jpg,svg}'],
 				dest: '<%= prod.IMG %>',
 				flatten: true
-			}
-		},
-		connect: {
-			server: {
-				options: {
-					port: '9001',
-					base: '<%= prod.root %>',
-					protocol: 'http',
-					hostname: 'localhost',
-					livereload: true,
-					open: {
-						target: 'http://localhost:9001/', // target url to open
-						appName: 'Firefox'
-					},
-				}
 			}
 		},
 		bump: {
@@ -153,15 +138,15 @@ module.exports = function(grunt) {
 					branch: 'gh-pages',
 				}
 			}
-		},		
+		},
 		watch: {
 			files: [
 				'<%= app.root %>**/*',
 				'Gruntfile.js'
 			],
-			tasks: [ 'less:dev', 'newer:jade', "copy:img", "newer:tinyimg" ],
+			tasks: [ "less:dev", "pug", ],
 			options: {
-				reload: false,
+				reload: true,
 				livereload: true,
 				spawn: true,
 				dateFormat: function( time ) {
@@ -169,17 +154,26 @@ module.exports = function(grunt) {
 					grunt.log.writeln('MOAR changes... bring them you must!');
 				}
 			}
-		}
+		},
+		browserSync: {
+			bsFiles: {
+				src: [ "<%= prod.root %>*.html", "<%= prod.css %>*.css" ]
+			},
+			options: {
+				watchTask: true,
+				server: "<%= prod.root %>"
+			}
+		},
 	});
 
 	require('matchdep').filterDev('grunt-*').forEach( grunt.loadNpmTasks );
 
 	// Default
-	grunt.registerTask('default', [ 'connect', 'watch' ]);
+	grunt.registerTask('default', [ "browserSync", "watch" ]);
 
 	// build
-	grunt.registerTask('build', [ 'tinyimg', 'copy:img', 'jade', 'htmlmin', 'less:prod'  ]);
+	grunt.registerTask('build', [ 'tinyimg', 'copy:img', 'pug', 'htmlmin', 'less:prod'  ]);
 
 	// deploy
-	grunt.registerTask('deploy', [ 'build', 'buildcontrol' ]);	
+	grunt.registerTask('deploy', [ 'build', 'buildcontrol' ]);
 };
