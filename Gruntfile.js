@@ -1,8 +1,11 @@
 /*global module:false*/
 module.exports = function(grunt) {
 	var name    = '<%= pkg.name %>-v<%= pkg.version%>',
-			manifest = { '<%= prod.CSS %>layout.min.css': [  '<%= app.LESS %>normalize.less', '<%= app.LESS %>base-*.less'],
-									 '<%= prod.CSS %>global.css': '<%= app.LESS %>global.less'};
+		manifest = {
+			'<%= prod.CSS %>layout.min.css': [  '<%= app.LESS %>normalize.less', '<%= app.LESS %>base-*.less'],
+			'<%= prod.CSS %>global.css': '<%= app.LESS %>global.less',
+			'<%= prod.CSS %>print.css': '<%= app.LESS %>print.less'
+		};
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),

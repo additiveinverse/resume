@@ -33,7 +33,7 @@
 			&-skills,
 			&-philosophy {
 				margin-top: 0;
-				padding: 0;				
+				padding: 0;
 			}
 		}
 	}
@@ -91,7 +91,7 @@
 		&-pic {
 			margin-left: 5.5%;
 		}
-	}	
+	}
 
 	.mission {
 		&-quote {
@@ -157,7 +157,7 @@
 		&-header {
 			display: inline-block;
 			width: calc(~"100% / 3.2");
-		}	
+		}
 
 		&-description {
 			.col(8);
@@ -179,65 +179,4 @@
 		max-width: 992px;
 		margin: 0 auto;
 	}
-}
-
-// 1280px
-@media print {
-	body {
-		background: white;
-		text-shadow: none;
-		color: black;
-		display: flex;
-		flex-flow: wrap;
-	}
-
-
-	.header {
-		flex: 0 0 30%;
-		order: 1;
-		text-align: right;
-		// position: absolute;
-		// top: 0;
-		// left: 0;
-		&-ttl {
-			line-height: 1;
-		}
-
-		&-pic {
-			border-radius: none;
-			margin-right: 0;
-			border: none;
-			box-shadow: none;
-			&:before,
-			&:after {
-				display: none;
-			}
-		}
-	}
-	
-	.mission {
-		order: 3;
-		&-quote {
-			font-size: larger;
-		}
-	}
-
-	.posts {
-		margin-top: 2.5em;
-		padding-left: 4%;
-		flex: 0 0 65%;
-		order: 2;
-	}
-
-	.post {
-		&-related {
-			&-lst,
-			&-itm,
-			&-ttl {
-				vertical-align: middle;
-				display: inline-block;
-				margin-right: 1em;
-			}
-		}
-	}	
 }
