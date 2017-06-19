@@ -2,9 +2,7 @@
 module.exports = function(grunt) {
 	var name    = '<%= pkg.name %>-v<%= pkg.version%>',
 		manifest = {
-			'<%= prod.CSS %>layout.min.css': [  '<%= app.LESS %>normalize.less', '<%= app.LESS %>base-*.less'],
-			'<%= prod.CSS %>global.css': '<%= app.LESS %>global.less',
-			'<%= prod.CSS %>print.css': '<%= app.LESS %>print.less'
+			'<%= prod.CSS %>global.css': '<%= app.LESS %>global.less'
 		};
 
 	grunt.initConfig({
@@ -101,6 +99,13 @@ module.exports = function(grunt) {
 				cwd: '<%= bower %>',
 				src: ['normalize-less/normalize.less', 'lesshat/build/*.less' ],
 				dest: 'app/less/',
+				flatten: true
+			},
+			twbs: {
+				expand: true,
+				cwd: '<%= bower %>bootstrap/',
+				src: ['less/mixins/*.less' ],
+				dest: 'app/less/twbs/',
 				flatten: true
 			},
 			img: {
