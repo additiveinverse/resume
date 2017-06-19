@@ -34,30 +34,30 @@ html( lang='en' )
 					li.header__contact-listitem
 						a( href= link ).header__contact-listitem--link #{i}
 
-		//- aside.mission
-		//- 	blockquote.mission-quote.mission-quote-ethics #{resume.mission}
+		aside.mission
+			h2.mission__title Mission
+			blockquote.mission__quote #{resume.mission}
 
 		main.main
-			h2.main__title Work History
+			h2.main__title Experience
 
-			each role, i in resume.timeline
-				article.post
-					header.post-header
-						h3.ttl.post-header-ttl-company #{role.company}
-						ul.lst.post-header-role-lst
-							li.itm.post-header-role-lst-itm.post-header-role-position( itemprop="jobTitle" )
-								h4 #{role.position}
-							li.itm.post-header-role-lst-itm.post-header-role-duration #{role.start} - #{role.end}
+			section.main__post
+				each role, i in resume.timeline
+					article.main__post-list
+						header.main__post-header
+							h3.main__post-header--company #{role.company}
+							h4.main__post-header--role #{role.position}
+							p.main__post-header--duration #{role.start} - #{role.end}
 
-					section.post__description
-						p #{role.description}
+						section.post__description
+							p #{role.description}
 
-						if role.projects
-							h5.post__related-title project work:
-							ul.post__related-list
-								each project in role.projects
-									li.post__related-listitem
-										a.post__related-listitem--link(itemprop="url", href="http://#{ project }") #{ project }
+							if role.projects
+								h5.post__related-title project work:
+								ul.post__related-list
+									each project in role.projects
+										li.post__related-listitem
+											a.post__related-listitem--link(itemprop="url", href="http://#{ project }") #{ project }
 
-			blockquote.mission-quote.mission-quote-philosophy #{resume.quote}
-			blockquote.mission-quote.mission-quote-skills #{resume.skills}
+			//- blockquote.mission-quote.mission-quote-philosophy #{resume.quote}
+			//- blockquote.mission-quote.mission-quote-skills #{resume.skills}

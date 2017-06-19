@@ -7,10 +7,23 @@
 	text-transform: uppercase;
 }
 
+.display ( @type: 'inline-block') {
+	display: @type;
+}
+
+.inline-block {
+	.display();
+	vertical-align: top;
+}
+
+.inline {
+	.display(inline);
+	float: none;
+}
 
 body {
 	font-family: @base-type;
-	background-color: #fff;
+	background-color: #f4f4f4;
 	background-image: url( data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nMjAwJyBoZWlnaHQ9JzMwMCcgdmlld0JveD0nMCAwIDIwMCAzMDAnPgoJPGZpbHRlciBpZD0nZnV6eicgeD0nMCcgeT0nMCc+CgkJPGZlVHVyYnVsZW5jZSB0eXBlPSd0dXJidWxlbmNlJyBiYXNlRnJlcXVlbmN5PScwLjE1JyBudW1PY3RhdmVzPScxMCcgc3RpdGNoVGlsZXM9J3N0aXRjaCcvPgoJPC9maWx0ZXI+Cgk8cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWx0ZXI9J3VybCgjZnV6eiknIG9wYWNpdHk9JzAuMDgnLz4KPC9zdmc+ );
 }
 
@@ -38,29 +51,33 @@ a {
 	}
 }
 
-.layout-row {
-	max-width: 1080px;
-	margin: 0 auto;
-}
 
-.col-left {
+#columns {
+	.row {
+		.display(flex);
+		max-width: 1024px;
+		margin: 0 auto;
+	}
+
+	.left {
 		flex: 0 0 25%;
-}
-.col-right {
-	margin-left: 5%;
-	flex: 0 0 65%;
+	}
+
+	.right {
+		margin-left: 5%;
+		flex: 0 0 65%;
+	}
 }
 
 
 .header {
-	&:extend( .layout-row );
-
+	&:extend( #columns .row );
 	margin-top: @base-margin;
-	display: flex;
+
 
 	&--wrap {
 		border-top: 1px solid @grey-light;
-		&:extend( .col-left );
+		&:extend( #columns .left );
 	}
 
 	&__title {
@@ -76,12 +93,13 @@ a {
 	&__contact {
 		&-list {
 			margin-top: 0;
-			&:extend( .col-right );
+			&:extend( #columns .right );
 			list-style: none;
 			padding: @base-margin 0 0;
 			border-top: 1px solid @grey-light;
 
 			&item {
+				color: @red-desat;
 				&:before {
 					content: "+ ";
 				}
@@ -93,14 +111,56 @@ a {
 	}
 }
 
+.mission {
+		&:extend( #columns .row );
+
+		&__title {
+			&:extend( #columns .left );
+			font-weight: 300;
+		}
+
+		&__quote {
+			&:extend( #columns .right );
+	}
+}
+
 .main {
-		&:extend( .layout-row );
+		&:extend( #columns .row );
+
+		&__title {
+			font-weight: 300;
+			&:extend( #columns .left );
+		}
+
+		&__post {
+			&:extend( #columns .right );
+
+			&-list {}
+
+			&-header {
+				&--company {
+					&:extend( .inline );
+
+				}
+
+				&--role {
+					&:extend( .inline );
+					font-weight: 300;
+					font-size: 1.17em;
+				}
+
+				&--duration {
+					margin-top: 0;
+				}
+			}
+		}
 }
 
 .post {
 	&__related {
 		&-list {
 			&item {
+				color: @red-desat;
 				&:before {
 					content: " + "
 				}
