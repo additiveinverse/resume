@@ -1,7 +1,9 @@
 @import './_variables';
 
-.mq( @size ) {
-
+.mq(@screen; @rules ) {
+	@media only screen and ( min-width: @screen ) {
+		@rules();
+	}
 }
 
 .background-color( @color: @black, @opacity: 100 ){
