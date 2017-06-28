@@ -88,8 +88,7 @@ module.exports = function(grunt) {
 					expand: true,
 					cwd: '<%= app.IMG.src %>',
 					src: ['**/*.{png,jpg}'],
-					dest: '<%= app.IMG.dist %>',
-					flatten: true
+					dest: '<%= app.IMG.dist %>'
 				}]
 			}
 		},
@@ -111,9 +110,8 @@ module.exports = function(grunt) {
 			img: {
 				expand: true,
 				cwd: '<%= app.IMG.dist %>',
-				src: ['*.{png,jpg,svg}'],
-				dest: '<%= prod.IMG %>',
-				flatten: true
+				src: ['**/*.{png,jpg,svg}'],
+				dest: '<%= prod.IMG %>'
 			}
 		},
 		bump: {
