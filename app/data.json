@@ -30,11 +30,11 @@
 				"description": "I worked with the founder to establish brand identity and visual guidelines. I created art for all the packaging, glassware, as well as t-shirts and merchandise sold at the brewery."
 			},
 			{	"company" : "Ebay Enterprise",
-				"position" : "Lead UX/UI developer",
+				"position" : "Lead UX developer",
 				"start" : "August 2010",
 				"end" : "March 2016",
 				"projects" : [ "petsmart.com", "zales.com", "ralphlauren.co.uk" ],
-				"description" : "I helped implement semantic front end ecommerce solutions for Petsmart, Ralph Lauren, and Timberland. I was involved in interviewing, mentoring and training developers in web standards, modular CSS approaches and emerging browser technologies. I also led a UX prototyping team that utilized technologies such as HTML5, CSS3, Responsive Web Design, LESS, Gruntjs, Angularjs, jQuery/UI, Jstl, CakePHP."
+				"description" : "I helped implement semantic front end ecommerce solutions for Petsmart, Ralph Lauren, and Timberland. Additionally, I led an internal tools team who's primary mission was to design and build tools to reduce day to day developer pain points. Additionally, I was involved in setting code standards, instituting team workflows, and implementing user focused design and development approaches with an eye towards emerging browser technologies."
 			},
 			{	"company" : "Additive Inverse",
 				"position" : "UI/UX designer & developer",
