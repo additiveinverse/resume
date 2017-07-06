@@ -7,10 +7,30 @@ html( lang='en' )
 			meta( name='viewport', content='width=device-width' )
 
 			title #{resume.user.name} [ resume #{ new Date().getFullYear() } ]
-			link( rel='stylesheet', href='http://fonts.googleapis.com/css?family=Roboto+Slab|Roboto:400,700,300' )
-			link( rel='stylesheet', href='css/layout.min.css' )
+			link( rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lato:300,400,900' )
 			link( rel='stylesheet', href='css/global.css' )
-			link( rel='stylesheet', href='css/print.css' )
+			//- <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
+			script( src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" )
+			//- <!-- Magnific Popup core JS file -->
+			script( src="js/jquery.magnific-popup.js" )
+
+			script.
+				$(document).ready(function() {
+					$('.samples__listitemlink').magnificPopup({
+						type:'image',
+						removalDelay: 300,
+						mainClass: 'mfp-fade',
+						gallery: {
+							enabled: true,
+							preload: [1,3],
+							navigateByImgClick: true,
+							arrowMarkup: '<button title="%title%" type="button" class="mfp-arrow mfp-arrow-%dir%"></button>', // markup of an arrow button
+							tPrev: 'Previous (Left arrow key)', // title for left button
+							tNext: 'Next (Right arrow key)', // title for right button
+							tCounter: '<span class="mfp-counter">%curr% of %total%</span>' // markup of counter
+						}
+					});
+				});
 
 			script.
 				(function(i,s,o,g,r,a,m){
@@ -26,39 +46,51 @@ html( lang='en' )
 
 	body
 		header.header
-			h1.ttl.header-ttl #{resume.user.name}
-			figure.header-pic
-				img(src="img/me.jpg").img.header-pic-img
+			.header--wrap
+				h1.header__title #{resume.user.name}
+				h2.header__subtitle #{ resume.user.description }
 
-			ul.lst.header-contact-lst
+
+			ul.header__contact-list
 				each link, i in resume.user.links
-					li.itm.header-contact-itm
-						a(href= link ).lnk.header-contact-lnk #{i}
+					li.header__contact-listitem
+						a( href= link ).header__contact-listitem--link #{i}
 
 		aside.mission
-			blockquote.mission-quote.mission-quote-ethics #{resume.mission}
+			h2.mission__title Mission
+			blockquote.mission__quote #{resume.mission}
 
-		main.posts
-			h2.ttl.posts-ttl Work History
+		main.main
+			h2.main__title Experience
 
-			each role, i in resume.timeline
-				article.post
-					header.post-header
-						h3.ttl.post-header-ttl-company #{role.company}
-						ul.lst.post-header-role-lst
-							li.itm.post-header-role-lst-itm.post-header-role-position( itemprop="jobTitle" )
-								h4 #{role.position}
-							li.itm.post-header-role-lst-itm.post-header-role-duration #{role.start} - #{role.end}
+			section.main__post
+				each role, i in resume.timeline
+					article.main__post-list
+						header.main__post-header
+							h3.main__post-header--company #{role.company}
+							h4.main__post-header--role #{role.position}
+							p.main__post-header--duration #{role.start} - #{role.end}
 
-					section.post-description
-						p #{role.description}
+						section.main__post--description
+							p #{role.description}
 
-						if role.projects
-							h5.ttl.post-related-ttl project work:
-							ul.lst.post-related-lst
-								each project in role.projects
-									li.itm.post-related-itm
-										a.lnk.post-related-lnk(itemprop="url", href="http://#{ project }") #{ project }
+							if role.projects
+								h5.main__post--description-title project work:
+								ul.main__post--description-list
+									each project in role.projects
+										li.main__post--description-listitem
+											a.main__post--description--listitemlink(itemprop="url", href="http://#{ project }") #{ project }
+		section.samples
+			h2.samples__title Work Samples
+			.samples__content
+				ul.samples__list
+					each sample, i in resume.samples
+						li.samples__listitem
+							a(href="/img/samples/" + sample ).samples__listitemlink
+								img( src="/img/samples/thumb-" + sample ).samples__listitemlink-img
 
-			blockquote.mission-quote.mission-quote-philosophy #{resume.quote}
-			blockquote.mission-quote.mission-quote-skills #{resume.skills}
+		section.skills
+			h2.skills__title Skills
+			.skills__content
+				blockquote.skills__quote--philosophy #{resume.quote}
+				blockquote.skills__quote--skills #{resume.skills}

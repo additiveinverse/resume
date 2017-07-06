@@ -26,6 +26,10 @@
   "devDependencies": {
     "normalize-less": "*",
     "lesshat": "~3.0.2",
-    "monosocialiconsfont": "*"
+    "monosocialiconsfont": "*",
+    "bootstrap": "^3.3.7"
+  },
+  "dependencies": {
+    "order.less": "^1.0.7"
   }
 }

@@ -1,5 +1,11 @@
 @import './_variables';
 
+.mq(@screen; @rules ) {
+	@media only screen and ( min-width: @screen ) {
+		@rules();
+	}
+}
+
 .background-color( @color: @black, @opacity: 100 ){
 	background-color: fadeout( @color, unit(@opacity,%) );
 }

@@ -22,10 +22,9 @@
 }
 
 .grid-row {
-	display: block;
 	margin-left: auto;
 	margin-right: auto;
-	.row;
+	.layout-row;
 }
 
 .grid-column {
@@ -36,18 +35,14 @@
 .grid-pull,
 .grid-push { position: relative; }
 
-.col( @x, @columns: @columns ) { 
-	width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width); 
+.col( @x, @columns: @columns ) {
+	width: @total-width*((((@gutter-width+@column-width)*@x)-@gutter-width) / @gridsystem-width);
 }
 
-.row(@columns:@columns) {
+.layout-row(@columns:@columns) {
 	width: @total-width*((@gutter-width + @gridsystem-width)/@gridsystem-width);
+	max-width: 1180px;
 	.clearfix;
-}
-
-.column(@x, @columns:@columns) {
-	&:extend( .grid-column );
-	.col(@x);
 }
 
 .offsetter( @offset ) {
@@ -66,12 +61,12 @@
 	left: @col-width;
 }
 // call the guards with new mixins
-.push( @offset:1 ) { 
-	.position( push, @offset ); 
+.push( @offset:1 ) {
+	.position( push, @offset );
 }
 
-.pull( @offset:1 ) { 
-	.position( push, @offset ); 
+.pull( @offset:1 ) {
+	.position( push, @offset );
 }
 
 // adding some guards to tighten things up a little
@@ -86,30 +81,3 @@
 // call the guards with new mixins
 .prefix( @offset:1 ) { .padding( prefix, @offset ); }
 .suffix( @offset:1 ) { .padding( suffix, @offset ); }
-
-
-// first pass at programatic grid system generation
-// this all sucks and is a pain in the rear because copy and paste
-// the ideal would be a single guard expression
-// that accepts @type: grid, push, pull, prefix, suffix
-// and @columns and then figures out which mixin to run.
-// .grid-loop( @type; @i ) when ( @i > 0 ) {
-// 	.@{type}-@{i} {
-// 		.column(@i);
-// 	}
-// 	.grid-loop( @type, @i - 1 );
-// }
-
-// .position-loop( @type; @i ) when ( @i > 0 ) {
-// 	.@{type}-@{i} {
-// 		.position(@type, @i);
-// 	}
-// 	.position-loop( @type, @i - 1 );
-// }
-
-// .padding-loop( @type; @i ) when ( @i > 0 ) {
-// 	.@{type}-@{i} {
-// 		.padding(@type, @i);
-// 	}
-// 	.padding-loop( @type, @i - 1 );
-// }

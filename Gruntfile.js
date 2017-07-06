@@ -2,9 +2,7 @@
 module.exports = function(grunt) {
 	var name    = '<%= pkg.name %>-v<%= pkg.version%>',
 		manifest = {
-			'<%= prod.CSS %>layout.min.css': [  '<%= app.LESS %>normalize.less', '<%= app.LESS %>base-*.less'],
-			'<%= prod.CSS %>global.css': '<%= app.LESS %>global.less',
-			'<%= prod.CSS %>print.css': '<%= app.LESS %>print.less'
+			'<%= prod.CSS %>global.css': '<%= app.LESS %>global.less'
 		};
 
 	grunt.initConfig({
@@ -89,9 +87,8 @@ module.exports = function(grunt) {
 				files: [{
 					expand: true,
 					cwd: '<%= app.IMG.src %>',
-					src: ['*.{png,jpg}'],
-					dest: '<%= app.IMG.dist %>',
-					flatten: true
+					src: ['**/*.{png,jpg}'],
+					dest: '<%= app.IMG.dist %>'
 				}]
 			}
 		},
@@ -103,12 +100,18 @@ module.exports = function(grunt) {
 				dest: 'app/less/',
 				flatten: true
 			},
+			twbs: {
+				expand: true,
+				cwd: '<%= bower %>bootstrap/',
+				src: ['less/mixins/*.less' ],
+				dest: 'app/less/twbs/',
+				flatten: true
+			},
 			img: {
 				expand: true,
 				cwd: '<%= app.IMG.dist %>',
-				src: ['*.{png,jpg,svg}'],
-				dest: '<%= prod.IMG %>',
-				flatten: true
+				src: ['**/*.{png,jpg,svg}'],
+				dest: '<%= prod.IMG %>'
 			}
 		},
 		bump: {
