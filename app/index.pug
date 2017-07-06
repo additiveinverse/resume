@@ -79,7 +79,7 @@ html( lang='en' )
 								ul.main__post--description-list
 									each project in role.projects
 										li.main__post--description-listitem
-											a.main__post--description--listitemlink(itemprop="url", href="http://#{ project }") #{ project }
+											a.main__post--description--listitemlink(itemprop="url", href="http://" + project ) #{ project }
 		section.samples
 			h2.samples__title Work Samples
 			.samples__content
