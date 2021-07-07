@@ -178,7 +178,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('default', [ "browserSync", "watch" ]);
 
 	// build
-	grunt.registerTask('build', [ 'tinyimg', 'copy:img', 'pug', 'htmlmin', 'less:prod'  ]);
+	grunt.registerTask('build', [ 'copy:img', 'pug', 'htmlmin', 'less:prod'  ]);
 
 	// deploy
 	grunt.registerTask('deploy', [ 'build', 'buildcontrol' ]);

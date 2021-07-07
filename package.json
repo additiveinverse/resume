@@ -25,16 +25,16 @@
   "devDependencies": {
     "grunt-browser-sync": "^2.2.0",
     "grunt-build-control": "~0.1.3",
-    "grunt-bump": "0.0.16",
+    "grunt-bump": "^0.8.0",
     "grunt-contrib-copy": "~0.5.0",
-    "grunt-contrib-htmlmin": "~0.3.0",
-    "grunt-contrib-less": "~0.11.4",
-    "grunt-contrib-pug": "^1.0.0",
-    "grunt-contrib-watch": "~0.6.1",
-    "grunt-jsonlint": "^1.0.7",
+    "grunt-contrib-htmlmin": "^3.1.0",
+    "grunt-contrib-less": "^3.0.0",
+    "grunt-contrib-pug": "^3.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "grunt-jsonlint": "^2.1.3",
     "grunt-newer": "~0.7.0",
     "grunt-open": "~0.2.3",
     "grunt-tinyimg": "0.0.5",
-    "matchdep": "~0.3.0"
+    "matchdep": "^2.0.0"
   }
 }

@@ -2,32 +2,39 @@
 	"resume": {
 		"user": {
 			"name": "Richard Bailey",
-			"description": "Designer / Developer",
+			"description": "UX Problem Solver",
 			"links": {
 				"github": "//github.com/additiveinverse/",
 				"twitter": "//www.twitter.com/__proem__",
 				"linkedin": "//www.linkedin.com/in/additiveinverse/"
 			},
-			"location": "King of Prussia, PA"
+			"location": "North Hollywood, CA"
 		},
-		"samples": ["ggv2.png", "ggv1.png", "zchild-home.png", "zchild-settings.png", "zchild-blocked.png", "nn-bfs.png", "nn-exitintent.png", "proemland.png", "bb.png" ],
-		"mission": "I am a seasoned UX developer and designer. I live and die by user-centered application design and pragmatic coding practices. I have a soft spot for team building, mentoring, and UX/UI architecture. I am a bit of a mad scientist.",
+		"samples": ["gmp-user.png", "ggv2.png", "ggv1.png", "zchild-home.png", "zchild-settings.png", "zchild-blocked.png", "nn-bfs.png", "nn-exitintent.png", "proemland.png" ],
+		"mission": "I am a seasoned UX designer and developer. I live and die by user-centered application design and pragmatic coding practices. I have a soft spot for team building, mentoring, and UX/UI architecture. I am a bit of a mad scientist.",
 		"quote": "Developing people, process and products are my passion. I love working closer to the top of the stack. I've lead enterprise UI teams with a lean startup mentality. I've spent some time in the creative salt mines of an agency environment. I've had a couple years of leadership and UI architecture under my belt. I like what those things have done to my brain.",
 		"skills": "I know my way around UX design principles, information architecture, and front end performance tuning. Using tools like Angular, Wordpress, CraftCMS, Grunt, Powershell, Sublime text; I've designed and built everything from marketing & ecommerce sites to mobile apps that consume Restful Api's. Most of all, I like solving problems.",
 		"timeline": [
+			{	"company": "Genomind",
+				"position": "UX Designer / Developer",
+				"start": "August 2017",
+				"end": "present",
+				"projects": ["portal.genomind.com", "mymap.genomind.com"],
+				"description": "I worked closely with the cross-functional clinical and sales teams to gather consensus for all of genominds front facing products. I conducted design/ideation sessions with stakeholders usually with an element of live coding in order to shorten the iteration cycle. I prototyped in AdobeXD and in the browser leveraging a pattern library and interface framework I built and maintained."
+			},
 			{	"company": "Content Watch",
 				"position": "Designer / Developer",
 				"start": "July 2016",
-				"end": "present",
+				"end": "July 2017",
 				"projects": ["netnanny.com", "wezift.com"],
-				"description": "I designed and developed new UX features with a focus on funnel optimization. I worked closely with stakeholders to develop information architecture, visual design and development strategies for a number marketing initiatives. I helped standardize workflow, estimation and deploy processes. Using adobe creative suite plus tools like uxpin, git, gulp, sass, and jquery I helped to make these projects not only brand focused, but compelling."
+				"description": "I designed and developed new UX features with a focus on funnel optimization. I worked closely with marketing stakeholders to develop information architecture, visual design and development strategies for a number of initiatives. I helped standardize delivery workflow, estimation and deploy processes. Using adobe creative suite plus tools like uxpin, git, gulp, and sass I helped to make these projects not only brand focused, but compelling."
 			},
 			{	"company": "Brash Beers",
 				"position": "Art Director / Designer",
 				"start": "July 2013",
 				"end": "present",
 				"projects": "",
-				"description": "I worked with the founder to establish brand identity and visual guidelines. I created art for all the packaging, glassware, as well as t-shirts and merchandise sold at the brewery."
+				"description": "I work with the founder to establish brand identity and visual guidelines. I created art for all the packaging, glassware, as well as t-shirts and merchandise sold at the brewery."
 			},
 			{	"company" : "Ebay Enterprise",
 				"position" : "Lead UX developer",
