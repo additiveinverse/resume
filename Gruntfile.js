@@ -140,7 +140,7 @@ module.exports = function(grunt) {
 			},
 			pages: {
 				options: {
-					remote: 'git@github.com:additiveinverse/resume.git',
+					remote: 'https://github.com/additiveinverse/resume.git',
 					branch: 'gh-pages',
 				}
 			}
