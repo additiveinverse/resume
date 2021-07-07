@@ -20,7 +20,7 @@
     "url": "https://github.com/additiveinverse/resume/issues"
   },
   "dependencies": {
-    "grunt": "~0.4.5"
+    "grunt": "~1.3.0"
   },
   "devDependencies": {
     "grunt-browser-sync": "^2.2.0",
