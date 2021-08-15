@@ -204,12 +204,16 @@ body {
 		}
 
 		&-header {
-			&--company {
-				&:extend( .inline );
+			&_ {
+				display: flex;
 			}
 
+			// &--company {
+			// 	&:extend( .inline );
+			// }
+
 			&--role {
-				&:extend( .inline, #title .subheader, .h3 );
+				&:extend( #title .subheader, .h3 );
 				padding-left: @base-margin-half;
 			}
 

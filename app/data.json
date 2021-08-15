@@ -17,45 +17,38 @@
 		"timeline": [
 			{	"company": "Genomind",
 				"position": "UX Designer / Developer",
-				"start": "August 2017",
+				"start": "08.2017",
 				"end": "present",
 				"projects": ["portal.genomind.com", "mymap.genomind.com"],
 				"description": "I work closely with the cross-functional clinical and sales teams to gather ux design consensus for all of genominds web facing products. I conduct regular design/ideation sessions with stakeholders. I routinely prototype in AdobeXD and in the browser leveraging a brand focused pattern library I built and maintain. I serve as product designer for the Genomind Mental Health Map dna test and activation/onboarding process."
 			},
 			{	"company": "Content Watch",
 				"position": "UX Designer / Developer",
-				"start": "July 2016",
-				"end": "July 2017",
+				"start": "07.2016",
+				"end": "07.2017",
 				"projects": ["netnanny.com", "wezift.com"],
 				"description": "I designed and developed new UX features with a focus on funnel optimization. I worked closely with marketing stakeholders to develop information architecture, visual design and development strategies for a number of initiatives. Worked as product designer for an early iteration net security mobile app. I helped standardize delivery workflow, estimation and deploy processes. Using adobe creative suite plus tools like uxpin, git, gulp, and sass I helped to make these projects not only brand focused, but compelling."
 			},
 			{	"company": "Brash Beers",
 				"position": "Art Director / Designer",
-				"start": "July 2013",
+				"start": "07.2013",
 				"end": "present",
 				"projects": "",
 				"description": "I work with the founder to establish brand identity and visual guidelines. I created art for all the death metal themed packaging, labels, glassware, as well as t-shirts and merchandise sold at the brewery."
 			},
 			{	"company" : "Ebay Enterprise",
 				"position" : "Lead UX developer / Product Designer",
-				"start" : "August 2010",
-				"end" : "March 2016",
+				"start" : "08.2010",
+				"end" : "03.2016",
 				"projects" : [ "petsmart.com", "zales.com", "ralphlauren.co.uk" ],
 				"description" : "I helped implement semantic front end ecommerce solutions for Petsmart, Ralph Lauren, and Timberland, among others. Additionally, I led development for internal tools team while acting as product designer, to build tools to optimize daily developer workflow. I was involved in defining and establishing code patterns, standards, maintaining team workflow, deploy validations and implementing user focused design and development approaches with an eye towards emerging browser technologies."
 			},
 			{	"company" : "Additive Inverse",
 				"position" : "UX designer / developer",
-				"start" : "July 2008",
-				"end" : "January 2011",
+				"start" : "07.2008",
+				"end" : "01.2011",
 				"projects" : [ "additiveinverse.com", "bistrobyronz.com" ],
 				"description" : "I provided my agency clients with an array of services including project planning, visual design, user experience design, and front end development for a variety of open source content management and ecommerce platforms (Drupal, Wordpress, and Textpattern)."
-			},
-			{	"company" : "Pixeldust Interactive",
-				"position" : "Front end developer",
-				"start" : "June 2008",
-				"end" : "October 2005",
-				"projects" : [ "lammes.com", "bargainjill.com" ],
-				"description" : "Focused largely on Wordpress theme development, I worked within a small team of cross discipline developers and designers to deliver dynamic web projects for a wide variety of clients and industries."
 			}
 		]
 	}
