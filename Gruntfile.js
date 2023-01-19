@@ -124,8 +124,8 @@ module.exports = function(grunt) {
 				createTag: true,
 				tagName: '%VERSION%',
 				tagMessage: '%VERSION%',
-				push: true,
-				pushTo: 'upstream',
+				// push: true,
+				// pushTo: 'upstream',
 				gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d',
 				globalReplace: false
 			}
@@ -181,5 +181,5 @@ module.exports = function(grunt) {
 	grunt.registerTask('build', [ 'copy:img', 'pug', 'htmlmin', 'less:prod'  ]);
 
 	// deploy
-	grunt.registerTask('deploy', [ 'build', 'buildcontrol' ]);
+	grunt.registerTask('deploy', [ 'bump', 'build', 'buildcontrol' ]);
 };
