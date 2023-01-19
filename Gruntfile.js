@@ -112,7 +112,7 @@ module.exports = function(grunt) {
 				cwd: '<%= app.IMG.dist %>',
 				src: ['**/*.{png,jpg,svg}'],
 				dest: '<%= prod.IMG %>'
-			},
+			}
 		},
 		bump: {
 			options: {
@@ -124,6 +124,8 @@ module.exports = function(grunt) {
 				createTag: true,
 				tagName: '%VERSION%',
 				tagMessage: '%VERSION%',
+				push: true,
+				pushTo: 'upstream',
 				gitDescribeOptions: '--tags --always --abbrev=1 --dirty=-d',
 				globalReplace: false
 			}
@@ -179,5 +181,5 @@ module.exports = function(grunt) {
 	grunt.registerTask('build', [ 'copy:img', 'pug', 'htmlmin', 'less:prod'  ]);
 
 	// deploy
-	grunt.registerTask('deploy', [ 'bump', 'build', 'buildcontrol' ]);
+	grunt.registerTask('deploy', [ 'build', 'buildcontrol' ]);
 };
