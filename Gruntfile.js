@@ -112,7 +112,7 @@ module.exports = function(grunt) {
 				cwd: '<%= app.IMG.dist %>',
 				src: ['**/*.{png,jpg,svg}'],
 				dest: '<%= prod.IMG %>'
-			}
+			},
 		},
 		bump: {
 			options: {
