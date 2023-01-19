@@ -250,11 +250,19 @@ body {
 		&-header {
 			&--company {
 				&:extend( .inline );
-				padding-right: @base-margin-half;
 			}
-
+			
 			&--role {
-				&:extend(.inline, #title .subheader, .h3 );
+				&:extend( #title .subheader, .h3 );
+				.mq( @screen-xs, {
+					margin-top: 0!important;
+					margin-bottom: 4px;
+					display: block;
+				});
+				.mq( @screen-sm, {
+					display: inline-block;
+					padding-left: 1rem;
+				});
 				// color: @red-desat;
 			}
 
@@ -361,4 +369,25 @@ body {
 			}
 		}
 	}
+}
+
+.btn-top {
+	// position: fixed;
+	background-color: @red;
+	box-shadow: 3px 5px 20px rgb(0 0 0 / 35%);
+	text-decoration: none;
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0 auto;
+	display: block;
+	width: 100%;
+	text-align: center;
+	&:before {
+		content: "\2191";
+		color: white;
+		font-size: 24px;
+	}
+	
+	width: 52px;
+	height: 52px;
 }

@@ -67,7 +67,7 @@ html( lang='en' )
 					article.main__post-list
 						header.main__post-header
 							h3.main__post-header--company #{role.company} 
-							h4.main__post-header--role  #{role.position}
+							h4.main__post-header--role #{role.position}
 							p.main__post-header--duration #{role.start} - #{role.end}
 
 						section.main__post--description
@@ -100,5 +100,4 @@ html( lang='en' )
 				blockquote.skills__quote--philosophy #{resume.quote}
 				blockquote.skills__quote--skills #{resume.skills}
 
-	a 
-		back to top
+	a(href="#top", title="back to top").btn-top
