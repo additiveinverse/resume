@@ -8,11 +8,11 @@ html( lang='en' )
 
 			title #{resume.user.name} [ resume #{ new Date().getFullYear() } ]
 			link( rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lato:300,400,900' )
-			link( rel='stylesheet', href='css/global.css' )
+			link( rel='stylesheet', href='./css/global.css' )
 			//- <!-- jQuery 1.7.2+ or Zepto.js 1.0+ -->
-			script( src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" )
+			script( src="https://code.jquery.com/jquery-3.6.3.min.js", integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=", crossorigin="anonymous" )
 			//- <!-- Magnific Popup core JS file -->
-			script( src="js/jquery.magnific-popup.js" )
+			script( src="./js/jquery.magnific-popup.js" )
 
 			script.
 				$(document).ready(function() {
@@ -44,12 +44,11 @@ html( lang='en' )
 				ga('create', 'UA-58831899-1', 'auto');
 				ga('send', 'pageview');
 
-	body
+	body#top
 		header.header
 			.header--wrap
 				h1.header__title #{resume.user.name}
 				h2.header__subtitle #{ resume.user.description }
-
 
 			ul.header__contact-list
 				each link, i in resume.user.links
@@ -74,23 +73,32 @@ html( lang='en' )
 						section.main__post--description
 							p #{role.description}
 
-							if role.projects
-								h5.main__post--description-title project work:
-								ul.main__post--description-list
-									each project in role.projects
-										li.main__post--description-listitem
-											a.main__post--description--listitemlink(itemprop="url", href="http://#{ project }") #{ project }
-		section.samples
-			h2.samples__title Work Samples
+							//- if role.projects
+							//- 	h5.main__post--description-title project work:
+							//- 	ul.main__post--description-list
+							//- 		each project in role.projects
+							//- 			li.main__post--description-listitem
+							//- 				a.main__post--description--listitemlink(itemprop="url", href="http://#{ project }") #{ project }
+		section.samples#samples
+			h2.samples__title Project Work
 			.samples__content
+				h5.mt-0.tt-cap.font-weight-normal case studies
+				ul.cases__list
+					each study, i in resume.cases
+						li.cases__listitem
+							a( href= study, target=_blank ).cases__listitem--link #{i}
+				h5.mt-0.tt-cap.font-weight-normal work samples
 				ul.samples__list
 					each sample, i in resume.samples
 						li.samples__listitem
 							a(href="/img/samples/" + sample ).samples__listitemlink
 								img( src="/img/samples/thumb-" + sample ).samples__listitemlink-img
 
-		section.skills
+		section.skills#skills
 			h2.skills__title Skills
 			.skills__content
 				blockquote.skills__quote--philosophy #{resume.quote}
 				blockquote.skills__quote--skills #{resume.skills}
+
+	a 
+		back to top

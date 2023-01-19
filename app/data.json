@@ -4,51 +4,54 @@
 			"name": "Richard Bailey",
 			"description": "Designer / Developer",
 			"links": {
-				"github": "//github.com/additiveinverse/",
-				"twitter": "//www.twitter.com/__proem__",
-				"linkedin": "//www.linkedin.com/in/additiveinverse/"
+				"linkedin": "//www.linkedin.com/in/additiveinverse/",
+				"github": "//github.com/additiveinverse/"
 			},
-			"location": "King of Prussia, PA"
+			"location": "North Hollywood, CA"
 		},
-		"samples": ["ggv2.png", "ggv1.png", "zchild-home.png", "zchild-settings.png", "zchild-blocked.png", "nn-bfs.png", "nn-exitintent.png", "proemland.png", "bb.png" ],
-		"mission": "I am a seasoned UX developer and designer. I live and die by user-centered application design and pragmatic coding practices. I have a soft spot for team building, mentoring, and UX/UI architecture. I am a bit of a mad scientist.",
+		"cases": {
+			"Genomind Patient Page Redesign": "//additiveinverse.github.io/CS_clinicianportal/",
+			"Brash Anniversary Campaign": "//additiveinverse.myportfolio.com/brashiversary4"
+		},
+		"samples": [ "gmp-altmeds.png", "mhm-recsredesign.png", "gmp-user.png", "ggv2.png", "ggv1.png", "proemland.png", "zchild-home.png",  "nn-bfs.png", "nn-exitintent.png" ],
+		"mission": "I am a seasoned UX designer and developer. I live and die by user-centered application design and pragmatic coding practices. I have a soft spot for team building, mentoring, and UX/UI architecture. I am a bit of a mad scientist.",
 		"quote": "Developing people, process and products are my passion. I love working closer to the top of the stack. I've lead enterprise UI teams with a lean startup mentality. I've spent some time in the creative salt mines of an agency environment. I've had a couple years of leadership and UI architecture under my belt. I like what those things have done to my brain.",
 		"skills": "I know my way around UX design principles, information architecture, and front end performance tuning. Using tools like Angular, Wordpress, CraftCMS, Grunt, Powershell, Sublime text; I've designed and built everything from marketing & ecommerce sites to mobile apps that consume Restful Api's. Most of all, I like solving problems.",
 		"timeline": [
+			{	"company": "Genomind",
+				"position": "UX Designer / UI Developer",
+				"start": "August 2017",
+				"end": "August 2022",
+				"projects": ["portal.genomind.com", "mymap.genomind.com"],
+				"description": "I work closely with the cross-functional clinical and sales teams to gather ux design consensus for all of genominds web facing products. I conduct regular design/ideation sessions with stakeholders. I routinely prototype in AdobeXD and in the browser leveraging a brand focused pattern library I built and maintain. I serve as product designer for the Genomind Mental Health Map dna test and activation/onboarding process."
+			},
+			{	"company": "Brash Brewing",
+				"position": "Creative Art Director",
+				"start": "July 2013",
+				"end": "July 2022",
+				"projects": "",
+				"description": "I worked with the founder to establish brand identity and visual guidelines. I created art for all the packaging, glassware, as well as t-shirts and merchandise sold at the brewery."
+			},
 			{	"company": "Content Watch",
 				"position": "Designer / Developer",
 				"start": "July 2016",
-				"end": "present",
+				"end": "June 2017",
 				"projects": ["netnanny.com", "wezift.com"],
-				"description": "I designed and developed new UX features with a focus on funnel optimization. I worked closely with stakeholders to develop information architecture, visual design and development strategies for a number marketing initiatives. I helped standardize workflow, estimation and deploy processes. Using adobe creative suite plus tools like uxpin, git, gulp, sass, and jquery I helped to make these projects not only brand focused, but compelling."
-			},
-			{	"company": "Brash Beers",
-				"position": "Art Director / Designer",
-				"start": "July 2013",
-				"end": "present",
-				"projects": "",
-				"description": "I worked with the founder to establish brand identity and visual guidelines. I created art for all the packaging, glassware, as well as t-shirts and merchandise sold at the brewery."
+				"description": "I designed and developed new UX features with a data-driven focus on funnel optimization. I worked closely with marketing stakeholders to develop and refine information architecture, visual design and content strategies. I assisted in designing prototypes for mobile. I helped standardize delivery workflow and processes for the creative team. Using adobe creative suite plus tools like uxpin, git, gulp, and sass I helped to make these projects not only brand focused, but compelling."
 			},
 			{	"company" : "Ebay Enterprise",
 				"position" : "Lead UX developer",
 				"start" : "August 2010",
 				"end" : "March 2016",
 				"projects" : [ "petsmart.com", "zales.com", "ralphlauren.co.uk" ],
-				"description" : "I helped implement semantic front end ecommerce solutions for Petsmart, Ralph Lauren, and Timberland. Additionally, I led an internal tools team who's primary mission was to design and build tools to reduce day to day developer pain points. Additionally, I was involved in setting code standards, instituting team workflows, and implementing user focused design and development approaches with an eye towards emerging browser technologies."
+				"description" : "Assisted with the implementation of semantic front end ecommerce solutions. I designed web focused products for an internal tools team. I helped define and establishing department wide development standards, front end workflows. As a lead, I mentored developers in implementing user focused design and development approaches with an eye towards emerging browser technologies."
 			},
 			{	"company" : "Additive Inverse",
 				"position" : "UI/UX designer & developer",
-				"start" : "July 2008",
+				"start" : "July 2005",
 				"end" : "January 2011",
 				"projects" : [ "additiveinverse.com", "bistrobyronz.com", "camerontexas.net" ],
-				"description" : "I provided my agency clients with an array of services including project planning, visual design, user experience design, and front end development for a variety of open source content management and ecommerce platforms (Drupal, Wordpress, and Textpattern)."
-			},
-			{	"company" : "Pixeldust Interactive",
-				"position" : "Front end developer",
-				"start" : "June 2008",
-				"end" : "October 2005",
-				"projects" : [ "lammes.com", "bargainjill.com" ],
-				"description" : "Focused largely on Wordpress theme development, I worked within a small team of cross discipline developers and designers to deliver dynamic web projects for a wide variety of clients and industries."
+				"description" : "I provided my clients with an array of services including project planning, visual design, user experience design, and front end development for a variety of open source content management and ecommerce platforms (Drupal, Wordpress, and Textpattern). I managed project delivery from requirements to QA."
 			}
 		]
 	}
