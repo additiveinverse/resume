@@ -59,6 +59,27 @@ html( lang='en' )
 			h2.mission__title Mission
 			blockquote.mission__quote #{resume.mission}
 
+		//- section.skills#skills
+		//- 	h2.skills__title Skills
+		//- 	.skills__content
+		//- 		blockquote.skills__quote--philosophy #{resume.quote}
+		//- 		blockquote.skills__quote--skills #{resume.skills}
+
+		section.samples#samples
+			h2.samples__title Project Work
+			.samples__content
+				h5.mt-0.tt-cap.font-weight-normal case studies
+				ul.cases__list
+					each study, i in resume.cases
+						li.cases__listitem
+							a( href= study, target=_blank ).cases__listitem--link #{i}
+				h5.mt-0.tt-cap.font-weight-normal work samples
+				ul.samples__list
+					each sample, i in resume.samples
+						li.samples__listitem
+							a(href="./img/samples/" + sample ).samples__listitemlink
+								img( src="./img/samples/thumb-" + sample ).samples__listitemlink-img
+
 		main.main
 			h2.main__title Experience
 
@@ -79,25 +100,6 @@ html( lang='en' )
 							//- 		each project in role.projects
 							//- 			li.main__post--description-listitem
 							//- 				a.main__post--description--listitemlink(itemprop="url", href="http://#{ project }") #{ project }
-		section.samples#samples
-			h2.samples__title Project Work
-			.samples__content
-				h5.mt-0.tt-cap.font-weight-normal case studies
-				ul.cases__list
-					each study, i in resume.cases
-						li.cases__listitem
-							a( href= study, target=_blank ).cases__listitem--link #{i}
-				h5.mt-0.tt-cap.font-weight-normal work samples
-				ul.samples__list
-					each sample, i in resume.samples
-						li.samples__listitem
-							a(href="./img/samples/" + sample ).samples__listitemlink
-								img( src="./img/samples/thumb-" + sample ).samples__listitemlink-img
 
-		section.skills#skills
-			h2.skills__title Skills
-			.skills__content
-				blockquote.skills__quote--philosophy #{resume.quote}
-				blockquote.skills__quote--skills #{resume.skills}
 
 	a(href="#top", title="back to top").btn-top
