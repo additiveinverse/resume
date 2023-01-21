@@ -1,5 +1,5 @@
 doctype html
-html( lang='en' )
+html( lang='en' )#top
 	head
 		block head
 			meta( charset='utf-8' )
@@ -14,8 +14,17 @@ html( lang='en' )
 			//- <!-- Magnific Popup core JS file -->
 			script( src="./js/jquery.magnific-popup.js" )
 
-			script.
+			script(type="text/javascript").
 				$(document).ready(function() {
+
+					$(window).scroll(function() {
+							if ($(this).scrollTop()) {
+								$('.btn-top').removeClass('hidden');
+							} else {
+								$('.btn-top').addClass('hidden');
+							}
+					});
+
 					$('.samples__listitemlink').magnificPopup({
 						type:'image',
 						removalDelay: 300,
@@ -44,7 +53,7 @@ html( lang='en' )
 				ga('create', 'UA-58831899-1', 'auto');
 				ga('send', 'pageview');
 
-	body#top
+	body
 		header.header
 			.header--wrap
 				h1.header__title #{resume.user.name}
@@ -102,4 +111,4 @@ html( lang='en' )
 							//- 				a.main__post--description--listitemlink(itemprop="url", href="http://#{ project }") #{ project }
 
 
-	a(href="#top", title="back to top").btn-top
+	a(href="#top", title="back to top").btn-top.hidden

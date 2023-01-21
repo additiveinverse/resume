@@ -123,6 +123,11 @@ blockquote {
 
 body {
 	background-image: url( data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nMjAwJyBoZWlnaHQ9JzMwMCcgdmlld0JveD0nMCAwIDIwMCAzMDAnPgoJPGZpbHRlciBpZD0nZnV6eicgeD0nMCcgeT0nMCc+CgkJPGZlVHVyYnVsZW5jZSB0eXBlPSd0dXJidWxlbmNlJyBiYXNlRnJlcXVlbmN5PScwLjE1JyBudW1PY3RhdmVzPScxMCcgc3RpdGNoVGlsZXM9J3N0aXRjaCcvPgoJPC9maWx0ZXI+Cgk8cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWx0ZXI9J3VybCgjZnV6eiknIG9wYWNpdHk9JzAuMDgnLz4KPC9zdmc+ );
+	
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 #columns {
@@ -371,22 +376,35 @@ body {
 	}
 }
 
+.shake a:hover{ 
+}
+
 .btn-top {
-	position: relative;
+	position: fixed;
 	background-color: @red;
-	box-shadow: 3px 5px 20px rgb(0 0 0 / 35%);
+	box-shadow: 3px 5px 18px rgb(0 0 0 / 45%);
 	text-decoration: none;
-	display: inline-block;
 	margin: 0 auto;
 	display: block;
 	width: 100%;
+	bottom: 0;
+	right: 2rem;
 	text-align: center;
+	transition: all 0.25s ease-in-out;
+	&.hidden {
+		bottom: -55px;
+	}
+	
 	&:before {
 		content: "\2191";
 		color: white;
 		font-size: 24px;
 	}
+	&:hover {
+
+	}
 	width: 50px;
 	height: 75px;
 	margin-bottom: -24px;
 }
+
