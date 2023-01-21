@@ -41,8 +41,8 @@
 // @import "list-group.less";
 // @import "panels.less";
 // @import "responsive-embed.less";
-// @import "wells.less";
-@import "./twbs/close.less";
+// @import "./twbs/wells.less";
+// @import "./twbs/close.less";
 
 @import "_magnific.less";
 
@@ -58,8 +58,8 @@
 
 @import './_variables';
 @import './_mixins';
-@import './_grid';
-@import './normalize';
+// @import './_grid';
+// @import './normalize';
 
 blockquote {
   padding: 0;
@@ -78,7 +78,48 @@ blockquote {
 .inline-block {
 	&:extend( .grid-column );
 }
+.mt-0 {
+	margin-top: 0;
+}
+.tt-cap {
+	text-transform: uppercase;
+}
 
+.mfp-close {
+	position: fixed;
+  font-size: (@font-size-base * 3);
+  line-height: 1;
+  color: white;
+  text-shadow: @close-text-shadow;
+	width: 50px;
+	line-height: 1;
+	height: 55px;
+	display: block;
+	top: 0;
+	right: 0;
+	border-radius: 100%;
+
+  &:hover,
+  &:focus {
+    color: @white;
+    text-decoration: none;
+    cursor: pointer;
+    .opacity(.5);
+  }
+
+  // Additional properties for button version
+  // iOS requires the button element instead of an anchor tag.
+  // If you want the anchor version, it requires `href="#"`.
+  // See https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
+  button& {
+		text-align: center;
+    padding: 0;
+    background: transparent;
+    cursor: pointer;
+    border: 0;
+    -webkit-appearance: none;
+  }
+}
 
 body {
 	background-image: url( data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHhtbG5zOnhsaW5rPSdodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rJyB3aWR0aD0nMjAwJyBoZWlnaHQ9JzMwMCcgdmlld0JveD0nMCAwIDIwMCAzMDAnPgoJPGZpbHRlciBpZD0nZnV6eicgeD0nMCcgeT0nMCc+CgkJPGZlVHVyYnVsZW5jZSB0eXBlPSd0dXJidWxlbmNlJyBiYXNlRnJlcXVlbmN5PScwLjE1JyBudW1PY3RhdmVzPScxMCcgc3RpdGNoVGlsZXM9J3N0aXRjaCcvPgoJPC9maWx0ZXI+Cgk8cmVjdCB3aWR0aD0nMTAwJScgaGVpZ2h0PScxMDAlJyBmaWx0ZXI9J3VybCgjZnV6eiknIG9wYWNpdHk9JzAuMDgnLz4KPC9zdmc+ );
@@ -180,12 +221,14 @@ body {
 	&__title {
 		&:extend( #columns .left, #title .header );
 	}
-
+	
 	&__quote {
 		&:extend( #columns .right, #columns .border );
 		#title .reset-top;
 		#title .reset-bottom;
+		color: @red-desat;		
 		padding: @base-margin 0;
+		font-size: @font-size-h4;
 	}
 }
 
@@ -199,6 +242,7 @@ body {
 	&__post {
 		padding-bottom: @base-margin;
 		&:extend( #columns .right, #columns .border );
+
 		&-list {
 			padding: @base-margin 0 0;
 		}
@@ -207,18 +251,23 @@ body {
 			&_ {
 				display: flex;
 			}
-
-			// &--company {
-			// 	&:extend( .inline );
-			// }
-
+			
 			&--role {
 				&:extend( #title .subheader, .h3 );
-				padding-left: @base-margin-half;
+				.mq( @screen-xs, {
+					margin-top: 0!important;
+					margin-bottom: 4px;
+					display: block;
+				});
+				.mq( @screen-sm, {
+					display: inline-block;
+					padding-left: 1rem;
+				});
+				// color: @red-desat;
 			}
 
 			&--duration {
-				margin-top: 0;
+				color: @grey-med
 			}
 		}
 
@@ -235,9 +284,9 @@ body {
 
 				&item {
 					display: inline;
-					color: @red-desat;
 					padding-left: @base-margin-half;
 					&:before {
+						color: @red-desat;
 						font-weight: 700;
 						content: " + "
 					}
@@ -270,23 +319,74 @@ body {
 	}
 	&__list {
 		&:extend( .list-unstyled );
-		font-size: 0;
+		display: flex;
+
+		flex-wrap: wrap;
+		// font-size: 0;
+		justify-content: space-between;
+		&:extend( #columns .row );
+
 		&item {
-			width: calc( ~"100% / 3 - 8px" );
-			display: inline-block;
-			vertical-align: top;
-			height: 120px;
+			// min-width: 25%;
+			flex: 1 0 31.33333%;
+			// width: calc( ~"100% / 3 - 8px" );
+			// display: inline-block;
+			// vertical-align: top;
+			height: 115px;
 			margin: 0 4px 16px;
 			overflow: hidden;
+			&:extend( .thumbnail );
+			box-shadow: 0 4px 25px rgba(0,0,0,0.25);
 			&link {
 				&-img {
 					background-color: white;
 					border: none;
 					width: 100%;
 					height: auto;
-					&:extend( .thumbnail );
 				}
 			}
 		}
 	}
+}
+
+.cases {	
+	&:extend( #columns .row );
+
+	&__list {
+		display: flex;
+		&:extend( .list-unstyled );
+		&item {
+			vertical-align: top;
+			margin: 0 4px 16px;
+			overflow: hidden;
+			&--link {
+				padding-left: @base-margin-half;
+				&:before {
+					color: @red-desat;
+					font-weight: 700;
+					content: " + "
+				}
+			}
+		}
+	}
+}
+
+.btn-top {
+	position: relative;
+	background-color: @red;
+	box-shadow: 3px 5px 20px rgb(0 0 0 / 35%);
+	text-decoration: none;
+	display: inline-block;
+	margin: 0 auto;
+	display: block;
+	width: 100%;
+	text-align: center;
+	&:before {
+		content: "\2191";
+		color: white;
+		font-size: 24px;
+	}
+	width: 50px;
+	height: 75px;
+	margin-bottom: -24px;
 }
