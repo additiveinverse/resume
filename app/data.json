@@ -10,11 +10,10 @@
 			"location": "North Hollywood, CA"
 		},
 		"cases": {
-			"Genomind Patient Page Redesign": "//additiveinverse.github.io/CS_clinicianportal/",
-			"Brash Anniversary Campaign": "//additiveinverse.myportfolio.com/brashiversary4"
+			"Genomind Patient Page Redesign": "//additiveinverse.github.io/CS_clinicianportal/"
 		},
 		"samples": [ "gmp-altmeds.png", "mhm-recsredesign.png", "gmp-user.png", "ggv2.png", "ggv1.png", "proemland.png", "zchild-home.png",  "nn-bfs.png", "nn-exitintent.png" ],
-		"mission": "I am a seasoned UX designer and developer. I live and die by user-centered application design and pragmatic coding practices. I have a soft spot for team building, mentoring, and UX/UI architecture. I am a bit of a mad scientist.",
+		"mission": "I am a seasoned UX designer and developer. I live and die by user-centered design and pragmatic coding practices. I have a soft spot for team building, mentoring, and UX/UI architecture. I am a bit of a mad scientist.",
 		"quote": "Developing products and process is my passion. I love working closer to the top of the tech stack. I've lead enterprise UI teams with a lean startup mentality. Most of all, I like solving problems.",
 		"skills": "I know my way around UX design principles, information architecture, and front end performance tuning. Using tools like Angular, Wordpress, CraftCMS, Grunt, Powershell, Sublime text; I've designed and built everything from marketing & ecommerce sites to mobile apps that consume Restful Api's. Most of all, I like solving problems.",
 		"timeline": [
